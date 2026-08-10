@@ -183,6 +183,18 @@
       .social-link { grid-template-columns: 42px 1fr auto; gap: 12px; } .social-link strong { font-size: 20px; }
       .footer-inner { display: grid; justify-items: start; } .footer-note { text-align: left; }
     }
+
+    .song-player { position: fixed; z-index: 60; left: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; padding: 10px 18px 10px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 250, 243, .92); box-shadow: 0 14px 34px rgba(90, 65, 58, .16); backdrop-filter: blur(8px); }
+    .song-toggle { flex: none; width: 40px; height: 40px; display: grid; place-items: center; border: none; border-radius: 50%; background: var(--rose-deep); color: #fff; cursor: pointer; }
+    .song-toggle svg { width: 15px; height: 15px; }
+    .song-meta { display: flex; flex-direction: column; gap: 2px; }
+    .song-meta span { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--gold-deep); }
+    .song-progress input { width: 96px; accent-color: var(--rose-deep); }
+    @media (max-width: 600px) {
+      .song-player { left: 12px; bottom: 12px; padding: 8px 14px 8px 8px; }
+      .song-meta { display: none; }
+      .song-progress input { width: 64px; }
+    }
   </style>
 </head>
 <body>
@@ -265,6 +277,41 @@
   </main>
 
   <footer><div class="footer-inner"><span class="footer-brand">JOYFULNESS PATH · WINNIE LIM 林曉怡</span><span>ANGELIC GUIDANCE · INNER CLARITY · EVERYDAY LIFE</span><span class="footer-note">© <span id="year">2026</span> Joyfulness Path</span></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <div class="song-player" role="region" aria-label="主題曲播放器">
+    <audio src="https://pagedemo.b-cdn.net/%E3%80%8A%E6%9A%96%E9%98%B3%E4%B9%8B%E8%B7%AF%EF%BD%9CHip-Hop%20%E5%A5%B3%E5%A3%B0Rap%E7%89%88%E3%80%8B.mp3" preload="metadata"></audio>
+    <button class="song-toggle" type="button" aria-label="播放主題曲">
+      <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <div class="song-meta">
+      <span>暖陽之路</span>
+      <span class="song-progress"><input type="range" min="0" max="100" value="0" step="0.1" aria-label="播放進度"></span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const audio = document.querySelector('.song-player audio');
+      const playButton = document.querySelector('.song-toggle');
+      const iconPlay = document.querySelector('.icon-play');
+      const iconPause = document.querySelector('.icon-pause');
+      const range = document.querySelector('.song-progress input');
+      playButton.addEventListener('click', function(){
+        if (audio.paused) { audio.play(); } else { audio.pause(); }
+      });
+      audio.addEventListener('play', function(){ iconPlay.style.display = 'none'; iconPause.style.display = ''; });
+      audio.addEventListener('pause', function(){ iconPlay.style.display = ''; iconPause.style.display = 'none'; });
+      audio.addEventListener('timeupdate', function(){
+        const duration = audio.duration || 0;
+        range.value = duration ? (audio.currentTime / duration * 100) : 0;
+      });
+      range.addEventListener('input', function(){
+        const duration = audio.duration || 0;
+        if (duration) { audio.currentTime = duration * (range.value / 100); }
+      });
+    })();
+  </script>
 </body>
 </html>
