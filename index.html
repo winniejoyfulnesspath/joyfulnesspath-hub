@@ -185,16 +185,13 @@
       .footer-inner { display: grid; justify-items: start; } .footer-note { text-align: left; }
     }
 
-    .song-player { position: fixed; z-index: 60; left: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; padding: 10px 18px 10px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 250, 243, .92); box-shadow: 0 14px 34px rgba(90, 65, 58, .16); backdrop-filter: blur(8px); }
-    .song-toggle { flex: none; width: 40px; height: 40px; display: grid; place-items: center; border: none; border-radius: 50%; background: var(--rose-deep); color: #fff; cursor: pointer; }
-    .song-toggle svg { width: 15px; height: 15px; }
-    .song-meta { display: flex; flex-direction: column; gap: 2px; }
-    .song-meta span { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--gold-deep); }
-    .song-progress input { width: 96px; accent-color: var(--rose-deep); }
+    .song-player { position: fixed; z-index: 60; right: 20px; bottom: 20px; left: auto; display: flex; align-items: center; }
+    .song-toggle { flex: none; width: 48px; height: 48px; display: grid; place-items: center; border: none; border-radius: 50%; background: var(--rose-deep); color: #fff; cursor: pointer; box-shadow: 0 10px 26px rgba(90, 65, 58, .28); }
+    .song-toggle svg { width: 16px; height: 16px; }
+    .song-meta { display: none; }
     @media (max-width: 600px) {
-      .song-player { left: auto; right: 14px; bottom: 14px; padding: 0; border: none; background: none; box-shadow: none; backdrop-filter: none; }
-      .song-toggle { width: 46px; height: 46px; box-shadow: 0 10px 24px rgba(90, 65, 58, .28); }
-      .song-meta { display: none; }
+      .song-player { right: 14px; bottom: 14px; }
+      .song-toggle { width: 46px; height: 46px; }
     }
   </style>
 </head>
