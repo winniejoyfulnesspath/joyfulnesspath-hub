@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joyfulness Path｜Winnie Lim 林曉怡・回到喜悅與內在清晰</title>
+  <meta name="description" content="Joyfulness Path 由 Winnie Lim 林曉怡主理，透過大天使主題分享、引導冥想與靈性練習，陪你整理內在，回到清晰、安定與有選擇的位置。">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_HK">
+  <meta property="og:title" content="Joyfulness Path｜Winnie Lim 林曉怡">
+  <meta property="og:description" content="讓喜悅，成為你回到自己的路。">
+  <link rel="canonical" href="https://joyfulnesspath.com/">
+
+  <style>
+    :root {
+      --ivory: #f7f1e8; --paper: #fffaf3; --paper-deep: #f0e6d9; --ink: #302a28;
+      --muted: #756a65; --rose: #c7929b; --rose-soft: #ead4d5; --rose-deep: #985f6b;
+      --sage: #b7c3b2; --sage-soft: #e1e8de; --forest: #26332c; --forest-soft: #334238;
+      --gold: #c3a46c; --gold-deep: #967743; --line: rgba(70, 52, 47, .16);
+      --serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+      --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      --content: min(1180px, calc(100vw - 56px));
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; overflow-x: hidden; color: var(--ink); background: var(--ivory);
+      font-family: var(--sans); line-height: 1.8; -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ""; position: fixed; z-index: 99; inset: 0; pointer-events: none; opacity: .22;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.10'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+    a { color: inherit; } button { font: inherit; }
+    ::selection { color: #241f1d; background: var(--rose-soft); }
+    :focus-visible { outline: 3px solid rgba(152, 95, 107, .38); outline-offset: 4px; }
+    .skip-link { position: fixed; z-index: 120; top: 12px; left: 12px; padding: 9px 16px; transform: translateY(-160%); border-radius: 999px; background: var(--forest); color: #fff; }
+    .skip-link:focus { transform: translateY(0); }
+    .site-header { position: absolute; z-index: 20; top: 0; left: 0; width: 100%; padding: 28px 0; }
+    .header-inner { width: var(--content); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .wordmark { display: inline-flex; align-items: baseline; gap: 11px; font-family: var(--serif); text-decoration: none; letter-spacing: .13em; }
+    .wordmark strong { font-size: 15px; font-weight: 600; }
+    .wordmark span { color: var(--rose-deep); font-family: var(--sans); font-size: 10px; font-weight: 800; letter-spacing: .19em; }
+    .site-nav { display: flex; align-items: center; gap: 28px; }
+    .site-nav a { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-decoration: none; }
+    .site-nav a:hover { color: var(--rose-deep); }
+    .site-nav .nav-cta { padding-bottom: 3px; color: var(--rose-deep); border-bottom: 1px solid var(--gold); }
+
+    .hero {
+      position: relative; min-height: 920px; display: grid; place-items: center; padding: 154px 0 110px;
+      isolation: isolate; overflow: hidden;
+      background: radial-gradient(circle at 14% 82%, rgba(183, 195, 178, .23), transparent 28rem), radial-gradient(circle at 84% 18%, rgba(199, 146, 155, .19), transparent 30rem), linear-gradient(180deg, var(--paper) 0%, var(--ivory) 100%);
+    }
+    .hero::after { content: "喜"; position: absolute; z-index: -2; right: -1.5vw; bottom: -18%; color: rgba(199, 146, 155, .065); font-family: var(--serif); font-size: min(54vw, 690px); font-weight: 500; line-height: 1; pointer-events: none; }
+    .hero-copy { position: relative; z-index: 2; width: min(1120px, calc(100vw - 48px)); text-align: center; }
+    .kicker { display: inline-flex; align-items: center; gap: 13px; margin: 0 0 30px; color: var(--gold-deep); font-size: 11px; font-weight: 800; letter-spacing: .25em; }
+    .kicker::before, .kicker::after { content: ""; width: 38px; height: 1px; background: var(--gold); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 0; font-family: var(--serif); font-size: clamp(50px, 7vw, 96px); font-weight: 500; line-height: 1.15; letter-spacing: .035em; }
+    h1 span { display: block; color: var(--rose-deep); }
+    .hero-lead { max-width: 700px; margin: 30px auto 0; color: var(--muted); font-family: var(--serif); font-size: clamp(19px, 2vw, 27px); letter-spacing: .07em; }
+    .hero-note { max-width: 610px; margin: 17px auto 0; color: #7f7470; font-size: 14px; letter-spacing: .045em; }
+    .hero-actions { margin-top: 38px; display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .button { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 28px; border: 1px solid transparent; border-radius: 999px; background: var(--rose-deep); color: #fff; box-shadow: 0 15px 36px rgba(114, 65, 75, .19); font-size: 13px; font-weight: 800; letter-spacing: .09em; text-decoration: none; transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(114, 65, 75, .26); }
+    .button--ghost { color: var(--ink); background: rgba(255, 250, 243, .5); border-color: var(--line); box-shadow: none; }
+    .button--light { color: var(--forest); background: #fffaf2; box-shadow: none; }
+    .button-arrow { font-size: 17px; font-weight: 400; }
+    .halo { position: absolute; z-index: -1; top: 48%; left: 50%; width: min(760px, 82vw); aspect-ratio: 1; transform: translate(-50%, -50%); opacity: .78; pointer-events: none; }
+    .halo-ring { position: absolute; inset: 4%; border: 1px solid rgba(195, 164, 108, .27); border-radius: 50%; animation: breathe 9s ease-in-out infinite; }
+    .halo-ring:nth-child(2) { inset: 18%; border-color: rgba(183, 195, 178, .38); animation-delay: -3s; }
+    .halo-ring:nth-child(3) { inset: 32%; border-color: rgba(199, 146, 155, .38); animation-delay: -6s; }
+    .orbit { position: absolute; inset: 13% 4%; border: 1px solid rgba(152, 95, 107, .20); border-radius: 50%; transform: rotate(32deg); }
+    .orbit:nth-of-type(5) { transform: rotate(-32deg); }
+    .halo-core { position: absolute; inset: 44%; border-radius: 50%; background: rgba(255, 250, 243, .9); box-shadow: 0 0 70px 42px rgba(255, 250, 243, .86); }
+    @keyframes breathe { 0%, 100% { transform: scale(.985); opacity: .68; } 50% { transform: scale(1.025); opacity: 1; } }
+    .hero-side-note { position: absolute; right: 24px; bottom: 38px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .28em; writing-mode: vertical-rl; }
+    .scroll-cue { position: absolute; left: 50%; bottom: 32px; display: grid; gap: 9px; justify-items: center; transform: translateX(-50%); color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .22em; text-decoration: none; }
+    .scroll-cue::after { content: ""; width: 1px; height: 30px; background: linear-gradient(var(--gold), transparent); }
+
+    .statement { position: relative; overflow: hidden; padding: 130px 0; color: #f8f2e8; background: var(--forest); }
+    .statement::before { content: "RETURN"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: rgba(255, 255, 255, .025); font-family: Georgia, serif; font-size: clamp(100px, 19vw, 280px); letter-spacing: .08em; white-space: nowrap; }
+    .statement-inner { position: relative; width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 70px; }
+    .statement h2 { margin: 0; font-family: var(--serif); font-size: clamp(34px, 4vw, 58px); font-weight: 400; line-height: 1.35; letter-spacing: .04em; }
+    .statement h2:last-child { text-align: right; }
+    .statement-mark { position: relative; width: 96px; height: 96px; display: grid; place-items: center; border: 1px solid rgba(195, 164, 108, .36); transform: rotate(45deg); }
+    .statement-mark::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 12px rgba(195, 164, 108, .10); }
+
+    .section { position: relative; padding: 142px 0; }
+    .section-inner { width: var(--content); margin: 0 auto; }
+    .section-kicker { margin-bottom: 22px; color: var(--gold-deep); font-size: 10px; font-weight: 800; letter-spacing: .24em; text-transform: uppercase; }
+    .section-title { margin-bottom: 30px; font-family: var(--serif); font-size: clamp(42px, 5.4vw, 72px); font-weight: 500; line-height: 1.2; letter-spacing: .035em; }
+    .about { overflow: hidden; background: var(--paper); }
+    .about::after { content: "路"; position: absolute; right: -2vw; bottom: -22%; color: rgba(183, 195, 178, .13); font-family: var(--serif); font-size: min(44vw, 600px); line-height: 1; }
+    .about-grid { position: relative; z-index: 1; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(60px, 10vw, 150px); align-items: start; }
+    .about-intro { position: sticky; top: 50px; }
+    .about-intro .section-title span { display: block; color: var(--rose-deep); }
+    .about-copy { padding-top: 54px; }
+    .lead-copy { margin-bottom: 28px; font-family: var(--serif); font-size: clamp(22px, 2.4vw, 31px); line-height: 1.75; letter-spacing: .055em; }
+    .body-copy { max-width: 680px; color: var(--muted); font-size: 15px; }
+    .principles { margin-top: 62px; border-top: 1px solid var(--line); }
+    .principle { display: grid; grid-template-columns: 48px 120px 1fr; gap: 24px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .principle-num { color: var(--rose); font-family: var(--serif); font-size: 14px; }
+    .principle h3 { margin: 0; font-family: var(--serif); font-size: 22px; font-weight: 500; }
+    .principle p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .events { overflow: hidden; background: linear-gradient(135deg, #f0dddd 0%, #f4e9df 55%, #e8ece3 100%); }
+    .events::before { content: ""; position: absolute; top: -310px; left: -220px; width: 650px; aspect-ratio: 1; border: 1px solid rgba(152, 95, 107, .14); border-radius: 50%; box-shadow: 0 0 0 90px rgba(255,255,255,.08), 0 0 0 180px rgba(255,255,255,.07); }
+    .events-head { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 58px; }
+    .events-head .section-title { max-width: 760px; margin-bottom: 0; }
+    .events-head p:last-child { max-width: 360px; margin-bottom: 8px; color: var(--muted); font-size: 14px; }
+    .event-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.12fr .88fr; gap: 24px; }
+    .event-card { position: relative; min-height: 450px; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(34px, 4vw, 58px); overflow: hidden; border: 1px solid rgba(255,255,255,.58); background: rgba(255, 250, 243, .74); box-shadow: 0 28px 70px rgba(90, 65, 58, .10); backdrop-filter: blur(8px); }
+    .event-card--primary { min-height: 520px; background: var(--paper); }
+    .event-card--primary::after { content: "心"; position: absolute; right: -5%; bottom: -14%; color: rgba(199, 146, 155, .09); font-family: var(--serif); font-size: 270px; line-height: 1; }
+    .status { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-bottom: 42px; color: var(--rose-deep); font-size: 10px; font-weight: 800; letter-spacing: .18em; }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--rose-deep); box-shadow: 0 0 0 6px rgba(152,95,107,.10); }
+    .event-date { margin-bottom: 13px; color: var(--gold-deep); font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+    .event-card h3 { position: relative; z-index: 1; margin-bottom: 21px; font-family: var(--serif); font-size: clamp(32px, 3.5vw, 50px); font-weight: 500; line-height: 1.3; letter-spacing: .035em; }
+    .event-card > div > p:last-child { position: relative; z-index: 1; max-width: 550px; color: var(--muted); font-size: 14px; }
+    .event-meta { position: relative; z-index: 1; margin: 34px 0 28px; padding: 16px 0; display: flex; flex-wrap: wrap; gap: 10px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #5f5350; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .event-link { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 12px; width: fit-content; color: var(--rose-deep); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid var(--gold); }
+    .event-link:hover { color: var(--forest); }
+
+    .invitation { padding: 118px 0; color: #f8f2e8; background: radial-gradient(circle at 80% 20%, rgba(195,164,108,.13), transparent 25rem), var(--forest); }
+    .invitation-inner { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 90px; align-items: center; }
+    .invitation .section-kicker { color: #dbc28f; }
+    .invitation h2 { margin-bottom: 0; font-family: var(--serif); font-size: clamp(36px, 4.5vw, 62px); font-weight: 400; line-height: 1.4; letter-spacing: .04em; }
+    .invitation-copy { color: rgba(255,255,255,.70); font-size: 14px; }
+    .invitation-copy p { margin-bottom: 28px; }
+
+    .connect { overflow: hidden; background: var(--sage-soft); }
+    .connect::before { content: "CONNECTION"; position: absolute; right: -2%; top: 4%; color: rgba(38, 51, 44, .035); font-family: Georgia, serif; font-size: clamp(70px, 12vw, 170px); letter-spacing: .05em; }
+    .connect-grid { position: relative; display: grid; grid-template-columns: .92fr 1.08fr; gap: 100px; align-items: end; }
+    .connect-copy .section-title { margin-bottom: 20px; }
+    .connect-copy p:last-child { max-width: 510px; color: var(--muted); font-size: 14px; }
+    .social-links { border-top: 1px solid rgba(38,51,44,.18); }
+    .social-link { display: grid; grid-template-columns: 70px 1fr auto; gap: 22px; align-items: center; padding: 30px 0; border-bottom: 1px solid rgba(38,51,44,.18); text-decoration: none; transition: padding .25s ease, color .25s ease; }
+    .social-link:hover { padding-left: 10px; color: var(--rose-deep); }
+    .social-index { color: var(--rose-deep); font-family: var(--serif); font-size: 13px; }
+    .social-link strong { display: block; font-family: var(--serif); font-size: 24px; font-weight: 500; }
+    .social-link small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; letter-spacing: .06em; }
+    .social-arrow { font-size: 21px; font-weight: 300; }
+    footer { padding: 38px 0; color: rgba(255,255,255,.64); background: #1f2923; }
+    .footer-inner { width: var(--content); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 10px; letter-spacing: .14em; }
+    .footer-brand { color: #fffaf2; font-family: var(--serif); font-size: 14px; }
+    .footer-note { text-align: right; }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+    @media (max-width: 900px) {
+      :root { --content: min(100% - 38px, 720px); }
+      .site-nav a:not(.nav-cta) { display: none; }
+      .hero { min-height: 820px; }
+      .statement-inner { grid-template-columns: 1fr; gap: 35px; text-align: center; }
+      .statement h2:last-child { text-align: center; }
+      .statement-mark { margin: 0 auto; }
+      .about-grid, .event-grid, .invitation-inner, .connect-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 20px; } .about-intro { position: static; } .about-copy { padding-top: 0; }
+      .events-head { display: block; } .events-head p:last-child { margin-top: 22px; }
+      .event-card, .event-card--primary { min-height: auto; }
+      .invitation-inner { gap: 42px; } .connect-grid { gap: 54px; }
+    }
+    @media (max-width: 600px) {
+      :root { --content: calc(100vw - 34px); }
+      .site-header { padding: 20px 0; } .wordmark span { display: none; } .site-nav .nav-cta { font-size: 10px; }
+      .hero { min-height: 760px; padding: 120px 0 90px; } .hero-copy { width: calc(100vw - 34px); }
+      .hero::after { right: -13%; bottom: -5%; font-size: 92vw; }
+      .hero-lead { font-size: 19px; line-height: 1.65; } .hero-note { font-size: 12px; }
+      .hero-actions { align-items: stretch; flex-direction: column; max-width: 310px; margin-left: auto; margin-right: auto; }
+      .button { width: 100%; } .hero-side-note { display: none; } .scroll-cue { bottom: 19px; }
+      .statement { padding: 94px 0; } .statement h2 { font-size: 33px; } .statement-mark { width: 72px; height: 72px; }
+      .section { padding: 96px 0; } .section-title { font-size: 40px; }
+      .about::after { right: -18%; bottom: -6%; font-size: 87vw; } .lead-copy { font-size: 20px; }
+      .principle { grid-template-columns: 36px 84px 1fr; gap: 12px; } .principle h3 { font-size: 18px; } .principle p { font-size: 12px; }
+      .events-head { margin-bottom: 38px; } .event-card { padding: 30px 24px; } .event-card h3 { font-size: 32px; } .event-meta { display: grid; gap: 5px; }
+      .invitation { padding: 94px 0; } .invitation h2 { font-size: 36px; }
+      .social-link { grid-template-columns: 42px 1fr auto; gap: 12px; } .social-link strong { font-size: 20px; }
+      .footer-inner { display: grid; justify-items: start; } .footer-note { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header" aria-label="網站導覽">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="Joyfulness Path 首頁"><strong>JOYFULNESS PATH</strong><span>WITH WINNIE LIM 林曉怡</span></a>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="#about">關於 Winnie Lim 林曉怡</a><a href="#events">活動</a><a href="#connect">同行入口</a><a class="nav-cta" href="#events">現正開放</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="halo" aria-hidden="true"><span class="halo-ring"></span><span class="halo-ring"></span><span class="halo-ring"></span><span class="orbit"></span><span class="orbit"></span><span class="halo-core"></span></div>
+      <div class="hero-copy">
+        <p class="kicker">ANGELIC GUIDANCE · INNER ALIGNMENT</p>
+        <h1 id="hero-title">讓喜悅，<span>成為你回到自己的路。</span></h1>
+        <p class="hero-lead">不必急著成為更好的人。先讓自己安靜下來，聽見此刻真正重要的聲音。</p>
+        <p class="hero-note">Joyfulness Path 由 Winnie Lim 林曉怡主理，以大天使主題分享、引導冥想與靈性練習，陪你回到清晰、安定與有選擇的位置。</p>
+        <div class="hero-actions"><a class="button" href="#events">查看現正開放活動 <span class="button-arrow" aria-hidden="true">↗</span></a><a class="button button--ghost" href="#about">認識 Winnie Lim 林曉怡</a></div>
+      </div>
+      <span class="hero-side-note">JOYFULNESS · CLARITY · CHOICE</span><a class="scroll-cue" href="#statement">SCROLL</a>
+    </section>
+
+    <section class="statement" id="statement" aria-label="Joyfulness Path 理念">
+      <div class="statement-inner"><h2>你未必需要<br>更多答案，</h2><span class="statement-mark" aria-hidden="true"></span><h2>而是需要一個<br>讓心安靜的位置。</h2></div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="section-inner about-grid">
+        <div class="about-intro"><p class="section-kicker">ABOUT WINNIE LIM 林曉怡 · 關於</p><h2 class="section-title" id="about-title">在生活之中，<span>重新聽見自己。</span></h2></div>
+        <div class="about-copy">
+          <p class="lead-copy">我是 Winnie Lim 林曉怡，Joyfulness Path 的主理人。我相信，靈性不是離開生活，而是在生活之中，重新看見自己的感受、需要與選擇。</p>
+          <p class="body-copy">大天使的意象與提醒，不是用來替我們決定人生；它更像一面溫柔的鏡子，讓人停一停，整理內在，再以更清晰的方式回到日常。透過主題分享、引導冥想與靈性練習，我希望為每一次相遇留出一個不必逞強、可以如實做自己的空間。</p>
+          <div class="principles" aria-label="Joyfulness Path 三個核心">
+            <article class="principle"><span class="principle-num">01</span><h3>聽見</h3><p>先聽見情緒與內在真正想說的話。</p></article>
+            <article class="principle"><span class="principle-num">02</span><h3>整理</h3><p>讓雜念慢慢沉澱，把混亂放回適合的位置。</p></article>
+            <article class="principle"><span class="principle-num">03</span><h3>選擇</h3><p>帶著清晰回到生活，作出真正適合自己的選擇。</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section events" id="events" aria-labelledby="events-title">
+      <div class="section-inner">
+        <div class="events-head"><div><p class="section-kicker">CURRENT JOURNEYS · 現正開放</p><h2 class="section-title" id="events-title">從此刻適合你的入口，<br>開始這段同行。</h2></div><p>每個活動都有自己的主題與節奏。你不需要一次理解所有內容，只需選擇此刻最有共鳴的一個入口。</p></div>
+
+        <!-- 活動更新區 START -->
+        <!-- 日後只需修改卡片 status、日期、標題、簡介及 href。已完結活動請整張刪除或移到過往活動頁。 -->
+        <div class="event-grid">
+          <article class="event-card event-card--primary">
+            <div><span class="status">NOW OPEN · 免費公開活動</span><p class="event-date">2026.08.15 · 20:30–22:30 · ZOOM · GMT+8</p><h3>大天使夏彌爾<br>心之歸位</h3><p>一場關於放下腦內雜音、重新回到內在清晰的免費公開引導冥想。你不需要預先清空思緒，帶著此刻的自己來到，便已剛剛好。</p></div>
+            <div><div class="event-meta"><span>免費參加</span><span>Zoom 線上進行</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://chamuel-heart-return.netlify.app/" target="_blank" rel="noopener noreferrer">查看活動與免費登記 <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="event-card">
+            <div><span class="status">OCTOBER · 深度同行</span><p class="event-date">2026 · 10 月 · 三日深度課程</p><h3>大天使<br>財富指令</h3><p>從匱乏慣性、允許承載與實際行動出發，重新整理你與豐盛的關係，讓內在選擇與生活方向重新對齊。</p></div>
+            <div><div class="event-meta"><span>三日深度調頻</span><span>完整課程</span></div><a class="event-link" href="https://winnie-angel-wealth10.netlify.app/" target="_blank" rel="noopener noreferrer">了解 10 月完整課程 <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <!-- 活動更新區 END -->
+      </div>
+    </section>
+
+    <section class="invitation" aria-labelledby="invitation-title">
+      <div class="invitation-inner"><div><p class="section-kicker">A GENTLE INVITATION · 一個邀請</p><h2 id="invitation-title">不必追趕某種狀態。<br>你可以先回到自己。</h2></div><div class="invitation-copy"><p>Joyfulness Path 不替你預言答案，也不要求你相信某一套標準。這裡更在意的，是你能否在每一次停下來之後，更誠實地理解自己，再帶著清晰回到生活。</p><a class="button button--light" href="#connect">先從日常分享開始 <span class="button-arrow" aria-hidden="true">↓</span></a></div></div>
+    </section>
+
+    <section class="section connect" id="connect" aria-labelledby="connect-title">
+      <div class="section-inner connect-grid">
+        <div class="connect-copy"><p class="section-kicker">STAY CONNECTED · 繼續同行</p><h2 class="section-title" id="connect-title">把這條路，<br>留在日常裡。</h2><p>暫時未有適合你的活動，也沒關係。先透過日常分享與社群交流，慢慢認識 Joyfulness Path。</p></div>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com/minyiwinnie/" target="_blank" rel="noopener noreferrer" aria-label="前往 Winnie Lim 林曉怡的 Instagram"><span class="social-index">01</span><span><strong>Instagram</strong><small>@minyiwinnie · 日常分享與活動消息</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
+          <a class="social-link" href="https://www.facebook.com/groups/joyfulnesspath31" target="_blank" rel="noopener noreferrer" aria-label="前往 Joyfulness Path Facebook 公開群"><span class="social-index">02</span><span><strong>Facebook 公開群</strong><small>Joyfulness Path · 社群交流與最新資訊</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-inner"><span class="footer-brand">JOYFULNESS PATH · WINNIE LIM 林曉怡</span><span>ANGELIC GUIDANCE · INNER CLARITY · EVERYDAY LIFE</span><span class="footer-note">© <span id="year">2026</span> Joyfulness Path</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
