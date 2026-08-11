@@ -119,14 +119,15 @@
     .event-card { position: relative; min-height: 450px; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(34px, 4vw, 58px); overflow: hidden; border: 1px solid rgba(255,255,255,.58); background: rgba(255, 250, 243, .74); box-shadow: 0 28px 70px rgba(90, 65, 58, .10); backdrop-filter: blur(8px); }
     .event-card--primary { min-height: 520px; background: var(--paper); }
     .event-card--primary::after { content: "心"; position: absolute; right: -5%; bottom: -14%; color: rgba(199, 146, 155, .09); font-family: var(--serif); font-size: 270px; line-height: 1; }
-    .status { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-bottom: 42px; color: var(--rose-deep); font-size: 10px; font-weight: 800; letter-spacing: .18em; }
-    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--rose-deep); box-shadow: 0 0 0 6px rgba(152,95,107,.10); }
+    .status { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-bottom: 42px; padding: 8px 16px 8px 12px; border-radius: 999px; background: var(--rose-deep); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .16em; box-shadow: 0 8px 20px rgba(152,95,107,.28); }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 5px rgba(255,255,255,.28); animation: statusPulse 1.8s ease-in-out infinite; }
+    @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
     .event-date { margin-bottom: 13px; color: var(--gold-deep); font-size: 11px; font-weight: 800; letter-spacing: .17em; }
     .event-card h3 { position: relative; z-index: 1; margin-bottom: 21px; font-family: var(--serif); font-size: clamp(32px, 3.5vw, 50px); font-weight: 500; line-height: 1.3; letter-spacing: .035em; }
     .event-card > div > p:last-child { position: relative; z-index: 1; max-width: 550px; color: var(--muted); font-size: 14px; }
     .event-meta { position: relative; z-index: 1; margin: 34px 0 28px; padding: 16px 0; display: flex; flex-wrap: wrap; gap: 10px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #5f5350; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
-    .event-link { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 12px; width: fit-content; color: var(--rose-deep); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid var(--gold); }
-    .event-link:hover { color: var(--forest); }
+    .event-link { position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: fit-content; min-height: 50px; padding: 0 26px; border-radius: 999px; background: var(--rose-deep); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-decoration: none; box-shadow: 0 12px 28px rgba(114,65,75,.22); transition: transform .25s ease, box-shadow .25s ease; }
+    .event-link:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(114,65,75,.3); color: #fff; }
 
     .invitation { padding: 118px 0; color: #f8f2e8; background: radial-gradient(circle at 80% 20%, rgba(195,164,108,.13), transparent 25rem), var(--forest); }
     .invitation-inner { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; gap: 90px; align-items: center; }
