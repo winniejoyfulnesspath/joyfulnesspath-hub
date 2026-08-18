@@ -120,6 +120,13 @@
     .event-card { position: relative; min-height: 450px; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(34px, 4vw, 58px); overflow: hidden; border: 1px solid rgba(255,255,255,.58); background: rgba(255, 250, 243, .74); box-shadow: 0 28px 70px rgba(90, 65, 58, .10); backdrop-filter: blur(8px); }
     .event-card--primary { min-height: 520px; background: var(--paper); }
     .event-card--primary::after { content: "心"; position: absolute; right: -5%; bottom: -14%; color: rgba(199, 146, 155, .09); font-family: var(--serif); font-size: 270px; line-height: 1; }
+    .event-card--gold .status { background: var(--gold-deep); box-shadow: 0 8px 20px rgba(150, 119, 67, .28); }
+    .event-card--gold .event-link { background: var(--gold-deep); box-shadow: 0 12px 28px rgba(150, 119, 67, .22); }
+    .event-card--gold .status::before { background: var(--paper); box-shadow: 0 0 0 5px rgba(255,255,255,.28); }
+    .event-card--muted { opacity: .82; }
+    .event-card--muted .status { background: var(--muted); box-shadow: none; }
+    .event-card--muted .status::before { animation: none; }
+    .event-card--muted .event-link { background: transparent; color: var(--muted); border: 1px solid var(--line); box-shadow: none; }
     .status { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-bottom: 42px; padding: 8px 16px 8px 12px; border-radius: 999px; background: var(--rose-deep); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .16em; box-shadow: 0 8px 20px rgba(152,95,107,.28); }
     .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 5px rgba(255,255,255,.28); animation: statusPulse 1.8s ease-in-out infinite; }
     @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
@@ -258,13 +265,13 @@
         <!-- 活動更新區 START -->
         <!-- 日後只需修改卡片 status、日期、標題、簡介及 href。已完結活動請整張刪除或移到過往活動頁。 -->
         <div class="event-grid">
-          <article class="event-card event-card--primary">
-            <div><span class="status">已圓滿結束</span><p class="event-date">2026.08.15 · 20:30–22:30 · ZOOM · GMT+8</p><h3>大天使夏彌爾<br>心之歸位</h3><p>一場關於放下腦內雜音、重新回到內在清晰的免費公開引導冥想。已於 8 月 15 日順利舉行，感謝所有參與者。</p></div>
-            <div><div class="event-meta"><span>活動已結束</span><span>Zoom 線上進行</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://heart-return.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">回顧活動頁面 <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="event-card">
+          <article class="event-card event-card--primary event-card--gold">
             <div><span class="status">OCTOBER · 深度同行</span><p class="event-date">2026 · 10 月 · 三日深度課程</p><h3>大天使<br>財富指令</h3><p>從匱乏慣性、允許承載與實際行動出發，重新整理你與豐盛的關係，讓內在選擇與生活方向重新對齊。</p></div>
             <div><div class="event-meta"><span>三日深度調頻</span><span>完整課程</span></div><a class="event-link" href="https://wealth10.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">了解 10 月完整課程 <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="event-card event-card--muted">
+            <div><span class="status">已圓滿結束</span><p class="event-date">2026.08.15 · 20:30–22:30 · ZOOM · GMT+8</p><h3>大天使夏彌爾<br>心之歸位</h3><p>一場關於放下腦內雜音、重新回到內在清晰的免費公開引導冥想。已於 8 月 15 日順利舉行，感謝所有參與者。</p></div>
+            <div><div class="event-meta"><span>活動已結束</span><span>Zoom 線上進行</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://heart-return.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">回顧活動頁面 <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
         <!-- 活動更新區 END -->
