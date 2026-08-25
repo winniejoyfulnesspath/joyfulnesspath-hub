@@ -57,7 +57,7 @@
 
     .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
     .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
-    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; text-wrap: balance; }
     .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
     .legal-mobile-toc { display: none; }
 
@@ -65,11 +65,11 @@
     .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
     .legal-section:last-of-type { border-bottom: none; }
     .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
-    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; text-wrap: balance; }
     .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
-    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; text-wrap: balance; }
     .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
-    .legal-section li { margin-bottom: 4px; }
+    .legal-section li { margin-bottom: 4px; text-wrap: balance; }
     .legal-section strong { font-weight: 700; }
     .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
     .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
@@ -125,7 +125,7 @@
       <p class="legal-eyebrow">LEGAL · JOYFULNESS PATH</p>
       <h1>網站及活動條款</h1>
       <p class="legal-intro">在參與之前，先把彼此的界線說清楚。</p>
-      <div class="legal-meta"><span>版本 JP-TERMS-ZH-1.1</span><span>生效日期：2026年8月25日</span></div>
+      <div class="legal-meta"><span>版本 JP-TERMS-ZH-1.2</span><span>生效日期：[2026年8月25日]</span></div>
       <div class="legal-lang" aria-label="語言版本">
         <a href="/terms/" aria-current="page">繁中</a><span class="sep">｜</span><a href="/en/terms/">English</a><span class="sep">｜</span><a href="/ms/terms/">Bahasa Melayu</a>
       </div>
@@ -179,7 +179,7 @@
 <section class="legal-section" id="s-1">
   <span class="legal-section-no">01</span>
   <h2>1. 身份及角色</h2>
-  <ol><li>Joyfulness Path是活動品牌，由Winnie Lim林曉怡主理，負責活動方向、內容、參加安排及與參加者的主要關係。</li><li>心靈新能量有限公司（SOUL NEW ENERGY LIMITED）為獨立技術及製作合作方，按約定提供網站、表格、資料系統、電郵、音樂、直播或其他製作支援。</li><li>除非個別活動頁另有明確說明，Soul New Energy並非活動內容的提供者，亦不代表Winnie或Joyfulness Path作出承諾。</li></ol>
+  <ol><li>Joyfulness Path是活動品牌，由Winnie Lim林曉怡主理，負責活動方向、內容、參加安排及與參加者的主要關係。</li><li>心靈新能量有限公司（SOUL NEW ENERGY LIMITED）為獨立技術及製作合作方，按約定提供網站、表格、資料系統、電郵、音樂、直播或其他製作支援。</li><li>除非個別活動頁另有明確說明，Soul New Energy並非活動內容的提供者，亦不代表Winnie或Joyfulness Path作出承諾。</li><li>就Joyfulness Path的網上付費活動，Winnie／Joyfulness Path為相關服務供應者；SNE只在付款頁明確說明時作技術、製作或付款處理支援。付費頁會在購買前以Bahasa Melayu及適用語言顯示供應者聯絡資料、服務特徵、完整價格、付款方法、服務時間及特別條款。</li></ol>
 </section>
 <section class="legal-section" id="s-2">
   <span class="legal-section-no">02</span>
@@ -223,7 +223,7 @@
 <section class="legal-section" id="s-9">
   <span class="legal-section-no">09</span>
   <h2>9. 付款、改期及退款</h2>
-  <ol><li>免費活動不涉及退款。</li><li>付費活動的費用、貨幣、付款方式、退款、改期及名額轉讓安排，以該活動頁或付款前顯示的特別條款為準。</li><li>除法律另有規定或活動頁另有承諾外，因參加者個人時間、裝置、網絡或未出席而未能參與，不會自動產生退款權利。</li><li>如主辦方取消付費活動而沒有提供合理替代安排，主辦方會退回實際收到的相關活動費用；第三方平台另行收取且不可退回的費用，會按適用法律及付款頁說明處理。</li><li>任何退款不影響參加者依法享有且不得排除的權利。</li></ol>
+  <ol><li>免費活動不涉及退款。</li><li>付費活動的費用、貨幣、付款方式、退款、改期及名額轉讓安排，以該活動頁或付款前顯示的特別條款為準。付款前應先更正明顯輸入錯誤，並保存訂單確認。</li><li>如個別付費頁沒有另行列明，默認安排為：參加者取消、個人時間衝突、裝置或網絡問題、未出席並不自動產生退款權；參加者如在活動開始前不少於48小時提出，主辦方可按名額及活動性質酌情允許一次改期或名額轉讓；此安排不減少依法不可排除的權利。</li><li>如主辦方取消付費活動而沒有提供合理替代安排，主辦方會退回實際收到的相關活動費用。如主辦方作出重大改期，參加者可按通知選擇替代安排或退回實際收到的相關活動費用。</li><li>第三方平台費用、貨幣轉換及處理方式，以付款頁實際披露及適用法律為準。</li><li>任何購買、改期或退款安排不影響參加者依法享有且不得排除的權利。</li></ol>
 </section>
 <section class="legal-section" id="s-10">
   <span class="legal-section-no">10</span>
@@ -248,7 +248,7 @@
 <section class="legal-section" id="s-14">
   <span class="legal-section-no">14</span>
   <h2>14. 私隱及個人資料</h2>
-  <p>個人資料會按照《Joyfulness Path私隱政策》及報名時顯示的個人資料收集通知處理。活動條款接受、跨境資料處理及三種通訊選擇會分開記錄。</p>
+  <p>個人資料會按照《Joyfulness Path私隱政策》及報名時顯示的個人資料收集通知處理。Focus選項或自由文字可能間接反映情緒、身心狀況或個人信念；我們會分開取得明確同意，並記錄活動條款、私隱通知、敏感資料、跨境處理及通訊選擇的當時版本。</p>
 </section>
 <section class="legal-section" id="s-15">
   <span class="legal-section-no">15</span>
@@ -268,10 +268,10 @@
 <section class="legal-section" id="s-18">
   <span class="legal-section-no">18</span>
   <h2>18. 聯絡方法</h2>
-  <p>一般活動查詢：<code>winnie.joyfulness.path@gmail.com</code> 私隱及個人資料查詢：<code>winnie.joyfulness.path@gmail.com</code></p>
+  <p>一般活動查詢：<code>winnie.joyfulness.path@gmail.com</code><br>私隱及個人資料查詢：<code>winnie.joyfulness.path@gmail.com</code><br>Joyfulness Path為馬來西亞網上營運，不設公眾到訪地點。<br>公開電話：<code>+60 12-234 9607</code></p>
 </section>
         <div class="legal-entity">
-          心靈新能量有限公司（SOUL NEW ENERGY LIMITED）<br>香港註冊公司 · 商業登記證號碼：79188635-000-11-25-9<br>hello@soulnewenergy.com
+          心靈新能量有限公司（SOUL NEW ENERGY LIMITED）<br>香港公司編號：79188635 · 商業登記證號碼：79188635-000-11-25-9<br>hello@soulnewenergy.com
         </div>
       </article>
     </div>

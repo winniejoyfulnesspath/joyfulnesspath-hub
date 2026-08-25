@@ -57,7 +57,7 @@
 
     .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
     .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
-    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; text-wrap: balance; }
     .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
     .legal-mobile-toc { display: none; }
 
@@ -65,11 +65,11 @@
     .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
     .legal-section:last-of-type { border-bottom: none; }
     .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
-    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; text-wrap: balance; }
     .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
-    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; text-wrap: balance; }
     .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
-    .legal-section li { margin-bottom: 4px; }
+    .legal-section li { margin-bottom: 4px; text-wrap: balance; }
     .legal-section strong { font-weight: 700; }
     .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
     .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
@@ -125,7 +125,7 @@
       <p class="legal-eyebrow">LEGAL · JOYFULNESS PATH</p>
       <h1>私隱政策</h1>
       <p class="legal-intro">你的資料如何被使用，這裡說清楚。</p>
-      <div class="legal-meta"><span>版本 JP-PRIVACY-ZH-1.0</span><span>生效日期：2026年8月25日</span></div>
+      <div class="legal-meta"><span>版本 JP-PRIVACY-ZH-1.1</span><span>生效日期：[2026年8月25日]</span></div>
       <div class="legal-lang" aria-label="語言版本">
         <a href="/privacy/" aria-current="page">繁中</a><span class="sep">｜</span><a href="/en/privacy/">English</a><span class="sep">｜</span><a href="/ms/privacy/">Bahasa Melayu</a>
       </div>
@@ -190,7 +190,9 @@
   <h2>2. 我們可能收集的資料</h2>
   <p>視乎你使用的服務，我們可能收集：</p>
 <ol><li><strong>身份及聯絡資料</strong>：姓名、電郵地址、所在地區及你主動提供的聯絡資料。</li><li><strong>報名及活動資料</strong>：活動名稱、報名時間、出席狀態、Focus選項、你在「其他」欄填寫的內容，以及與活動安排相關的紀錄。</li><li><strong>選擇及同意紀錄</strong>：活動條款版本、私隱通知版本、跨境資料處理選擇、活動通知、後續消息、Newsletter及撤回紀錄。</li><li><strong>付款及交易資料</strong>：付款狀態、交易識別碼、金額、貨幣、付款時間及退款紀錄。完整付款卡資料通常由付款服務供應商處理，我們不會要求你透過一般表格提交完整付款卡資料。</li><li><strong>通訊資料</strong>：你向我們發出的電郵、表格內容、查詢、意見、取消或更正要求。</li><li><strong>技術及使用資料</strong>：IP位址、裝置及瀏覽器類型、存取時間、來源頁、活動頁互動、安全記錄及必要的系統紀錄。</li><li><strong>直播及活動互動資料</strong>：Zoom顯示名稱、聊天室內容、發言或影像；是否收錄及如何使用，以活動頁及活動開始前的說明為準。</li></ol>
-<p>Focus及自由填寫欄只應提供活動所需資料，請避免提交與活動無關或你不希望我們保存的私密內容。</p>
+<p>Focus及自由填寫欄只應提供活動所需資料。請不要提供診斷、藥物、創傷細節、身份證件號碼、財務帳戶或他人資料；你可選擇「暫不透露」。</p>
+<h3>Focus及敏感資料</h3>
+<p>Focus選項或自願自由文字可能間接反映情緒、身心狀況或宗教／類似信念，因而可能構成敏感個人資料。我們只會在取得你的明確同意後，用於處理報名、安排活動及製作不識別個人的整體分析。不會將個別Focus或自由文字公開或用於對個人作醫療、心理、財務或其他專業判斷。你可撤回同意；撤回前已進行的處理不受影響，但我們可能無法繼續使用該資料提供相關個人化安排。</p>
 </section>
 <section class="legal-section" id="s-3">
   <span class="legal-section-no">03</span>
@@ -209,7 +211,7 @@
   <span class="legal-section-no">05</span>
   <h2>5. 必須及自願提供的資料</h2>
   <h3>必須資料</h3>
-<p>姓名、電郵、地區、活動Focus、活動條款接受、跨境資料處理選擇及本輪活動通知，為完成報名及提供活動安排所需。如不提供，我們可能無法確認報名、發送參與連結或提供相關服務。</p>
+<p>姓名、電郵、地區、活動Focus（可選「暫不透露」）、活動條款接受、敏感資料及跨境處理明確同意、本輪活動通知及活動性質確認，為完成報名及提供活動安排所需。如不提供，我們可能無法確認報名、發送參與連結或提供相關服務。</p>
 <h3>自願資料</h3>
 <p>後續消息、Newsletter及非必要的自由填寫內容屬自願。拒絕或撤回此等選擇，不影響你已完成的活動報名或已購買服務。</p>
 </section>
@@ -240,7 +242,7 @@
   <span class="legal-section-no">09</span>
   <h2>9. 保存期限</h2>
   <p>我們不會把個人資料保存得比達成目的所需更久。現行基準如下：</p>
-<ul><li>一般報名及活動記錄：最後一次活動或實質互動後最多24個月；</li><li>付款、退款及會計記錄：按適用法律所需期間保存，通常不超過7年；</li><li>技術及安全記錄：在我們可控制範圍內通常最多90日；</li><li>後續消息及Newsletter資料：保存至你撤回同意或該服務停止；</li><li>退訂或拒收紀錄：以避免再次發送所需的最少資料保存；</li><li>爭議、調查或法律要求相關資料：保存至相關事項完結及適用期限屆滿。</li></ul>
+<ul><li>一般報名及活動記錄：最後一次活動或實質互動後最多24個月；</li><li>Focus自由文字：原始可識別內容在實際可行及無保留必要時，優先於活動後90日內刪除或去識別化；</li><li>付款、退款及會計記錄：按適用法律所需期間保存，通常不超過7年；</li><li>技術及安全記錄：在我們可控制範圍內通常最多90日；</li><li>後續消息及Newsletter資料：保存至你撤回同意或該服務停止；</li><li>退訂或拒收紀錄：以避免再次發送所需的最少資料保存；</li><li>爭議、調查或法律要求相關資料：保存至相關事項完結及適用期限屆滿。</li></ul>
 <p>資料不再需要時，我們會採取合理步驟刪除、匿名化或安全處置。第三方平台自行保存的資料亦可能受其政策及備份周期影響。</p>
 </section>
 <section class="legal-section" id="s-10">
@@ -249,6 +251,7 @@
   <p>我們會採取與資料性質及風險相稱的合理措施，包括：</p>
 <ul><li>限制只有工作所需人士可以存取；</li><li>使用個人帳戶、適當密碼及可用的多重驗證；</li><li>盡量避免透過公開連結或未受保護渠道傳送資料；</li><li>保存必要的系統、錯誤及權限紀錄；</li><li>定期檢視存取權及移除不再需要的權限；</li><li>要求服務供應商及合作方遵守保密和安全責任；</li><li>制定資料事故通報、限制影響及跟進流程。</li></ul>
 <p>任何網上傳輸或系統均不能保證絕對安全。如你懷疑資料或帳戶出現未經授權使用，請立即聯絡我們。</p>
+<p>如發生可能造成重大傷害或法律要求通知的個人資料事故，我們會按適用要求評估、限制影響、保存記錄，並在需要時通知相關監管機構及受影響人士。</p>
 </section>
 <section class="legal-section" id="s-11">
   <span class="legal-section-no">11</span>
@@ -292,12 +295,11 @@
 <section class="legal-section" id="s-18">
   <span class="legal-section-no">18</span>
   <h2>18. 聯絡我們</h2>
-  <p>資料控制者：Winnie Lim林曉怡，以Joyfulness Path名義營運</p>
-<p>私隱查詢及權利申請：<code>winnie.joyfulness.path@gmail.com</code></p>
-<p>技術及製作服務方：心靈新能量有限公司（SOUL NEW ENERGY LIMITED） 商業登記證號碼：<code>79188635-000-11-25-9</code> 註冊地：香港 技術及公司查詢：<code>hello@soulnewenergy.com</code></p>
+  <p>資料控制者：Winnie Lim林曉怡，以Joyfulness Path名義營運<br>營運地：馬來西亞（網上營運，<span style="white-space:nowrap">不設公眾到訪地點）</span><br>公開電話：<code>+60 12-234 9607</code><br>私隱查詢及權利申請：<code>winnie.joyfulness.path@gmail.com</code></p>
+<p>技術及製作服務方：心靈新能量有限公司（SOUL NEW ENERGY LIMITED）<br>香港公司編號（CR No.）：<code>79188635</code><br>商業登記證號碼：<code>79188635-000-11-25-9</code><br>註冊地：香港<br>技術及公司查詢：<code>hello@soulnewenergy.com</code></p>
 </section>
         <div class="legal-entity">
-          心靈新能量有限公司（SOUL NEW ENERGY LIMITED）<br>香港註冊公司 · 商業登記證號碼：79188635-000-11-25-9<br>hello@soulnewenergy.com
+          心靈新能量有限公司（SOUL NEW ENERGY LIMITED）<br>香港公司編號：79188635 · 商業登記證號碼：79188635-000-11-25-9<br>hello@soulnewenergy.com
         </div>
       </article>
     </div>

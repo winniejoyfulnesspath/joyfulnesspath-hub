@@ -57,7 +57,7 @@
 
     .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
     .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
-    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; text-wrap: balance; }
     .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
     .legal-mobile-toc { display: none; }
 
@@ -65,11 +65,11 @@
     .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
     .legal-section:last-of-type { border-bottom: none; }
     .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
-    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; text-wrap: balance; }
     .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
-    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; text-wrap: balance; }
     .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
-    .legal-section li { margin-bottom: 4px; }
+    .legal-section li { margin-bottom: 4px; text-wrap: balance; }
     .legal-section strong { font-weight: 700; }
     .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
     .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
@@ -125,7 +125,7 @@
       <p class="legal-eyebrow">UNDANG-UNDANG · JOYFULNESS PATH</p>
       <h1>Dasar Privasi</h1>
       <p class="legal-intro">Bagaimana data anda digunakan, dijelaskan dengan mudah.</p>
-      <div class="legal-meta"><span>Versi JP-PRIVACY-MS-1.0</span><span>Tarikh kuat kuasa：25 Ogos 2026</span></div>
+      <div class="legal-meta"><span>Versi JP-PRIVACY-MS-1.1</span><span>Tarikh kuat kuasa：[25 Ogos 2026]</span></div>
       <div class="legal-lang" aria-label="Bahasa">
         <a href="/privacy/">繁中</a><span class="sep">｜</span><a href="/en/privacy/">English</a><span class="sep">｜</span><a href="/ms/privacy/" aria-current="page">Bahasa Melayu</a>
       </div>
@@ -190,7 +190,9 @@
   <h2>2. Data yang mungkin kami kumpulkan</h2>
   <p>Bergantung pada perkhidmatan, kami mungkin mengumpulkan:</p>
 <ol><li><strong>Data identiti dan hubungan:</strong> nama, alamat e-mel, lokasi dan butiran hubungan yang anda pilih untuk berikan.</li><li><strong>Data pendaftaran dan aktiviti:</strong> nama aktiviti, masa pendaftaran, status kehadiran, pilihan Focus, teks yang dimasukkan di bawah “Lain-lain”, dan rekod berkaitan urusan aktiviti.</li><li><strong>Rekod pilihan dan persetujuan:</strong> versi Terma dan notis privasi yang dipaparkan, pilihan pemprosesan rentas sempadan, notis aktiviti, mesej susulan, surat berita dan penarikan balik.</li><li><strong>Data bayaran dan transaksi:</strong> status bayaran, pengecam transaksi, jumlah, mata wang, masa bayaran dan rekod bayaran balik. Butiran penuh kad bayaran biasanya dikendalikan oleh penyedia pembayaran; kami tidak akan meminta anda menghantar butiran penuh kad melalui borang umum.</li><li><strong>Komunikasi:</strong> e-mel, kandungan borang, pertanyaan, komen dan permintaan pembatalan atau pembetulan yang dihantar kepada kami.</li><li><strong>Data teknikal dan penggunaan:</strong> alamat IP, jenis peranti dan pelayar, masa akses, halaman rujukan, interaksi halaman aktiviti, log keselamatan dan rekod sistem yang perlu.</li><li><strong>Data interaksi penstriman dan aktiviti:</strong> nama paparan Zoom, sembang, percakapan atau video. Sama ada data itu dirakam dan cara penggunaannya bergantung pada notis halaman aktiviti dan penerangan sebelum aktiviti bermula.</li></ol>
-<p>Sila berikan hanya maklumat yang diperlukan untuk aktiviti dalam ruang Focus dan teks bebas. Jangan hantar maklumat peribadi yang tidak berkaitan atau apa-apa yang anda tidak mahu kami simpan.</p>
+<p>Sila berikan hanya maklumat yang diperlukan untuk aktiviti dalam ruang Focus dan teks bebas. Jangan berikan diagnosis, butiran ubat, butiran trauma, nombor dokumen pengenalan, maklumat akaun kewangan atau data orang lain. Anda boleh memilih “Memilih untuk tidak menyatakan”.</p>
+<h3>Focus dan data peribadi sensitif</h3>
+<p>Pilihan Focus atau teks bebas pilihan mungkin secara tidak langsung mendedahkan kesejahteraan emosi atau mental atau kepercayaan agama atau yang serupa, lalu boleh menjadi data peribadi sensitif. Kami hanya memprosesnya selepas memperoleh persetujuan nyata anda, untuk pendaftaran, perancangan aktiviti dan analisis terkumpul yang tidak mengenal pasti anda. Kami tidak menerbitkan Focus atau teks bebas seseorang atau menggunakannya untuk membuat penilaian perubatan, psikologi, kewangan atau profesional lain. Anda boleh menarik balik persetujuan. Penarikan balik tidak menjejaskan pemprosesan yang telah selesai, tetapi kami mungkin tidak lagi dapat menggunakan data itu bagi aturan peribadi yang berkaitan.</p>
 </section>
 <section class="legal-section" id="s-3">
   <span class="legal-section-no">03</span>
@@ -209,7 +211,7 @@
   <span class="legal-section-no">05</span>
   <h2>5. Data wajib dan pilihan</h2>
   <h3>Data wajib</h3>
-<p>Nama, alamat e-mel, lokasi, pilihan Focus, penerimaan Terma, pilihan pemprosesan rentas sempadan yang perlu dan notis aktiviti kitaran semasa diperlukan untuk melengkapkan pendaftaran dan menyediakan aktiviti. Jika anda tidak memberikannya, kami mungkin tidak dapat mengesahkan pendaftaran, menghantar maklumat akses atau menyediakan perkhidmatan.</p>
+<p>Nama, alamat e-mel, lokasi, pilihan Focus (yang boleh berupa “Memilih untuk tidak menyatakan”), penerimaan Terma, persetujuan nyata bagi pemprosesan data sensitif dan rentas sempadan yang perlu, notis aktiviti kitaran semasa serta pengakuan sifat aktiviti diperlukan untuk melengkapkan pendaftaran dan menyediakan aktiviti. Jika anda tidak memberikannya, kami mungkin tidak dapat mengesahkan pendaftaran, menghantar maklumat akses atau menyediakan perkhidmatan.</p>
 <h3>Data pilihan</h3>
 <p>Mesej susulan, langganan surat berita dan teks bebas yang tidak perlu adalah pilihan. Penolakan atau penarikan balik pilihan ini kemudian tidak menjejaskan pendaftaran yang telah lengkap atau perkhidmatan yang telah dibeli.</p>
 </section>
@@ -240,7 +242,7 @@
   <span class="legal-section-no">09</span>
   <h2>9. Penyimpanan</h2>
   <p>Kami tidak menyimpan data peribadi lebih lama daripada yang diperlukan bagi tujuannya. Tempoh rujukan semasa ialah:</p>
-<ul><li>rekod pendaftaran dan aktiviti umum: sehingga 24 bulan selepas aktiviti atau interaksi bermakna yang terakhir;</li><li>rekod bayaran, bayaran balik dan perakaunan: bagi tempoh yang dikehendaki oleh undang-undang terpakai, lazimnya tidak lebih daripada tujuh tahun;</li><li>log teknikal dan keselamatan: lazimnya sehingga 90 hari jika berada dalam kawalan kami;</li><li>data mesej susulan dan surat berita: sehingga anda menarik balik persetujuan atau perkhidmatan tamat;</li><li>rekod berhenti melanggan atau sekatan: data minimum yang diperlukan untuk mengelakkan anda dihubungi lagi; dan</li><li>data berkaitan pertikaian, siasatan atau keperluan undang-undang: sehingga perkara tersebut selesai dan tempoh yang terpakai tamat.</li></ul>
+<ul><li>rekod pendaftaran dan aktiviti umum: sehingga 24 bulan selepas aktiviti atau interaksi bermakna yang terakhir;</li><li>teks bebas Focus yang boleh dikenal pasti: jika dapat dilaksanakan dan tidak lagi diperlukan, diutamakan untuk dipadamkan atau dinyahkenal pasti dalam tempoh 90 hari selepas aktiviti;</li><li>rekod bayaran, bayaran balik dan perakaunan: bagi tempoh yang dikehendaki oleh undang-undang terpakai, lazimnya tidak lebih daripada tujuh tahun;</li><li>log teknikal dan keselamatan: lazimnya sehingga 90 hari jika berada dalam kawalan kami;</li><li>data mesej susulan dan surat berita: sehingga anda menarik balik persetujuan atau perkhidmatan tamat;</li><li>rekod berhenti melanggan atau sekatan: data minimum yang diperlukan untuk mengelakkan anda dihubungi lagi; dan</li><li>data berkaitan pertikaian, siasatan atau keperluan undang-undang: sehingga perkara tersebut selesai dan tempoh yang terpakai tamat.</li></ul>
 <p>Apabila data tidak lagi diperlukan, kami akan mengambil langkah munasabah untuk memadam, menyahkenal pasti atau melupuskannya dengan selamat. Data yang disimpan secara bebas oleh platform pihak ketiga juga mungkin tertakluk pada dasar dan kitaran sandarannya.</p>
 </section>
 <section class="legal-section" id="s-10">
@@ -249,6 +251,7 @@
   <p>Kami mengambil langkah munasabah yang bersesuaian dengan sifat dan risiko data, termasuk:</p>
 <ul><li>mengehadkan akses kepada individu yang memerlukannya untuk kerja;</li><li>menggunakan akaun individu, kata laluan yang sesuai dan pengesahan berbilang faktor apabila tersedia;</li><li>mengelakkan pautan umum atau saluran tanpa perlindungan untuk pemindahan data setakat yang munasabah;</li><li>menyimpan rekod sistem, ralat dan kebenaran yang perlu;</li><li>menyemak akses dan membuang kebenaran yang tidak lagi diperlukan;</li><li>menghendaki penyedia perkhidmatan dan rakan kerjasama menjaga kerahsiaan dan keselamatan; dan</li><li>mengekalkan proses untuk melaporkan, membendung dan membuat susulan terhadap insiden data.</li></ul>
 <p>Tiada penghantaran atau sistem dalam talian yang boleh dijamin selamat sepenuhnya. Hubungi kami dengan segera jika anda mengesyaki penggunaan data atau akaun anda tanpa kebenaran.</p>
+<p>Jika sesuatu pelanggaran data peribadi boleh menyebabkan kemudaratan yang ketara atau perlu dimaklumkan di sisi undang-undang, kami akan menilai dan membendungnya, menyimpan rekod serta memaklumkan pengawal selia dan individu terjejas apabila diperlukan.</p>
 </section>
 <section class="legal-section" id="s-11">
   <span class="legal-section-no">11</span>
@@ -292,12 +295,11 @@
 <section class="legal-section" id="s-18">
   <span class="legal-section-no">18</span>
   <h2>18. Hubungi kami</h2>
-  <p>Pengawal data: Winnie Lim 林曉怡, yang mengendalikan Joyfulness Path</p>
-<p>Pertanyaan privasi dan permintaan hak: <code>winnie.joyfulness.path@gmail.com</code></p>
-<p>Penyedia perkhidmatan teknikal dan penerbitan: SOUL NEW ENERGY LIMITED (心靈新能量有限公司) No. Sijil Pendaftaran Perniagaan: <code>79188635-000-11-25-9</code> Tempat pendaftaran: Hong Kong Pertanyaan teknikal dan syarikat: <code>hello@soulnewenergy.com</code></p>
+  <p>Pengawal data: Winnie Lim 林曉怡, yang mengendalikan Joyfulness Path<br>Tempat operasi: Malaysia (operasi dalam talian; tiada lokasi kunjungan awam)<br>Nombor telefon awam: <code>+60 12-234 9607</code><br>Pertanyaan privasi dan permintaan hak: <code>winnie.joyfulness.path@gmail.com</code></p>
+<p>Penyedia perkhidmatan teknikal dan penerbitan: SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>No. Syarikat Hong Kong (CR No.): <code>79188635</code><br>No. Sijil Pendaftaran Perniagaan: <code>79188635-000-11-25-9</code><br>Tempat pendaftaran: Hong Kong<br>Pertanyaan teknikal dan syarikat: <code>hello@soulnewenergy.com</code></p>
 </section>
         <div class="legal-entity">
-          SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>Berdaftar di Hong Kong · No. Pendaftaran Perniagaan: 79188635-000-11-25-9<br>hello@soulnewenergy.com
+          SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>Berdaftar di Hong Kong · No. Syarikat: 79188635 · No. Pendaftaran Perniagaan: 79188635-000-11-25-9<br>hello@soulnewenergy.com
         </div>
       </article>
     </div>

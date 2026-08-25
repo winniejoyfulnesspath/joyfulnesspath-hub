@@ -57,7 +57,7 @@
 
     .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
     .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
-    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; text-wrap: balance; }
     .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
     .legal-mobile-toc { display: none; }
 
@@ -65,11 +65,11 @@
     .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
     .legal-section:last-of-type { border-bottom: none; }
     .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
-    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; text-wrap: balance; }
     .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
-    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; text-wrap: balance; }
     .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
-    .legal-section li { margin-bottom: 4px; }
+    .legal-section li { margin-bottom: 4px; text-wrap: balance; }
     .legal-section strong { font-weight: 700; }
     .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
     .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
@@ -125,7 +125,7 @@
       <p class="legal-eyebrow">UNDANG-UNDANG · JOYFULNESS PATH</p>
       <h1>Terma Laman Web dan Aktiviti</h1>
       <p class="legal-intro">Sebelum anda menyertai, mari kita perjelaskan sempadan bersama.</p>
-      <div class="legal-meta"><span>Versi JP-TERMS-MS-1.1</span><span>Tarikh kuat kuasa：25 Ogos 2026</span></div>
+      <div class="legal-meta"><span>Versi JP-TERMS-MS-1.2</span><span>Tarikh kuat kuasa：[25 Ogos 2026]</span></div>
       <div class="legal-lang" aria-label="Bahasa">
         <a href="/terms/">繁中</a><span class="sep">｜</span><a href="/en/terms/">English</a><span class="sep">｜</span><a href="/ms/terms/" aria-current="page">Bahasa Melayu</a>
       </div>
@@ -179,7 +179,7 @@
 <section class="legal-section" id="s-1">
   <span class="legal-section-no">01</span>
   <h2>1. Identiti dan peranan</h2>
-  <ol><li>Joyfulness Path ialah jenama aktiviti yang dikendalikan oleh Winnie Lim. Winnie bertanggungjawab terhadap hala tuju dan kandungan aktiviti, urusan penyertaan serta hubungan utama dengan peserta.</li><li>SOUL NEW ENERGY LIMITED ialah penyedia perkhidmatan teknikal dan penerbitan yang bebas. Mengikut persetujuannya dengan Joyfulness Path, syarikat ini boleh menyediakan sokongan laman web, borang, sistem data, e-mel, muzik, penstriman dan penerbitan lain.</li><li>Melainkan dinyatakan dengan jelas pada halaman sesuatu aktiviti, Soul New Energy bukan penyedia kandungan aktiviti dan tidak membuat janji bagi pihak Winnie atau Joyfulness Path.</li></ol>
+  <ol><li>Joyfulness Path ialah jenama aktiviti yang dikendalikan oleh Winnie Lim. Winnie bertanggungjawab terhadap hala tuju dan kandungan aktiviti, urusan penyertaan serta hubungan utama dengan peserta.</li><li>SOUL NEW ENERGY LIMITED ialah penyedia perkhidmatan teknikal dan penerbitan yang bebas. Mengikut persetujuannya dengan Joyfulness Path, syarikat ini boleh menyediakan sokongan laman web, borang, sistem data, e-mel, muzik, penstriman dan penerbitan lain.</li><li>Melainkan dinyatakan dengan jelas pada halaman sesuatu aktiviti, Soul New Energy bukan penyedia kandungan aktiviti dan tidak membuat janji bagi pihak Winnie atau Joyfulness Path.</li><li>Bagi aktiviti Joyfulness Path berbayar yang dijual dalam talian, Winnie/Joyfulness Path ialah pembekal perkhidmatan. SNE hanya bertindak sebagai sokongan teknikal, penerbitan atau pemprosesan bayaran apabila dinyatakan dengan jelas pada halaman pembayaran. Sebelum pembelian, halaman pembayaran akan memaparkan dalam Bahasa Melayu dan mana-mana bahasa tambahan yang berkenaan maklumat hubungan pembekal, ciri utama perkhidmatan, harga penuh, kaedah bayaran, masa perkhidmatan dan terma khusus.</li></ol>
 </section>
 <section class="legal-section" id="s-2">
   <span class="legal-section-no">02</span>
@@ -223,7 +223,7 @@
 <section class="legal-section" id="s-9">
   <span class="legal-section-no">09</span>
   <h2>9. Bayaran, penjadualan semula dan bayaran balik</h2>
-  <ol><li>Bayaran balik tidak terpakai kepada aktiviti percuma.</li><li>Fi, mata wang, kaedah bayaran, bayaran balik, penjadualan semula dan pemindahan tempat bagi aktiviti berbayar tertakluk pada terma khusus yang dipaparkan pada halaman aktiviti atau pembayaran sebelum pembelian.</li><li>Melainkan undang-undang terpakai atau halaman aktiviti menyatakan sebaliknya, ketidakupayaan hadir disebabkan jadual, peranti, sambungan internet atau ketidakhadiran peserta tidak secara automatik memberikan hak bayaran balik.</li><li>Jika penganjur membatalkan aktiviti berbayar tanpa menyediakan alternatif yang munasabah, penganjur akan memulangkan fi aktiviti yang sebenarnya diterima. Fi pihak ketiga yang dikenakan secara berasingan dan tidak boleh dipulangkan akan diuruskan mengikut undang-undang terpakai dan notis pada halaman pembayaran.</li><li>Tiada apa-apa dalam seksyen ini menjejaskan hak yang tidak boleh dikecualikan di sisi undang-undang.</li></ol>
+  <ol><li>Bayaran balik tidak terpakai kepada aktiviti percuma.</li><li>Fi, mata wang, kaedah bayaran, bayaran balik, penjadualan semula dan pemindahan tempat bagi aktiviti berbayar tertakluk pada terma khusus yang dipaparkan sebelum pembelian. Pembeli mesti dapat membetulkan kesilapan input yang nyata sebelum pembayaran dan akan menerima pengesahan pesanan yang boleh disimpan.</li><li>Jika halaman pembayaran tidak menyatakan sebaliknya, aturan lalai ialah: pembatalan oleh peserta, konflik jadual, masalah peranti atau internet, atau ketidakhadiran tidak secara automatik mewujudkan hak bayaran balik. Jika diminta sekurang-kurangnya 48 jam sebelum aktiviti bermula, penganjur boleh, tertakluk pada kapasiti dan sifat aktiviti, membenarkan satu penjadualan semula atau pemindahan tempat. Ini tidak mengurangkan apa-apa hak yang tidak boleh dikecualikan di sisi undang-undang.</li><li>Jika penganjur membatalkan aktiviti berbayar tanpa alternatif yang munasabah, penganjur akan memulangkan fi aktiviti yang sebenarnya diterima. Jika penganjur membuat penjadualan semula yang material, peserta boleh memilih alternatif yang dimaklumkan atau bayaran balik fi aktiviti yang sebenarnya diterima.</li><li>Fi platform pihak ketiga, penukaran mata wang dan aturan pemprosesan tertakluk pada pendedahan halaman pembayaran dan undang-undang terpakai.</li><li>Tiada apa-apa dalam aturan pembelian, penjadualan semula atau bayaran balik menjejaskan hak yang tidak boleh dikecualikan di sisi undang-undang.</li></ol>
 </section>
 <section class="legal-section" id="s-10">
   <span class="legal-section-no">10</span>
@@ -248,7 +248,7 @@
 <section class="legal-section" id="s-14">
   <span class="legal-section-no">14</span>
   <h2>14. Privasi dan data peribadi</h2>
-  <p>Data peribadi diproses mengikut Dasar Privasi Joyfulness Path dan notis pengumpulan data peribadi yang dipaparkan semasa pendaftaran. Penerimaan Terma, pemprosesan data rentas sempadan dan tiga pilihan komunikasi direkodkan secara berasingan.</p>
+  <p>Data peribadi diproses mengikut Dasar Privasi Joyfulness Path dan notis pengumpulan data peribadi semasa pendaftaran. Pilihan Focus atau teks bebas mungkin secara tidak langsung mendedahkan kesejahteraan emosi atau mental atau kepercayaan peribadi. Kami mendapatkan persetujuan nyata secara berasingan dan menyimpan bukti versi bagi Terma, notis privasi, pemprosesan data sensitif, pemprosesan rentas sempadan dan pilihan komunikasi.</p>
 </section>
 <section class="legal-section" id="s-15">
   <span class="legal-section-no">15</span>
@@ -268,10 +268,10 @@
 <section class="legal-section" id="s-18">
   <span class="legal-section-no">18</span>
   <h2>18. Hubungi kami</h2>
-  <p>Pertanyaan umum aktiviti: <code>winnie.joyfulness.path@gmail.com</code> Pertanyaan privasi dan data peribadi: <code>winnie.joyfulness.path@gmail.com</code></p>
+  <p>Pertanyaan umum aktiviti: <code>winnie.joyfulness.path@gmail.com</code><br>Pertanyaan privasi dan data peribadi: <code>winnie.joyfulness.path@gmail.com</code><br>Joyfulness Path beroperasi secara dalam talian dari Malaysia dan tidak mempunyai lokasi kunjungan awam.<br>Nombor telefon awam: <code>+60 12-234 9607</code></p>
 </section>
         <div class="legal-entity">
-          SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>Berdaftar di Hong Kong · No. Pendaftaran Perniagaan: 79188635-000-11-25-9<br>hello@soulnewenergy.com
+          SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>Berdaftar di Hong Kong · No. Syarikat: 79188635 · No. Pendaftaran Perniagaan: 79188635-000-11-25-9<br>hello@soulnewenergy.com
         </div>
       </article>
     </div>
