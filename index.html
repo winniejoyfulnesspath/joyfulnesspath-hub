@@ -182,7 +182,11 @@
     .footer-note { text-align: right; }
     .footer-credit { display: block; margin-top: 4px; color: rgba(255,255,255,.38); font-size: 9px; letter-spacing: .1em; }
 
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+    /* ===== MOTION SYSTEM (Lenis + native IntersectionObserver reveal) ===== */
+    [data-reveal] { opacity: 1; transform: none; }
+    .motion-ready [data-reveal] { opacity: 0; transform: translate3d(0, 9px, 0); transition: opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1); }
+    .motion-ready [data-reveal].is-in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .motion-ready [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; } }
     @media (max-width: 900px) {
       :root { --content: min(100% - 38px, 720px); }
       .site-nav a:not(.nav-cta) { display: none; }
@@ -250,19 +254,19 @@
     </section>
 
     <section class="statement" id="statement" aria-label="Joyfulness Path 理念">
-      <div class="statement-inner"><h2>你未必需要<br>更多答案，</h2><span class="statement-mark" aria-hidden="true"></span><h2>而是需要一個<br><span style="white-space:nowrap">讓心安靜的位置。</span></h2></div>
+      <div class="statement-inner" data-reveal><h2>你未必需要<br>更多答案，</h2><span class="statement-mark" aria-hidden="true"></span><h2>而是需要一個<br><span style="white-space:nowrap">讓心安靜的位置。</span></h2></div>
     </section>
 
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="section-inner about-grid">
-        <div class="about-intro"><p class="section-kicker">ABOUT WINNIE LIM 林曉怡 · 關於</p><h2 class="section-title" id="about-title">在生活之中，<span>重新聽見自己。</span></h2></div>
+        <div class="about-intro" data-reveal><p class="section-kicker">ABOUT WINNIE LIM 林曉怡 · 關於</p><h2 class="section-title" id="about-title">在生活之中，<span>重新聽見自己。</span></h2></div>
         <div class="about-copy">
-          <p class="lead-copy">我是 Winnie Lim 林曉怡，Joyfulness Path 的主理人。我相信，靈性不是離開生活，而是在生活之中，重新看見自己的感受、需要與選擇。</p>
-          <p class="body-copy">大天使的意象與提醒，不是用來替我們決定人生；它更像一面溫柔的鏡子，讓人停一停，整理內在，再以更清晰的方式回到日常。透過主題分享、引導冥想與靈性練習，我希望為每一次相遇留出一個不必逞強、可以如實做自己的空間。</p>
+          <p class="lead-copy" data-reveal>我是 Winnie Lim 林曉怡，Joyfulness Path 的主理人。我相信，靈性不是離開生活，而是在生活之中，重新看見自己的感受、需要與選擇。</p>
+          <p class="body-copy" data-reveal>大天使的意象與提醒，不是用來替我們決定人生；它更像一面溫柔的鏡子，讓人停一停，整理內在，再以更清晰的方式回到日常。透過主題分享、引導冥想與靈性練習，我希望為每一次相遇留出一個不必逞強、可以如實做自己的空間。</p>
           <div class="principles" aria-label="Joyfulness Path 三個核心">
-            <article class="principle"><span class="principle-num">01</span><h3>聽見</h3><p>先聽見情緒與內在真正想說的話。</p></article>
-            <article class="principle"><span class="principle-num">02</span><h3>整理</h3><p>讓雜念慢慢沉澱，把混亂放回適合的位置。</p></article>
-            <article class="principle"><span class="principle-num">03</span><h3>選擇</h3><p>帶著清晰回到生活，作出真正適合自己的選擇。</p></article>
+            <article class="principle" data-reveal><span class="principle-num">01</span><h3>聽見</h3><p>先聽見情緒與內在真正想說的話。</p></article>
+            <article class="principle" data-reveal><span class="principle-num">02</span><h3>整理</h3><p>讓雜念慢慢沉澱，把混亂放回適合的位置。</p></article>
+            <article class="principle" data-reveal><span class="principle-num">03</span><h3>選擇</h3><p>帶著清晰回到生活，作出真正適合自己的選擇。</p></article>
           </div>
         </div>
       </div>
@@ -275,11 +279,11 @@
         <!-- 活動更新區 START -->
         <!-- 日後只需修改卡片 status、日期、標題、簡介及 href。已完結活動請整張刪除或移到過往活動頁。 -->
         <div class="event-grid">
-          <article class="event-card event-card--primary event-card--gold">
+          <article class="event-card event-card--primary event-card--gold" data-reveal>
             <div><span class="status">OCTOBER · 深度同行</span><p class="event-date">2 / 3 / 4 OCT 2026 · FRI–SUN · 8:30PM–11:00PM · ZOOM · GMT+8</p><h3>大天使<br>財富指令</h3><p>三日深度調頻課程。從匱乏慣性、允許承載與實際行動出發，逐步整理你與豐盛的關係，讓內在選擇與生活方向重新對齊，把覺察真正落地成每日可用的行動。</p></div>
             <div><div class="event-meta"><span>三日線上深度課程</span><span>Zoom 完整課程</span><span>費用 RM233</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://wealth10.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">了解 10 月完整課程 <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="event-card event-card--muted">
+          <article class="event-card event-card--muted" data-reveal>
             <div><span class="status">已圓滿結束</span><p class="event-date">2026.08.15 · 20:30–22:30 · ZOOM · GMT+8</p><h3>大天使夏彌爾<br>心之歸位</h3><p>一場關於放下腦內雜音、重新回到內在清晰的免費公開引導冥想。已於 8 月 15 日順利舉行，感謝所有參與者。</p></div>
             <div><div class="event-meta"><span>活動已結束</span><span>Zoom 線上進行</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://heart-return.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">回顧活動頁面 <span aria-hidden="true">↗</span></a></div>
           </article>
@@ -289,16 +293,16 @@
     </section>
 
     <section class="invitation" aria-labelledby="invitation-title">
-      <div class="invitation-inner"><div><p class="section-kicker">A GENTLE INVITATION · 一個邀請</p><h2 id="invitation-title">不必追趕某種狀態。<br>你可以先回到自己。</h2></div><div class="invitation-copy"><p>Joyfulness Path 不替你預言答案，也不要求你相信某一套標準。這裡更在意的，是你能否在每一次停下來之後，更誠實地理解自己，再帶著清晰回到生活。</p><a class="button button--light" href="#connect">先從日常分享開始 <span class="button-arrow" aria-hidden="true">↓</span></a></div></div>
+      <div class="invitation-inner" data-reveal><div><p class="section-kicker">A GENTLE INVITATION · 一個邀請</p><h2 id="invitation-title">不必追趕某種狀態。<br>你可以先回到自己。</h2></div><div class="invitation-copy"><p>Joyfulness Path 不替你預言答案，也不要求你相信某一套標準。這裡更在意的，是你能否在每一次停下來之後，更誠實地理解自己，再帶著清晰回到生活。</p><a class="button button--light" href="#connect">先從日常分享開始 <span class="button-arrow" aria-hidden="true">↓</span></a></div></div>
     </section>
 
     <section class="section connect" id="connect" aria-labelledby="connect-title">
       <div class="section-inner connect-grid">
-        <div class="connect-copy"><p class="section-kicker">STAY CONNECTED · 繼續同行</p><h2 class="section-title" id="connect-title">把這條路，<br>留在日常裡。</h2><p>暫時未有適合你的活動，也沒關係。先透過日常分享與社群交流，慢慢認識 Joyfulness Path。</p></div>
+        <div class="connect-copy" data-reveal><p class="section-kicker">STAY CONNECTED · 繼續同行</p><h2 class="section-title" id="connect-title">把這條路，<br>留在日常裡。</h2><p>暫時未有適合你的活動，也沒關係。先透過日常分享與社群交流，慢慢認識 Joyfulness Path。</p></div>
         <div class="social-links">
-          <a class="social-link" href="https://www.instagram.com/minyiwinnie/" target="_blank" rel="noopener noreferrer" aria-label="前往 Winnie Lim 林曉怡的 Instagram"><span class="social-index">01</span><span><strong>Instagram</strong><small>@minyiwinnie · 日常分享與活動消息</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
-          <a class="social-link" href="https://www.facebook.com/groups/joyfulnesspath31" target="_blank" rel="noopener noreferrer" aria-label="前往 Joyfulness Path Facebook 公開群"><span class="social-index">02</span><span><strong>Facebook 公開群</strong><small>Joyfulness Path · 社群交流與最新資訊</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
-          <a class="social-link" href="https://chat.whatsapp.com/BCxcM2Ap2WLCOue8y6d9FQ" target="_blank" rel="noopener noreferrer" aria-label="加入大天使 Buddy WhatsApp 公開群"><span class="social-index">03</span><span><strong>Buddy 同行群</strong><small>WhatsApp 公開群組 · 陪伴與互相打氣</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
+          <a class="social-link" data-reveal href="https://www.instagram.com/minyiwinnie/" target="_blank" rel="noopener noreferrer" aria-label="前往 Winnie Lim 林曉怡的 Instagram"><span class="social-index">01</span><span><strong>Instagram</strong><small>@minyiwinnie · 日常分享與活動消息</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
+          <a class="social-link" data-reveal href="https://www.facebook.com/groups/joyfulnesspath31" target="_blank" rel="noopener noreferrer" aria-label="前往 Joyfulness Path Facebook 公開群"><span class="social-index">02</span><span><strong>Facebook 公開群</strong><small>Joyfulness Path · 社群交流與最新資訊</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
+          <a class="social-link" data-reveal href="https://chat.whatsapp.com/BCxcM2Ap2WLCOue8y6d9FQ" target="_blank" rel="noopener noreferrer" aria-label="加入大天使 Buddy WhatsApp 公開群"><span class="social-index">03</span><span><strong>Buddy 同行群</strong><small>WhatsApp 公開群組 · 陪伴與互相打氣</small></span><span class="social-arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -353,5 +357,8 @@
       });
     })();
   </script>
+  <script src="/vendor/lenis.min.js"></script>
+  <script src="/vendor/motion-init.js"></script>
+  <script src="/vendor/reveal-init.js"></script>
 </body>
 </html>
