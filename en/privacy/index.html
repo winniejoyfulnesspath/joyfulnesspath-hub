@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy｜Joyfulness Path</title>
+  <meta name="description" content="How your data is used, in plain terms.">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://joyfulnesspath.com/en/privacy/">
+  <link rel="alternate" hreflang="zh-Hant" href="/privacy/">
+  <link rel="alternate" hreflang="en" href="/en/privacy/">
+  <link rel="alternate" hreflang="ms" href="/ms/privacy/">
+  <link rel="alternate" hreflang="x-default" href="/privacy/">
+  <style>
+    :root {
+      --ivory: #f7f1e8; --paper: #fffaf3; --paper-deep: #f0e6d9; --ink: #302a28;
+      --muted: #756a65; --rose: #c7929b; --rose-soft: #ead4d5; --rose-deep: #985f6b;
+      --sage: #b7c3b2; --sage-soft: #e1e8de; --forest: #26332c; --forest-soft: #334238;
+      --gold: #c3a46c; --gold-deep: #967743; --line: rgba(70, 52, 47, .16);
+      --serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+      --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      --content: min(1180px, calc(100vw - 56px));
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--ivory); font-family: var(--sans); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    ::selection { color: #241f1d; background: var(--rose-soft); }
+    :focus-visible { outline: 3px solid rgba(152, 95, 107, .38); outline-offset: 4px; }
+    .skip-link { position: fixed; z-index: 120; top: 12px; left: 12px; padding: 9px 16px; transform: translateY(-160%); border-radius: 999px; background: var(--forest); color: #fff; text-decoration: none; }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header { padding: 26px 0; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .header-inner { width: var(--content); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 15px; font-weight: 600; text-decoration: none; letter-spacing: .06em; color: var(--ink); }
+    .wordmark img { height: 34px; width: auto; display: block; }
+    .home-link { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-decoration: none; }
+    .home-link:hover { color: var(--rose-deep); }
+
+    .legal-hero { position: relative; padding: 64px 0 46px; background: linear-gradient(180deg, var(--paper) 0%, var(--ivory) 100%); border-bottom: 1px solid var(--line); }
+    .legal-hero-inner { width: var(--content); margin: 0 auto; }
+    .legal-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--gold-deep); font-size: 11px; font-weight: 800; letter-spacing: .22em; }
+    .legal-eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--gold); }
+    .legal-hero h1 { margin: 0 0 14px; font-family: var(--serif); font-size: clamp(34px, 5vw, 54px); font-weight: 500; letter-spacing: .03em; }
+    .legal-intro { max-width: 620px; margin: 0 0 18px; color: var(--muted); font-family: var(--serif); font-size: 17px; letter-spacing: .04em; }
+    .legal-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+    .legal-lang { margin-top: 20px; display: flex; gap: 4px; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+    .legal-lang a { padding: 4px 2px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+    .legal-lang a:hover { color: var(--rose-deep); }
+    .legal-lang a[aria-current="page"] { color: var(--rose-deep); border-bottom-color: var(--rose-deep); }
+    .legal-lang .sep { color: var(--line); }
+
+    .legal-notice { width: var(--content); margin: 26px auto 0; padding: 16px 20px; border: 1px solid var(--rose-soft); border-radius: 10px; background: rgba(234, 212, 213, .28); color: var(--ink); font-size: 13px; line-height: 1.7; }
+
+    .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
+    .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
+    .legal-mobile-toc { display: none; }
+
+    .legal-document { max-width: 760px; }
+    .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
+    .legal-section:last-of-type { border-bottom: none; }
+    .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section li { margin-bottom: 4px; }
+    .legal-section strong { font-weight: 700; }
+    .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
+    .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
+    .legal-table { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 13.5px; }
+    .legal-table th, .legal-table td { padding: 9px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .legal-table th { background: var(--paper-deep); font-weight: 700; }
+    .legal-entity { margin-top: 8px; padding: 18px 20px; border-radius: 10px; background: var(--paper-deep); color: var(--muted); font-size: 13px; line-height: 1.9; }
+
+    footer { padding: 38px 0; color: rgba(255,255,255,.64); background: #1f2923; }
+    .footer-inner { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; font-size: 10px; letter-spacing: .14em; }
+    .f-title { justify-self: start; text-align: left; }
+    .f-collab { justify-self: center; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 11px; }
+    .f-collab a { color: #fffaf2; text-decoration: none; opacity: .92; display: inline-flex; align-items: center; gap: 6px; }
+    .f-logo { height: 20px; width: 20px; border-radius: 50%; object-fit: cover; }
+    .f-collab a:hover { opacity: 1; }
+    .f-collab .x { opacity: .55; }
+    .f-meta { justify-self: end; text-align: right; opacity: .85; }
+    .f-legal { display: inline-flex; gap: 14px; margin-bottom: 6px; }
+    .f-legal a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .f-legal a:hover { color: #fff; }
+
+    @media (max-width: 900px) {
+      :root { --content: min(100% - 38px, 720px); }
+      .legal-shell { grid-template-columns: 1fr; gap: 0; padding: 40px 0 90px; }
+      .legal-toc { display: none; }
+      .legal-mobile-toc { display: block; margin-bottom: 30px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+      .legal-mobile-toc summary { cursor: pointer; font-weight: 700; font-size: 13px; letter-spacing: .04em; }
+      .legal-mobile-toc a { display: block; padding: 8px 2px; color: var(--muted); font-size: 13px; text-decoration: none; }
+      footer { padding-bottom: 38px; }
+      .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 14px; }
+      .footer-inner .f-title, .footer-inner .f-collab, .footer-inner .f-meta { justify-self: center; text-align: center; }
+      .f-legal { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      :root { --content: calc(100vw - 34px); }
+      .legal-hero { padding: 46px 0 32px; }
+      .legal-hero h1 { font-size: clamp(30px, 11vw, 40px); }
+      .legal-section h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" aria-label="Site navigation">
+    <div class="header-inner">
+      <a class="wordmark" href="/"><img src="/logo-header.png" alt="Joyfulness Path">Joyfulness Path</a>
+      <a class="home-link" href="/">Back to home</a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <div class="legal-hero-inner">
+      <p class="legal-eyebrow">LEGAL · JOYFULNESS PATH</p>
+      <h1>Privacy Policy</h1>
+      <p class="legal-intro">How your data is used, in plain terms.</p>
+      <div class="legal-meta"><span>Version JP-PRIVACY-EN-1.0</span><span>Effective date：[official launch date]</span></div>
+      <div class="legal-lang" aria-label="Language">
+        <a href="/privacy/">繁中</a><span class="sep">｜</span><a href="/en/privacy/" aria-current="page">English</a><span class="sep">｜</span><a href="/ms/privacy/">Bahasa Melayu</a>
+      </div>
+    </div>
+    <div class="legal-notice">⚠️ This page is a working draft for internal review and development. It must complete Malaysia/Hong Kong legal review before it is published and used to collect data.</div>
+  </section>
+
+  <main id="main">
+    <div class="legal-shell">
+      <nav class="legal-toc" aria-label="On this page">
+<a href="#s-1">01 · 1. Who is responsible for your data</a>
+<a href="#s-2">02 · 2. Data we may collect</a>
+<a href="#s-3">03 · 3. Sources of data</a>
+<a href="#s-4">04 · 4. Purposes of processing</a>
+<a href="#s-5">05 · 5. Mandatory and optional data</a>
+<a href="#s-6">06 · 6. Communication choices</a>
+<a href="#s-7">07 · 7. Parties to whom data may be disclosed</a>
+<a href="#s-8">08 · 8. Cross-border processing</a>
+<a href="#s-9">09 · 9. Retention</a>
+<a href="#s-10">10 · 10. Security</a>
+<a href="#s-11">11 · 11. Cookies and website analytics</a>
+<a href="#s-12">12 · 12. Your rights and choices</a>
+<a href="#s-13">13 · 13. Children and minors</a>
+<a href="#s-14">14 · 14. Public streaming and activity recording</a>
+<a href="#s-15">15 · 15. Third-party websites</a>
+<a href="#s-16">16 · 16. Updates to this Policy</a>
+<a href="#s-17">17 · 17. Language versions</a>
+<a href="#s-18">18 · 18. Contact us</a>
+      </nav>
+      <article class="legal-document">
+        <details class="legal-mobile-toc">
+          <summary>On this page</summary>
+<a href="#s-1">01 · 1. Who is responsible for your data</a>
+<a href="#s-2">02 · 2. Data we may collect</a>
+<a href="#s-3">03 · 3. Sources of data</a>
+<a href="#s-4">04 · 4. Purposes of processing</a>
+<a href="#s-5">05 · 5. Mandatory and optional data</a>
+<a href="#s-6">06 · 6. Communication choices</a>
+<a href="#s-7">07 · 7. Parties to whom data may be disclosed</a>
+<a href="#s-8">08 · 8. Cross-border processing</a>
+<a href="#s-9">09 · 9. Retention</a>
+<a href="#s-10">10 · 10. Security</a>
+<a href="#s-11">11 · 11. Cookies and website analytics</a>
+<a href="#s-12">12 · 12. Your rights and choices</a>
+<a href="#s-13">13 · 13. Children and minors</a>
+<a href="#s-14">14 · 14. Public streaming and activity recording</a>
+<a href="#s-15">15 · 15. Third-party websites</a>
+<a href="#s-16">16 · 16. Updates to this Policy</a>
+<a href="#s-17">17 · 17. Language versions</a>
+<a href="#s-18">18 · 18. Contact us</a>
+        </details>
+<section class="legal-section" id="s-1">
+  <span class="legal-section-no">01</span>
+  <h2>1. Who is responsible for your data</h2>
+  <h3>Primary data controller</h3>
+<p>Winnie Lim 林曉怡, operating Joyfulness Path in Malaysia, determines the primary purposes for collecting and using activity registration data.</p>
+<h3>Technical and production service provider</h3>
+<p>SOUL NEW ENERGY LIMITED (心靈新能量有限公司), trading as Soul New Energy, is a company registered in Hong Kong. It provides website, registration system, data management, email, activity production, streaming and related technical support under Joyfulness Path&#x27;s instructions.</p>
+<p>Soul New Energy processes Joyfulness Path participant data only as needed to provide those services. It will not use that data for its own marketing unless you give separate express consent.</p>
+</section>
+<section class="legal-section" id="s-2">
+  <span class="legal-section-no">02</span>
+  <h2>2. Data we may collect</h2>
+  <p>Depending on the service, we may collect:</p>
+<ol><li><strong>Identity and contact data:</strong> name, email address, location and contact details you choose to provide.</li><li><strong>Registration and activity data:</strong> activity name, registration time, attendance status, Focus selection, text entered under “Other”, and records connected with activity arrangements.</li><li><strong>Choices and consent records:</strong> versions of the Terms and privacy notice shown, cross-border processing choice, activity notifications, follow-up messages, newsletter choices and withdrawals.</li><li><strong>Payment and transaction data:</strong> payment status, transaction identifier, amount, currency, payment time and refund record. Full payment card details are normally handled by the payment provider; we will not ask you to submit full card details through a general form.</li><li><strong>Communications:</strong> emails, form content, enquiries, comments and cancellation or correction requests sent to us.</li><li><strong>Technical and usage data:</strong> IP address, device and browser type, access time, referring page, activity-page interaction, security logs and necessary system records.</li><li><strong>Streaming and activity interaction data:</strong> Zoom display name, chat, speech or video. Whether it is recorded and how it is used will depend on the activity-page notice and the explanation before the activity begins.</li></ol>
+<p>Please provide only information needed for the activity in the Focus and free-text fields. Do not submit unrelated private information or anything you do not want us to retain.</p>
+</section>
+<section class="legal-section" id="s-3">
+  <span class="legal-section-no">03</span>
+  <h2>3. Sources of data</h2>
+  <p>We may obtain data from:</p>
+<ul><li>website, registration and enquiry forms completed by you;</li><li>your emails and activity interactions with Joyfulness Path or Soul New Energy;</li><li>Zoom, Facebook, YouTube, payment platforms or other third-party services you choose to use;</li><li>logs generated for security, error handling and service operation; and</li><li>a person authorised to act for you.</li></ul>
+</section>
+<section class="legal-section" id="s-4">
+  <span class="legal-section-no">04</span>
+  <h2>4. Purposes of processing</h2>
+  <p>We may use personal data to:</p>
+<ol><li>receive and process activity registrations;</li><li>confirm identity, manage capacity and prevent duplicates or misuse;</li><li>send confirmations, activity links, times, arrangements, reminders, rescheduling notices and other essential notices;</li><li>provide Zoom access, streams, replays, materials or another registered service;</li><li>use overall Focus patterns to plan content and improve the participant experience;</li><li>process payments, refunds, reconciliation, accounts and records;</li><li>respond to enquiries, complaints, access, correction, withdrawal and unsubscribe requests;</li><li>send follow-up activity messages or newsletters after your optional consent;</li><li>maintain the security of websites, forms, email, data systems and streams;</li><li>identify errors, duplicate submissions, unauthorised use and other system problems;</li><li>comply with legal requirements, resolve disputes and protect lawful rights; and</li><li>prepare aggregated operational statistics that no longer reasonably identify an individual.</li></ol>
+<p>We will not change the data to a purpose unrelated to the original collection without appropriate notice and any consent required by law.</p>
+</section>
+<section class="legal-section" id="s-5">
+  <span class="legal-section-no">05</span>
+  <h2>5. Mandatory and optional data</h2>
+  <h3>Mandatory data</h3>
+<p>Name, email address, location, Focus selection, acceptance of the Terms, the necessary cross-border processing choice and current-cycle activity notifications are needed to complete registration and deliver the activity. If you do not provide them, we may be unable to confirm your registration, send access information or provide the service.</p>
+<h3>Optional data</h3>
+<p>Follow-up messages, newsletter subscriptions and non-essential free text are optional. Refusing or later withdrawing these choices does not affect a completed registration or purchased service.</p>
+</section>
+<section class="legal-section" id="s-6">
+  <span class="legal-section-no">06</span>
+  <h2>6. Communication choices</h2>
+  <p>We manage these three purposes separately:</p>
+<ol><li><strong>Activity notifications:</strong> confirmations, access links, arrangements and reminders directly connected with the activity cycle you registered for.</li><li><strong>Follow-up messages:</strong> further information about the same series or related activities; optional.</li><li><strong>Newsletter:</strong> recurring Joyfulness Path content and updates; optional.</li></ol>
+<p>Optional choices are not pre-selected. You may withdraw consent to follow-up messages or newsletters at any time by using the unsubscribe method in an email or contacting us.</p>
+</section>
+<section class="legal-section" id="s-7">
+  <span class="legal-section-no">07</span>
+  <h2>7. Parties to whom data may be disclosed</h2>
+  <p>We disclose data only as necessary to:</p>
+<ul><li>Soul New Energy and authorised people assisting with the activity;</li><li>website hosting, cloud storage, database, form, automation and security providers;</li><li>email delivery and communication providers;</li><li>video activity platforms such as Zoom;</li><li>public streaming platforms such as Facebook and YouTube, without automatically publishing Zoom participant data;</li><li>payment providers such as Stripe or PayPal where listed on the activity page;</li><li>accountants, legal advisers and other professional advisers under confidentiality duties;</li><li>courts, regulators, law-enforcement or other authorities acting with proper power; and</li><li>another party with your separate consent.</li></ul>
+<p>Current technical services may include Vercel, Google Workspace, Google Sheets, Google Apps Script, Zoom, Meta/Facebook, Google/YouTube, Stripe and PayPal. If the service list changes materially, we will update this Policy or the relevant notice.</p>
+<p>We do not sell participant personal data.</p>
+</section>
+<section class="legal-section" id="s-8">
+  <span class="legal-section-no">08</span>
+  <h2>8. Cross-border processing</h2>
+  <p>Joyfulness Path operates from Malaysia and Soul New Energy is located in Hong Kong. Registration data may be transferred from Malaysia to Hong Kong to provide website, registration management, email, technical and activity production services.</p>
+<p>Some providers may also use servers or support teams in Malaysia, Hong Kong or other countries or regions, where data-protection laws may differ from those in your location.</p>
+<p>We will:</p>
+<ul><li>explain the purpose of the transfer and categories of recipient when data is collected;</li><li>obtain consent where required;</li><li>transfer only data necessary for the stated purpose;</li><li>impose confidentiality, security and use restrictions on processors;</li><li>retain reasonable records of cross-border recipients and processing; and</li><li>take reasonable security measures and review relevant providers.</li></ul>
+</section>
+<section class="legal-section" id="s-9">
+  <span class="legal-section-no">09</span>
+  <h2>9. Retention</h2>
+  <p>We do not retain personal data longer than necessary for its purpose. Our current reference periods are:</p>
+<ul><li>general registration and activity records: up to 24 months after the last activity or meaningful interaction;</li><li>payment, refund and accounting records: for the period required by applicable law, normally no longer than seven years;</li><li>technical and security logs: normally up to 90 days where within our control;</li><li>follow-up and newsletter data: until you withdraw consent or the service ends;</li><li>unsubscribe or suppression records: the minimum data needed to avoid contacting you again; and</li><li>data connected with a dispute, investigation or legal requirement: until the matter ends and the applicable period expires.</li></ul>
+<p>When data is no longer needed, we will take reasonable steps to delete, anonymise or securely dispose of it. Data retained independently by a third-party platform may also be subject to its policy and backup cycle.</p>
+</section>
+<section class="legal-section" id="s-10">
+  <span class="legal-section-no">10</span>
+  <h2>10. Security</h2>
+  <p>We take reasonable measures proportionate to the nature and risk of the data, including:</p>
+<ul><li>restricting access to people who need it for their work;</li><li>using individual accounts, appropriate passwords and multi-factor authentication where available;</li><li>avoiding public links or unprotected channels for data transfer where reasonably possible;</li><li>retaining necessary system, error and permission records;</li><li>reviewing access and removing permissions no longer required;</li><li>requiring service providers and partners to maintain confidentiality and security; and</li><li>maintaining a process to report, contain and follow up a data incident.</li></ul>
+<p>No online transmission or system can be guaranteed to be absolutely secure. Contact us promptly if you suspect unauthorised use of your data or account.</p>
+</section>
+<section class="legal-section" id="s-11">
+  <span class="legal-section-no">11</span>
+  <h2>11. Cookies and website analytics</h2>
+  <p>The website may use cookies or similar technologies necessary for functionality, security and preferences. If non-essential analytics or promotional tracking is introduced, we will provide notice and choice as required.</p>
+<p>You may restrict cookies through your browser, although some functions may then not work properly.</p>
+</section>
+<section class="legal-section" id="s-12">
+  <span class="legal-section-no">12</span>
+  <h2>12. Your rights and choices</h2>
+  <p>Subject to applicable law and reasonable identity verification, you may request to:</p>
+<ul><li>access personal data we hold about you;</li><li>correct data that is inaccurate, incomplete or out of date;</li><li>withdraw consent-based processing;</li><li>stop receiving follow-up messages or newsletters;</li><li>restrict certain processing or make a complaint;</li><li>receive or transfer data where the law applies and it is technically feasible; and</li><li>delete data that is no longer needed and has no other lawful retention basis.</li></ul>
+<p>Withdrawal does not affect processing already carried out before it. We may request reasonable information to verify your identity and protect your data.</p>
+</section>
+<section class="legal-section" id="s-13">
+  <span class="legal-section-no">13</span>
+  <h2>13. Children and minors</h2>
+  <p>The website and activities are primarily intended for people aged 18 or above. A person under 18 should first obtain consent from a parent or legal guardian. If we learn that a minor&#x27;s data was collected without appropriate consent, we will take reasonable steps to restrict its use or delete it.</p>
+</section>
+<section class="legal-section" id="s-14">
+  <span class="legal-section-no">14</span>
+  <h2>14. Public streaming and activity recording</h2>
+  <p>Registering or accepting general activity terms is not permission to use your name, voice or image publicly. Unless separate express consent is obtained, a public stream should normally show only hosts and authorised guests.</p>
+<p>If an activity includes recording, replay or public content, the activity page or announcement before the activity will explain the recording scope, purpose and audience. Participants should avoid placing information in their display name or a public chat that they do not want others to see.</p>
+</section>
+<section class="legal-section" id="s-15">
+  <span class="legal-section-no">15</span>
+  <h2>15. Third-party websites</h2>
+  <p>The website may link to third-party platforms. Their own policies govern how they collect and use data. Please review their terms and privacy policies before use.</p>
+</section>
+<section class="legal-section" id="s-16">
+  <span class="legal-section-no">16</span>
+  <h2>16. Updates to this Policy</h2>
+  <p>We may update this Policy to reflect changes to services, technology or legal requirements. The new effective date will be shown. If a material change affects data purposes, disclosures or choices, we will provide additional notice or obtain fresh consent where required.</p>
+</section>
+<section class="legal-section" id="s-17">
+  <span class="legal-section-no">17</span>
+  <h2>17. Language versions</h2>
+  <p>This English version is provided together with Bahasa Melayu and Traditional Chinese versions. If there is a difference between versions, they will be interpreted consistently with applicable law and the reviewed official text, without reducing your legal rights.</p>
+</section>
+<section class="legal-section" id="s-18">
+  <span class="legal-section-no">18</span>
+  <h2>18. Contact us</h2>
+  <p>Data controller: Winnie Lim 林曉怡, operating as Joyfulness Path</p>
+<p>Privacy enquiries and rights requests: <code>winnie.joyfulness.path@gmail.com</code></p>
+<p>Technical and production service provider: SOUL NEW ENERGY LIMITED (心靈新能量有限公司) Business Registration Certificate No.: <code>79188635-000-11-25-9</code> Place of registration: Hong Kong Technical and company enquiries: <code>hello@soulnewenergy.com</code></p>
+</section>
+        <div class="legal-entity">
+          SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>Registered in Hong Kong · Business Registration No.: 79188635-000-11-25-9<br>hello@soulnewenergy.com
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer><div class="footer-inner">
+    <span class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡</span>
+    <span class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="/jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="/sne-icon.png" alt=""></a></span>
+    <span class="f-meta"><span class="f-legal"><a href="/en/terms/">Activity Terms</a><a href="/en/privacy/">Privacy Policy</a><a href="mailto:winnie.joyfulness.path@gmail.com">Contact</a></span><br>© <span id="year">2026</span> Joyfulness Path with Winnie Lim 林曉怡</span>
+  </div></footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

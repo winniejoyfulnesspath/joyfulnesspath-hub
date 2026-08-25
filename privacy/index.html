@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>私隱政策｜Joyfulness Path</title>
+  <meta name="description" content="你的資料如何被使用，這裡說清楚。">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://joyfulnesspath.com/privacy/">
+  <link rel="alternate" hreflang="zh-Hant" href="/privacy/">
+  <link rel="alternate" hreflang="en" href="/en/privacy/">
+  <link rel="alternate" hreflang="ms" href="/ms/privacy/">
+  <link rel="alternate" hreflang="x-default" href="/privacy/">
+  <style>
+    :root {
+      --ivory: #f7f1e8; --paper: #fffaf3; --paper-deep: #f0e6d9; --ink: #302a28;
+      --muted: #756a65; --rose: #c7929b; --rose-soft: #ead4d5; --rose-deep: #985f6b;
+      --sage: #b7c3b2; --sage-soft: #e1e8de; --forest: #26332c; --forest-soft: #334238;
+      --gold: #c3a46c; --gold-deep: #967743; --line: rgba(70, 52, 47, .16);
+      --serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+      --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      --content: min(1180px, calc(100vw - 56px));
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--ivory); font-family: var(--sans); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    ::selection { color: #241f1d; background: var(--rose-soft); }
+    :focus-visible { outline: 3px solid rgba(152, 95, 107, .38); outline-offset: 4px; }
+    .skip-link { position: fixed; z-index: 120; top: 12px; left: 12px; padding: 9px 16px; transform: translateY(-160%); border-radius: 999px; background: var(--forest); color: #fff; text-decoration: none; }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header { padding: 26px 0; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .header-inner { width: var(--content); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 15px; font-weight: 600; text-decoration: none; letter-spacing: .06em; color: var(--ink); }
+    .wordmark img { height: 34px; width: auto; display: block; }
+    .home-link { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-decoration: none; }
+    .home-link:hover { color: var(--rose-deep); }
+
+    .legal-hero { position: relative; padding: 64px 0 46px; background: linear-gradient(180deg, var(--paper) 0%, var(--ivory) 100%); border-bottom: 1px solid var(--line); }
+    .legal-hero-inner { width: var(--content); margin: 0 auto; }
+    .legal-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--gold-deep); font-size: 11px; font-weight: 800; letter-spacing: .22em; }
+    .legal-eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--gold); }
+    .legal-hero h1 { margin: 0 0 14px; font-family: var(--serif); font-size: clamp(34px, 5vw, 54px); font-weight: 500; letter-spacing: .03em; }
+    .legal-intro { max-width: 620px; margin: 0 0 18px; color: var(--muted); font-family: var(--serif); font-size: 17px; letter-spacing: .04em; }
+    .legal-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+    .legal-lang { margin-top: 20px; display: flex; gap: 4px; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+    .legal-lang a { padding: 4px 2px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+    .legal-lang a:hover { color: var(--rose-deep); }
+    .legal-lang a[aria-current="page"] { color: var(--rose-deep); border-bottom-color: var(--rose-deep); }
+    .legal-lang .sep { color: var(--line); }
+
+    .legal-notice { width: var(--content); margin: 26px auto 0; padding: 16px 20px; border: 1px solid var(--rose-soft); border-radius: 10px; background: rgba(234, 212, 213, .28); color: var(--ink); font-size: 13px; line-height: 1.7; }
+
+    .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
+    .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
+    .legal-mobile-toc { display: none; }
+
+    .legal-document { max-width: 760px; }
+    .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
+    .legal-section:last-of-type { border-bottom: none; }
+    .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section li { margin-bottom: 4px; }
+    .legal-section strong { font-weight: 700; }
+    .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
+    .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
+    .legal-table { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 13.5px; }
+    .legal-table th, .legal-table td { padding: 9px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .legal-table th { background: var(--paper-deep); font-weight: 700; }
+    .legal-entity { margin-top: 8px; padding: 18px 20px; border-radius: 10px; background: var(--paper-deep); color: var(--muted); font-size: 13px; line-height: 1.9; }
+
+    footer { padding: 38px 0; color: rgba(255,255,255,.64); background: #1f2923; }
+    .footer-inner { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; font-size: 10px; letter-spacing: .14em; }
+    .f-title { justify-self: start; text-align: left; }
+    .f-collab { justify-self: center; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 11px; }
+    .f-collab a { color: #fffaf2; text-decoration: none; opacity: .92; display: inline-flex; align-items: center; gap: 6px; }
+    .f-logo { height: 20px; width: 20px; border-radius: 50%; object-fit: cover; }
+    .f-collab a:hover { opacity: 1; }
+    .f-collab .x { opacity: .55; }
+    .f-meta { justify-self: end; text-align: right; opacity: .85; }
+    .f-legal { display: inline-flex; gap: 14px; margin-bottom: 6px; }
+    .f-legal a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .f-legal a:hover { color: #fff; }
+
+    @media (max-width: 900px) {
+      :root { --content: min(100% - 38px, 720px); }
+      .legal-shell { grid-template-columns: 1fr; gap: 0; padding: 40px 0 90px; }
+      .legal-toc { display: none; }
+      .legal-mobile-toc { display: block; margin-bottom: 30px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+      .legal-mobile-toc summary { cursor: pointer; font-weight: 700; font-size: 13px; letter-spacing: .04em; }
+      .legal-mobile-toc a { display: block; padding: 8px 2px; color: var(--muted); font-size: 13px; text-decoration: none; }
+      footer { padding-bottom: 38px; }
+      .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 14px; }
+      .footer-inner .f-title, .footer-inner .f-collab, .footer-inner .f-meta { justify-self: center; text-align: center; }
+      .f-legal { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      :root { --content: calc(100vw - 34px); }
+      .legal-hero { padding: 46px 0 32px; }
+      .legal-hero h1 { font-size: clamp(30px, 11vw, 40px); }
+      .legal-section h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header" aria-label="網站導覽">
+    <div class="header-inner">
+      <a class="wordmark" href="/"><img src="/logo-header.png" alt="Joyfulness Path">Joyfulness Path</a>
+      <a class="home-link" href="/">返回首頁</a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <div class="legal-hero-inner">
+      <p class="legal-eyebrow">LEGAL · JOYFULNESS PATH</p>
+      <h1>私隱政策</h1>
+      <p class="legal-intro">你的資料如何被使用，這裡說清楚。</p>
+      <div class="legal-meta"><span>版本 JP-PRIVACY-ZH-1.0</span><span>生效日期：[正式上線日期]</span></div>
+      <div class="legal-lang" aria-label="語言版本">
+        <a href="/privacy/" aria-current="page">繁中</a><span class="sep">｜</span><a href="/en/privacy/">English</a><span class="sep">｜</span><a href="/ms/privacy/">Bahasa Melayu</a>
+      </div>
+    </div>
+    <div class="legal-notice">⚠️ 本頁為工作初稿，供內部覆核及開發使用。正式發布及開始收集資料前，須完成馬來西亞／香港本地法律覆核。</div>
+  </section>
+
+  <main id="main">
+    <div class="legal-shell">
+      <nav class="legal-toc" aria-label="本頁目錄">
+<a href="#s-1">01 · 1. 誰負責你的資料</a>
+<a href="#s-2">02 · 2. 我們可能收集的資料</a>
+<a href="#s-3">03 · 3. 資料來源</a>
+<a href="#s-4">04 · 4. 使用目的</a>
+<a href="#s-5">05 · 5. 必須及自願提供的資料</a>
+<a href="#s-6">06 · 6. 通訊選擇</a>
+<a href="#s-7">07 · 7. 我們可能向誰提供資料</a>
+<a href="#s-8">08 · 8. 跨境處理</a>
+<a href="#s-9">09 · 9. 保存期限</a>
+<a href="#s-10">10 · 10. 資料安全</a>
+<a href="#s-11">11 · 11. Cookies及網站分析</a>
+<a href="#s-12">12 · 12. 你的權利及選擇</a>
+<a href="#s-13">13 · 13. 兒童及未成年人</a>
+<a href="#s-14">14 · 14. 公開直播及活動錄影</a>
+<a href="#s-15">15 · 15. 第三方網站</a>
+<a href="#s-16">16 · 16. 政策更新</a>
+<a href="#s-17">17 · 17. 語言版本</a>
+<a href="#s-18">18 · 18. 聯絡我們</a>
+      </nav>
+      <article class="legal-document">
+        <details class="legal-mobile-toc">
+          <summary>本頁目錄</summary>
+<a href="#s-1">01 · 1. 誰負責你的資料</a>
+<a href="#s-2">02 · 2. 我們可能收集的資料</a>
+<a href="#s-3">03 · 3. 資料來源</a>
+<a href="#s-4">04 · 4. 使用目的</a>
+<a href="#s-5">05 · 5. 必須及自願提供的資料</a>
+<a href="#s-6">06 · 6. 通訊選擇</a>
+<a href="#s-7">07 · 7. 我們可能向誰提供資料</a>
+<a href="#s-8">08 · 8. 跨境處理</a>
+<a href="#s-9">09 · 9. 保存期限</a>
+<a href="#s-10">10 · 10. 資料安全</a>
+<a href="#s-11">11 · 11. Cookies及網站分析</a>
+<a href="#s-12">12 · 12. 你的權利及選擇</a>
+<a href="#s-13">13 · 13. 兒童及未成年人</a>
+<a href="#s-14">14 · 14. 公開直播及活動錄影</a>
+<a href="#s-15">15 · 15. 第三方網站</a>
+<a href="#s-16">16 · 16. 政策更新</a>
+<a href="#s-17">17 · 17. 語言版本</a>
+<a href="#s-18">18 · 18. 聯絡我們</a>
+        </details>
+<section class="legal-section" id="s-1">
+  <span class="legal-section-no">01</span>
+  <h2>1. 誰負責你的資料</h2>
+  <h3>主要資料控制者</h3>
+<p>Winnie Lim林曉怡，以Joyfulness Path名義於馬來西亞營運，負責決定活動報名資料的主要收集及使用目的。</p>
+<h3>技術及製作服務方</h3>
+<p>心靈新能量有限公司（SOUL NEW ENERGY LIMITED；品牌名稱：Soul New Energy）為香港註冊公司，按Joyfulness Path指示提供網站、報名系統、資料管理、電郵、活動製作、直播及相關技術支援。</p>
+<p>Soul New Energy只會在提供上述服務所需範圍內處理Joyfulness Path參加者資料，不會自行將該等資料用於Soul New Energy推廣，除非另行取得你的明確同意。</p>
+</section>
+<section class="legal-section" id="s-2">
+  <span class="legal-section-no">02</span>
+  <h2>2. 我們可能收集的資料</h2>
+  <p>視乎你使用的服務，我們可能收集：</p>
+<ol><li><strong>身份及聯絡資料</strong>：姓名、電郵地址、所在地區及你主動提供的聯絡資料。</li><li><strong>報名及活動資料</strong>：活動名稱、報名時間、出席狀態、Focus選項、你在「其他」欄填寫的內容，以及與活動安排相關的紀錄。</li><li><strong>選擇及同意紀錄</strong>：活動條款版本、私隱通知版本、跨境資料處理選擇、活動通知、後續消息、Newsletter及撤回紀錄。</li><li><strong>付款及交易資料</strong>：付款狀態、交易識別碼、金額、貨幣、付款時間及退款紀錄。完整付款卡資料通常由付款服務供應商處理，我們不會要求你透過一般表格提交完整付款卡資料。</li><li><strong>通訊資料</strong>：你向我們發出的電郵、表格內容、查詢、意見、取消或更正要求。</li><li><strong>技術及使用資料</strong>：IP位址、裝置及瀏覽器類型、存取時間、來源頁、活動頁互動、安全記錄及必要的系統紀錄。</li><li><strong>直播及活動互動資料</strong>：Zoom顯示名稱、聊天室內容、發言或影像；是否收錄及如何使用，以活動頁及活動開始前的說明為準。</li></ol>
+<p>Focus及自由填寫欄只應提供活動所需資料，請避免提交與活動無關或你不希望我們保存的私密內容。</p>
+</section>
+<section class="legal-section" id="s-3">
+  <span class="legal-section-no">03</span>
+  <h2>3. 資料來源</h2>
+  <p>我們可能從以下途徑取得資料：</p>
+<ul><li>你直接填寫的網站、報名或查詢表格；</li><li>你與Joyfulness Path或Soul New Energy的電郵及活動互動；</li><li>Zoom、Facebook、YouTube、付款平台或其他由你選擇使用的第三方服務；</li><li>網站及系統在安全、錯誤處理及服務運作過程中產生的記錄；</li><li>你授權代表你行事的人士。</li></ul>
+</section>
+<section class="legal-section" id="s-4">
+  <span class="legal-section-no">04</span>
+  <h2>4. 使用目的</h2>
+  <p>我們可能將資料用於：</p>
+<ol><li>接收及處理活動報名；</li><li>核對身份、管理名額及防止重複或濫用；</li><li>發送確認、活動連結、時間、安排、提醒、改期或重要通知；</li><li>提供Zoom、直播、回放、教材或其他已登記服務；</li><li>根據整體Focus分布安排活動內容及改善參加體驗；</li><li>處理付款、退款、對帳、會計及記錄；</li><li>回覆查詢、投訴、查閱、更正、撤回及退訂要求；</li><li>在你自願同意後，發送後續活動消息或Newsletter；</li><li>維持網站、表格、電郵、資料系統及直播安全；</li><li>偵測錯誤、重複提交、未經授權使用或其他系統問題；</li><li>遵守法律要求、處理爭議及保障合法權利；</li><li>製作不再能合理識別個人的整體統計及營運分析。</li></ol>
+<p>我們不會在未有適當通知及所需同意的情況下，把資料改作與原收集目的無直接關係的用途。</p>
+</section>
+<section class="legal-section" id="s-5">
+  <span class="legal-section-no">05</span>
+  <h2>5. 必須及自願提供的資料</h2>
+  <h3>必須資料</h3>
+<p>姓名、電郵、地區、活動Focus、活動條款接受、跨境資料處理選擇及本輪活動通知，為完成報名及提供活動安排所需。如不提供，我們可能無法確認報名、發送參與連結或提供相關服務。</p>
+<h3>自願資料</h3>
+<p>後續消息、Newsletter及非必要的自由填寫內容屬自願。拒絕或撤回此等選擇，不影響你已完成的活動報名或已購買服務。</p>
+</section>
+<section class="legal-section" id="s-6">
+  <span class="legal-section-no">06</span>
+  <h2>6. 通訊選擇</h2>
+  <p>我們分開管理以下三種用途，彼此不可代替：</p>
+<ol><li><strong>活動通知</strong>：與你登記的本輪活動直接相關的確認、連結、安排及提醒。</li><li><strong>後續消息</strong>：與本系列或相關活動有關的後續資訊；完全自願。</li><li><strong>Newsletter</strong>：Joyfulness Path定期內容及消息；完全自願。</li></ol>
+<p>可選項不會預先剔選。你可隨時透過電郵內的取消方法或聯絡我們撤回後續消息或Newsletter同意。</p>
+</section>
+<section class="legal-section" id="s-7">
+  <span class="legal-section-no">07</span>
+  <h2>7. 我們可能向誰提供資料</h2>
+  <p>我們只會按需要向以下類別提供資料：</p>
+<ul><li>Soul New Energy及獲授權協助活動的工作人員；</li><li>網站託管、雲端儲存、資料庫、表格、自動化及安全服務供應商；</li><li>電郵發送及通訊服務供應商；</li><li>Zoom等視像活動平台；</li><li>Facebook、YouTube等公開直播平台，但不會因此自動公開Zoom參加者的資料；</li><li>Stripe、PayPal或活動頁列明的付款服務供應商；</li><li>會計、法律或其他受保密責任約束的專業顧問；</li><li>法律、法院、監管或執法機構在具有適當權限時提出的要求；</li><li>經你另行同意的其他人士。</li></ul>
+<p>目前技術服務可能包括Vercel、Google Workspace／Google Sheets／Google Apps Script、Zoom、Meta／Facebook、Google／YouTube、Stripe及PayPal。服務名單如有實質改變，我們會更新本政策或相關通知。</p>
+<p>我們不會出售參加者個人資料。</p>
+</section>
+<section class="legal-section" id="s-8">
+  <span class="legal-section-no">08</span>
+  <h2>8. 跨境處理</h2>
+  <p>Joyfulness Path由馬來西亞營運，而Soul New Energy位於香港。你的報名資料可能由馬來西亞傳送至香港，以提供網站、報名管理、電郵、技術及活動製作服務。</p>
+<p>部分服務供應商亦可能在香港、馬來西亞或其他國家及地區設置伺服器或支援團隊。資料所在地的法律可能與你所在地不同。</p>
+<p>我們會：</p>
+<ul><li>在收集資料時說明跨境處理的目的及接收者類別；</li><li>取得適用情況下所需的同意；</li><li>只傳送達成指定目的所需的資料；</li><li>與資料處理者訂立保密、安全及使用限制；</li><li>保存合理所需的跨境接收者及處理紀錄；</li><li>在合理範圍內採取安全措施及審視服務供應商。</li></ul>
+</section>
+<section class="legal-section" id="s-9">
+  <span class="legal-section-no">09</span>
+  <h2>9. 保存期限</h2>
+  <p>我們不會把個人資料保存得比達成目的所需更久。現行基準如下：</p>
+<ul><li>一般報名及活動記錄：最後一次活動或實質互動後最多24個月；</li><li>付款、退款及會計記錄：按適用法律所需期間保存，通常不超過7年；</li><li>技術及安全記錄：在我們可控制範圍內通常最多90日；</li><li>後續消息及Newsletter資料：保存至你撤回同意或該服務停止；</li><li>退訂或拒收紀錄：以避免再次發送所需的最少資料保存；</li><li>爭議、調查或法律要求相關資料：保存至相關事項完結及適用期限屆滿。</li></ul>
+<p>資料不再需要時，我們會採取合理步驟刪除、匿名化或安全處置。第三方平台自行保存的資料亦可能受其政策及備份周期影響。</p>
+</section>
+<section class="legal-section" id="s-10">
+  <span class="legal-section-no">10</span>
+  <h2>10. 資料安全</h2>
+  <p>我們會採取與資料性質及風險相稱的合理措施，包括：</p>
+<ul><li>限制只有工作所需人士可以存取；</li><li>使用個人帳戶、適當密碼及可用的多重驗證；</li><li>盡量避免透過公開連結或未受保護渠道傳送資料；</li><li>保存必要的系統、錯誤及權限紀錄；</li><li>定期檢視存取權及移除不再需要的權限；</li><li>要求服務供應商及合作方遵守保密和安全責任；</li><li>制定資料事故通報、限制影響及跟進流程。</li></ul>
+<p>任何網上傳輸或系統均不能保證絕對安全。如你懷疑資料或帳戶出現未經授權使用，請立即聯絡我們。</p>
+</section>
+<section class="legal-section" id="s-11">
+  <span class="legal-section-no">11</span>
+  <h2>11. Cookies及網站分析</h2>
+  <p>網站可能使用維持功能、安全及偏好所需的Cookies或相近技術。若啟用非必要的網站分析或推廣追蹤，我們會按適用要求提供說明及選擇。</p>
+<p>你可透過瀏覽器限制Cookies，但部分功能可能因此無法正常使用。</p>
+</section>
+<section class="legal-section" id="s-12">
+  <span class="legal-section-no">12</span>
+  <h2>12. 你的權利及選擇</h2>
+  <p>在適用法律及合理身份核實下，你可要求：</p>
+<ul><li>查閱我們持有的個人資料；</li><li>更正不準確、不完整或過時的資料；</li><li>撤回以同意為基礎的處理；</li><li>停止接收後續消息或Newsletter；</li><li>限制某些處理或提出投訴；</li><li>在法律適用及技術可行時要求資料轉移；</li><li>在資料不再需要且沒有其他合法保留原因時要求刪除。</li></ul>
+<p>撤回同意不影響撤回前已進行處理的有效性。為保障你的資料，我們可能要求合理的身份核實資料。</p>
+</section>
+<section class="legal-section" id="s-13">
+  <span class="legal-section-no">13</span>
+  <h2>13. 兒童及未成年人</h2>
+  <p>本網站及活動主要為年滿18歲人士而設。未滿18歲人士應先取得父母或法定監護人同意。如我們發現未有適當同意而收集了未成年人的資料，會採取合理步驟限制使用或刪除。</p>
+</section>
+<section class="legal-section" id="s-14">
+  <span class="legal-section-no">14</span>
+  <h2>14. 公開直播及活動錄影</h2>
+  <p>報名或接受一般活動條款，不等於你同意公開使用姓名、聲音或影像。除非另行取得明確同意，公開直播原則上只顯示主持人及已獲授權的嘉賓。</p>
+<p>如個別活動設有錄影、回放或公開內容，活動頁或活動開始前會說明記錄範圍、用途及可見人士。參加者亦應避免在顯示名稱或公開聊天室中提供不希望他人看見的資料。</p>
+</section>
+<section class="legal-section" id="s-15">
+  <span class="legal-section-no">15</span>
+  <h2>15. 第三方網站</h2>
+  <p>本網站可能連結至第三方平台。第三方如何收集及使用資料由其自身政策控制；請在使用前閱讀相關條款及私隱政策。</p>
+</section>
+<section class="legal-section" id="s-16">
+  <span class="legal-section-no">16</span>
+  <h2>16. 政策更新</h2>
+  <p>我們可能因服務、技術或法律要求更新本政策。新版本會列明生效日期。涉及資料用途、披露或選擇的重大改變時，我們會按適用要求提供額外通知或重新取得同意。</p>
+</section>
+<section class="legal-section" id="s-17">
+  <span class="legal-section-no">17</span>
+  <h2>17. 語言版本</h2>
+  <p>本繁體中文版本供華語使用者閱讀。因Joyfulness Path於馬來西亞營運，正式資料保護通知亦會提供Bahasa Malaysia及English版本。如版本之間出現差異，會按適用法律及經覆核的正式版本處理，而不會減少你依法享有的權利。</p>
+</section>
+<section class="legal-section" id="s-18">
+  <span class="legal-section-no">18</span>
+  <h2>18. 聯絡我們</h2>
+  <p>資料控制者：Winnie Lim林曉怡，以Joyfulness Path名義營運</p>
+<p>私隱查詢及權利申請：<code>winnie.joyfulness.path@gmail.com</code></p>
+<p>技術及製作服務方：心靈新能量有限公司（SOUL NEW ENERGY LIMITED） 商業登記證號碼：<code>79188635-000-11-25-9</code> 註冊地：香港 技術及公司查詢：<code>hello@soulnewenergy.com</code></p>
+</section>
+        <div class="legal-entity">
+          心靈新能量有限公司（SOUL NEW ENERGY LIMITED）<br>香港註冊公司 · 商業登記證號碼：79188635-000-11-25-9<br>hello@soulnewenergy.com
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer><div class="footer-inner">
+    <span class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡</span>
+    <span class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="/jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="/sne-icon.png" alt=""></a></span>
+    <span class="f-meta"><span class="f-legal"><a href="/terms/">活動條款</a><a href="/privacy/">私隱政策</a><a href="mailto:winnie.joyfulness.path@gmail.com">聯絡</a></span><br>© <span id="year">2026</span> Joyfulness Path with Winnie Lim 林曉怡</span>
+  </div></footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

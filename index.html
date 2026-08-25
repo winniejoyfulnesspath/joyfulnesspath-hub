@@ -165,9 +165,14 @@
     .f-collab a:hover { opacity: 1; }
     .f-collab .x { opacity: .55; }
     .f-meta { justify-self: end; text-align: right; opacity: .85; }
+    .f-legal { display: inline-flex; gap: 14px; margin-bottom: 6px; }
+    .f-legal a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .f-legal a:hover { color: #fff; }
     @media (max-width: 700px) {
+      footer { padding-bottom: 96px; }
       .footer-inner { grid-template-columns: 1fr; text-align: center; }
       .footer-inner .f-title, .footer-inner .f-collab, .footer-inner .f-meta { justify-self: center; text-align: center; }
+      .f-legal { justify-content: center; }
     }
     .footer-brand { color: #fffaf2; font-family: var(--serif); font-size: 14px; }
     .footer-note { text-align: right; }
@@ -205,7 +210,8 @@
       .footer-inner { display: grid; justify-items: start; padding-right: 66px; } .footer-note { text-align: left; }
     }
 
-    .song-player { position: fixed; z-index: 60; right: 20px; bottom: 20px; left: auto; display: flex; align-items: center; }
+    .song-player { position: fixed; z-index: 60; right: 20px; bottom: 20px; left: auto; display: flex; align-items: center; transition: opacity .25s ease, transform .25s ease; }
+    .song-player.is-hidden { opacity: 0; transform: translateY(8px) scale(.9); pointer-events: none; }
     .song-toggle { flex: none; width: 48px; height: 48px; display: grid; place-items: center; border: none; border-radius: 50%; background: var(--rose-deep); color: #fff; cursor: pointer; box-shadow: 0 10px 26px rgba(90, 65, 58, .28); }
     .song-toggle svg { width: 16px; height: 16px; }
     .song-meta { display: none; }
@@ -294,7 +300,7 @@
     </section>
   </main>
 
-  <footer><div class="footer-inner"><span class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡</span><span class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="sne-icon.png" alt=""></a></span><span class="f-meta">© <span id="year">2026</span> Winnie Lim 林曉怡</span></div></footer>
+  <footer><div class="footer-inner"><span class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡</span><span class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="sne-icon.png" alt=""></a></span><span class="f-meta"><span class="f-legal"><a href="/terms/">活動條款</a><a href="/privacy/">私隱政策</a><a href="mailto:winnie.joyfulness.path@gmail.com">聯絡</a></span><br>© <span id="year">2026</span> Joyfulness Path with Winnie Lim 林曉怡</span></div></footer>
 
   <div class="song-player" role="region" aria-label="主題曲播放器">
     <audio src="https://pagedemo.b-cdn.net/%E3%80%8A%E6%9A%96%E9%98%B3%E4%B9%8B%E8%B7%AF%EF%BD%9CHip-Hop%20%E5%A5%B3%E5%A3%B0Rap%E7%89%88%E3%80%8B.mp3" preload="metadata"></audio>
@@ -310,6 +316,18 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const player = document.querySelector('.song-player');
+      const siteFooter = document.querySelector('footer');
+      if (player && siteFooter && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            player.classList.toggle('is-hidden', entry.isIntersecting);
+          });
+        }, { rootMargin: '0px 0px -20px 0px', threshold: 0 });
+        io.observe(siteFooter);
+      }
+    })();
     (function(){
       const audio = document.querySelector('.song-player audio');
       const playButton = document.querySelector('.song-toggle');

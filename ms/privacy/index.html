@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dasar Privasi｜Joyfulness Path</title>
+  <meta name="description" content="Bagaimana data anda digunakan, dijelaskan dengan mudah.">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://joyfulnesspath.com/ms/privacy/">
+  <link rel="alternate" hreflang="zh-Hant" href="/privacy/">
+  <link rel="alternate" hreflang="en" href="/en/privacy/">
+  <link rel="alternate" hreflang="ms" href="/ms/privacy/">
+  <link rel="alternate" hreflang="x-default" href="/privacy/">
+  <style>
+    :root {
+      --ivory: #f7f1e8; --paper: #fffaf3; --paper-deep: #f0e6d9; --ink: #302a28;
+      --muted: #756a65; --rose: #c7929b; --rose-soft: #ead4d5; --rose-deep: #985f6b;
+      --sage: #b7c3b2; --sage-soft: #e1e8de; --forest: #26332c; --forest-soft: #334238;
+      --gold: #c3a46c; --gold-deep: #967743; --line: rgba(70, 52, 47, .16);
+      --serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+      --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      --content: min(1180px, calc(100vw - 56px));
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--ivory); font-family: var(--sans); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    ::selection { color: #241f1d; background: var(--rose-soft); }
+    :focus-visible { outline: 3px solid rgba(152, 95, 107, .38); outline-offset: 4px; }
+    .skip-link { position: fixed; z-index: 120; top: 12px; left: 12px; padding: 9px 16px; transform: translateY(-160%); border-radius: 999px; background: var(--forest); color: #fff; text-decoration: none; }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header { padding: 26px 0; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .header-inner { width: var(--content); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 15px; font-weight: 600; text-decoration: none; letter-spacing: .06em; color: var(--ink); }
+    .wordmark img { height: 34px; width: auto; display: block; }
+    .home-link { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-decoration: none; }
+    .home-link:hover { color: var(--rose-deep); }
+
+    .legal-hero { position: relative; padding: 64px 0 46px; background: linear-gradient(180deg, var(--paper) 0%, var(--ivory) 100%); border-bottom: 1px solid var(--line); }
+    .legal-hero-inner { width: var(--content); margin: 0 auto; }
+    .legal-eyebrow { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--gold-deep); font-size: 11px; font-weight: 800; letter-spacing: .22em; }
+    .legal-eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--gold); }
+    .legal-hero h1 { margin: 0 0 14px; font-family: var(--serif); font-size: clamp(34px, 5vw, 54px); font-weight: 500; letter-spacing: .03em; }
+    .legal-intro { max-width: 620px; margin: 0 0 18px; color: var(--muted); font-family: var(--serif); font-size: 17px; letter-spacing: .04em; }
+    .legal-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+    .legal-lang { margin-top: 20px; display: flex; gap: 4px; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+    .legal-lang a { padding: 4px 2px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+    .legal-lang a:hover { color: var(--rose-deep); }
+    .legal-lang a[aria-current="page"] { color: var(--rose-deep); border-bottom-color: var(--rose-deep); }
+    .legal-lang .sep { color: var(--line); }
+
+    .legal-notice { width: var(--content); margin: 26px auto 0; padding: 16px 20px; border: 1px solid var(--rose-soft); border-radius: 10px; background: rgba(234, 212, 213, .28); color: var(--ink); font-size: 13px; line-height: 1.7; }
+
+    .legal-shell { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding: 56px 0 130px; align-items: start; }
+    .legal-toc { position: sticky; top: 32px; display: grid; gap: 2px; }
+    .legal-toc a { padding: 8px 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; text-decoration: none; border-left: 2px solid transparent; padding-left: 12px; }
+    .legal-toc a:hover, .legal-toc a:focus-visible { color: var(--rose-deep); border-left-color: var(--rose); }
+    .legal-mobile-toc { display: none; }
+
+    .legal-document { max-width: 760px; }
+    .legal-section { padding: 30px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 96px; }
+    .legal-section:last-of-type { border-bottom: none; }
+    .legal-section-no { display: block; margin-bottom: 8px; color: var(--rose); font-family: var(--serif); font-size: 13px; }
+    .legal-section h2 { margin: 0 0 14px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .02em; }
+    .legal-section h3 { margin: 18px 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 600; }
+    .legal-section p { margin: 0 0 12px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section ul, .legal-section ol { margin: 0 0 12px; padding-left: 20px; color: var(--ink); font-size: 15px; line-height: 1.85; }
+    .legal-section li { margin-bottom: 4px; }
+    .legal-section strong { font-weight: 700; }
+    .legal-section code { padding: 1px 6px; border-radius: 4px; background: var(--paper-deep); font-size: 13px; }
+    .legal-code { padding: 14px 16px; border-radius: 8px; background: var(--paper-deep); overflow-x: auto; font-size: 12.5px; line-height: 1.7; white-space: pre-wrap; }
+    .legal-table { width: 100%; border-collapse: collapse; margin: 0 0 14px; font-size: 13.5px; }
+    .legal-table th, .legal-table td { padding: 9px 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .legal-table th { background: var(--paper-deep); font-weight: 700; }
+    .legal-entity { margin-top: 8px; padding: 18px 20px; border-radius: 10px; background: var(--paper-deep); color: var(--muted); font-size: 13px; line-height: 1.9; }
+
+    footer { padding: 38px 0; color: rgba(255,255,255,.64); background: #1f2923; }
+    .footer-inner { width: var(--content); margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; font-size: 10px; letter-spacing: .14em; }
+    .f-title { justify-self: start; text-align: left; }
+    .f-collab { justify-self: center; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 11px; }
+    .f-collab a { color: #fffaf2; text-decoration: none; opacity: .92; display: inline-flex; align-items: center; gap: 6px; }
+    .f-logo { height: 20px; width: 20px; border-radius: 50%; object-fit: cover; }
+    .f-collab a:hover { opacity: 1; }
+    .f-collab .x { opacity: .55; }
+    .f-meta { justify-self: end; text-align: right; opacity: .85; }
+    .f-legal { display: inline-flex; gap: 14px; margin-bottom: 6px; }
+    .f-legal a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .f-legal a:hover { color: #fff; }
+
+    @media (max-width: 900px) {
+      :root { --content: min(100% - 38px, 720px); }
+      .legal-shell { grid-template-columns: 1fr; gap: 0; padding: 40px 0 90px; }
+      .legal-toc { display: none; }
+      .legal-mobile-toc { display: block; margin-bottom: 30px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+      .legal-mobile-toc summary { cursor: pointer; font-weight: 700; font-size: 13px; letter-spacing: .04em; }
+      .legal-mobile-toc a { display: block; padding: 8px 2px; color: var(--muted); font-size: 13px; text-decoration: none; }
+      footer { padding-bottom: 38px; }
+      .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 14px; }
+      .footer-inner .f-title, .footer-inner .f-collab, .footer-inner .f-meta { justify-self: center; text-align: center; }
+      .f-legal { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      :root { --content: calc(100vw - 34px); }
+      .legal-hero { padding: 46px 0 32px; }
+      .legal-hero h1 { font-size: clamp(30px, 11vw, 40px); }
+      .legal-section h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Langkau ke kandungan utama</a>
+  <header class="site-header" aria-label="Navigasi laman">
+    <div class="header-inner">
+      <a class="wordmark" href="/"><img src="/logo-header.png" alt="Joyfulness Path">Joyfulness Path</a>
+      <a class="home-link" href="/">Kembali ke laman utama</a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <div class="legal-hero-inner">
+      <p class="legal-eyebrow">UNDANG-UNDANG · JOYFULNESS PATH</p>
+      <h1>Dasar Privasi</h1>
+      <p class="legal-intro">Bagaimana data anda digunakan, dijelaskan dengan mudah.</p>
+      <div class="legal-meta"><span>Versi JP-PRIVACY-MS-1.0</span><span>Tarikh kuat kuasa：[tarikh pelancaran rasmi]</span></div>
+      <div class="legal-lang" aria-label="Bahasa">
+        <a href="/privacy/">繁中</a><span class="sep">｜</span><a href="/en/privacy/">English</a><span class="sep">｜</span><a href="/ms/privacy/" aria-current="page">Bahasa Melayu</a>
+      </div>
+    </div>
+    <div class="legal-notice">⚠️ Halaman ini adalah draf kerja untuk semakan dalaman dan pembangunan. Semakan undang-undang Malaysia/Hong Kong mesti selesai sebelum diterbitkan dan digunakan untuk mengumpul data.</div>
+  </section>
+
+  <main id="main">
+    <div class="legal-shell">
+      <nav class="legal-toc" aria-label="Kandungan halaman ini">
+<a href="#s-1">01 · 1. Pihak yang bertanggungjawab terhadap data anda</a>
+<a href="#s-2">02 · 2. Data yang mungkin kami kumpulkan</a>
+<a href="#s-3">03 · 3. Sumber data</a>
+<a href="#s-4">04 · 4. Tujuan pemprosesan</a>
+<a href="#s-5">05 · 5. Data wajib dan pilihan</a>
+<a href="#s-6">06 · 6. Pilihan komunikasi</a>
+<a href="#s-7">07 · 7. Pihak yang mungkin menerima data</a>
+<a href="#s-8">08 · 8. Pemprosesan rentas sempadan</a>
+<a href="#s-9">09 · 9. Penyimpanan</a>
+<a href="#s-10">10 · 10. Keselamatan</a>
+<a href="#s-11">11 · 11. Kuki dan analitik laman web</a>
+<a href="#s-12">12 · 12. Hak dan pilihan anda</a>
+<a href="#s-13">13 · 13. Kanak-kanak dan individu bawah umur</a>
+<a href="#s-14">14 · 14. Siaran umum dan rakaman aktiviti</a>
+<a href="#s-15">15 · 15. Laman web pihak ketiga</a>
+<a href="#s-16">16 · 16. Kemas kini Dasar</a>
+<a href="#s-17">17 · 17. Versi bahasa</a>
+<a href="#s-18">18 · 18. Hubungi kami</a>
+      </nav>
+      <article class="legal-document">
+        <details class="legal-mobile-toc">
+          <summary>Kandungan halaman ini</summary>
+<a href="#s-1">01 · 1. Pihak yang bertanggungjawab terhadap data anda</a>
+<a href="#s-2">02 · 2. Data yang mungkin kami kumpulkan</a>
+<a href="#s-3">03 · 3. Sumber data</a>
+<a href="#s-4">04 · 4. Tujuan pemprosesan</a>
+<a href="#s-5">05 · 5. Data wajib dan pilihan</a>
+<a href="#s-6">06 · 6. Pilihan komunikasi</a>
+<a href="#s-7">07 · 7. Pihak yang mungkin menerima data</a>
+<a href="#s-8">08 · 8. Pemprosesan rentas sempadan</a>
+<a href="#s-9">09 · 9. Penyimpanan</a>
+<a href="#s-10">10 · 10. Keselamatan</a>
+<a href="#s-11">11 · 11. Kuki dan analitik laman web</a>
+<a href="#s-12">12 · 12. Hak dan pilihan anda</a>
+<a href="#s-13">13 · 13. Kanak-kanak dan individu bawah umur</a>
+<a href="#s-14">14 · 14. Siaran umum dan rakaman aktiviti</a>
+<a href="#s-15">15 · 15. Laman web pihak ketiga</a>
+<a href="#s-16">16 · 16. Kemas kini Dasar</a>
+<a href="#s-17">17 · 17. Versi bahasa</a>
+<a href="#s-18">18 · 18. Hubungi kami</a>
+        </details>
+<section class="legal-section" id="s-1">
+  <span class="legal-section-no">01</span>
+  <h2>1. Pihak yang bertanggungjawab terhadap data anda</h2>
+  <h3>Pengawal data utama</h3>
+<p>Winnie Lim 林曉怡, yang mengendalikan Joyfulness Path di Malaysia, menentukan tujuan utama pengumpulan dan penggunaan data pendaftaran aktiviti.</p>
+<h3>Penyedia perkhidmatan teknikal dan penerbitan</h3>
+<p>SOUL NEW ENERGY LIMITED (心靈新能量有限公司), yang menggunakan jenama Soul New Energy, ialah sebuah syarikat yang berdaftar di Hong Kong. Syarikat ini menyediakan laman web, sistem pendaftaran, pengurusan data, e-mel, penerbitan aktiviti, penstriman dan sokongan teknikal berkaitan mengikut arahan Joyfulness Path.</p>
+<p>Soul New Energy memproses data peserta Joyfulness Path hanya setakat yang diperlukan untuk menyediakan perkhidmatan tersebut. Syarikat ini tidak akan menggunakan data itu bagi pemasarannya sendiri melainkan anda memberikan persetujuan nyata yang berasingan.</p>
+</section>
+<section class="legal-section" id="s-2">
+  <span class="legal-section-no">02</span>
+  <h2>2. Data yang mungkin kami kumpulkan</h2>
+  <p>Bergantung pada perkhidmatan, kami mungkin mengumpulkan:</p>
+<ol><li><strong>Data identiti dan hubungan:</strong> nama, alamat e-mel, lokasi dan butiran hubungan yang anda pilih untuk berikan.</li><li><strong>Data pendaftaran dan aktiviti:</strong> nama aktiviti, masa pendaftaran, status kehadiran, pilihan Focus, teks yang dimasukkan di bawah “Lain-lain”, dan rekod berkaitan urusan aktiviti.</li><li><strong>Rekod pilihan dan persetujuan:</strong> versi Terma dan notis privasi yang dipaparkan, pilihan pemprosesan rentas sempadan, notis aktiviti, mesej susulan, surat berita dan penarikan balik.</li><li><strong>Data bayaran dan transaksi:</strong> status bayaran, pengecam transaksi, jumlah, mata wang, masa bayaran dan rekod bayaran balik. Butiran penuh kad bayaran biasanya dikendalikan oleh penyedia pembayaran; kami tidak akan meminta anda menghantar butiran penuh kad melalui borang umum.</li><li><strong>Komunikasi:</strong> e-mel, kandungan borang, pertanyaan, komen dan permintaan pembatalan atau pembetulan yang dihantar kepada kami.</li><li><strong>Data teknikal dan penggunaan:</strong> alamat IP, jenis peranti dan pelayar, masa akses, halaman rujukan, interaksi halaman aktiviti, log keselamatan dan rekod sistem yang perlu.</li><li><strong>Data interaksi penstriman dan aktiviti:</strong> nama paparan Zoom, sembang, percakapan atau video. Sama ada data itu dirakam dan cara penggunaannya bergantung pada notis halaman aktiviti dan penerangan sebelum aktiviti bermula.</li></ol>
+<p>Sila berikan hanya maklumat yang diperlukan untuk aktiviti dalam ruang Focus dan teks bebas. Jangan hantar maklumat peribadi yang tidak berkaitan atau apa-apa yang anda tidak mahu kami simpan.</p>
+</section>
+<section class="legal-section" id="s-3">
+  <span class="legal-section-no">03</span>
+  <h2>3. Sumber data</h2>
+  <p>Kami mungkin memperoleh data daripada:</p>
+<ul><li>borang laman web, pendaftaran dan pertanyaan yang anda lengkapkan;</li><li>e-mel dan interaksi aktiviti anda dengan Joyfulness Path atau Soul New Energy;</li><li>Zoom, Facebook, YouTube, platform pembayaran atau perkhidmatan pihak ketiga lain yang anda pilih untuk gunakan;</li><li>log yang dijana untuk keselamatan, pengendalian ralat dan operasi perkhidmatan; dan</li><li>seseorang yang diberi kuasa untuk bertindak bagi pihak anda.</li></ul>
+</section>
+<section class="legal-section" id="s-4">
+  <span class="legal-section-no">04</span>
+  <h2>4. Tujuan pemprosesan</h2>
+  <p>Kami mungkin menggunakan data peribadi untuk:</p>
+<ol><li>menerima dan memproses pendaftaran aktiviti;</li><li>mengesahkan identiti, mengurus kapasiti dan mencegah pendaftaran berulang atau penyalahgunaan;</li><li>menghantar pengesahan, pautan, masa, aturan, peringatan, notis penjadualan semula dan notis penting lain;</li><li>menyediakan akses Zoom, penstriman, rakaman ulangan, bahan atau perkhidmatan lain yang didaftarkan;</li><li>menggunakan corak keseluruhan Focus untuk merancang kandungan dan menambah baik pengalaman peserta;</li><li>memproses bayaran, bayaran balik, penyelarasan, akaun dan rekod;</li><li>menjawab pertanyaan, aduan dan permintaan akses, pembetulan, penarikan balik atau berhenti melanggan;</li><li>menghantar mesej susulan atau surat berita selepas persetujuan pilihan anda;</li><li>mengekalkan keselamatan laman web, borang, e-mel, sistem data dan penstriman;</li><li>mengenal pasti ralat, penghantaran berulang, penggunaan tanpa kebenaran dan masalah sistem lain;</li><li>mematuhi keperluan undang-undang, menyelesaikan pertikaian dan melindungi hak yang sah; dan</li><li>menyediakan statistik operasi terkumpul yang tidak lagi dapat mengenal pasti seseorang secara munasabah.</li></ol>
+<p>Kami tidak akan menukar data kepada tujuan yang tidak berkaitan dengan tujuan asal tanpa notis yang sesuai dan apa-apa persetujuan yang dikehendaki oleh undang-undang.</p>
+</section>
+<section class="legal-section" id="s-5">
+  <span class="legal-section-no">05</span>
+  <h2>5. Data wajib dan pilihan</h2>
+  <h3>Data wajib</h3>
+<p>Nama, alamat e-mel, lokasi, pilihan Focus, penerimaan Terma, pilihan pemprosesan rentas sempadan yang perlu dan notis aktiviti kitaran semasa diperlukan untuk melengkapkan pendaftaran dan menyediakan aktiviti. Jika anda tidak memberikannya, kami mungkin tidak dapat mengesahkan pendaftaran, menghantar maklumat akses atau menyediakan perkhidmatan.</p>
+<h3>Data pilihan</h3>
+<p>Mesej susulan, langganan surat berita dan teks bebas yang tidak perlu adalah pilihan. Penolakan atau penarikan balik pilihan ini kemudian tidak menjejaskan pendaftaran yang telah lengkap atau perkhidmatan yang telah dibeli.</p>
+</section>
+<section class="legal-section" id="s-6">
+  <span class="legal-section-no">06</span>
+  <h2>6. Pilihan komunikasi</h2>
+  <p>Kami menguruskan tiga tujuan ini secara berasingan:</p>
+<ol><li><strong>Notis aktiviti:</strong> pengesahan, pautan akses, aturan dan peringatan yang berkaitan secara langsung dengan kitaran aktiviti yang anda daftar.</li><li><strong>Mesej susulan:</strong> maklumat lanjut tentang siri yang sama atau aktiviti berkaitan; pilihan.</li><li><strong>Surat berita:</strong> kandungan dan kemas kini berkala Joyfulness Path; pilihan.</li></ol>
+<p>Pilihan sukarela tidak ditandakan terlebih dahulu. Anda boleh menarik balik persetujuan terhadap mesej susulan atau surat berita pada bila-bila masa melalui kaedah berhenti melanggan dalam e-mel atau dengan menghubungi kami.</p>
+</section>
+<section class="legal-section" id="s-7">
+  <span class="legal-section-no">07</span>
+  <h2>7. Pihak yang mungkin menerima data</h2>
+  <p>Kami mendedahkan data hanya apabila perlu kepada:</p>
+<ul><li>Soul New Energy dan individu yang diberi kuasa untuk membantu aktiviti;</li><li>penyedia pengehosan laman web, storan awan, pangkalan data, borang, automasi dan keselamatan;</li><li>penyedia penghantaran e-mel dan komunikasi;</li><li>platform aktiviti video seperti Zoom;</li><li>platform penstriman umum seperti Facebook dan YouTube, tanpa menerbitkan data peserta Zoom secara automatik;</li><li>penyedia pembayaran seperti Stripe atau PayPal jika disenaraikan pada halaman aktiviti;</li><li>akauntan, penasihat undang-undang dan penasihat profesional lain yang tertakluk pada kewajipan kerahsiaan;</li><li>mahkamah, pengawal selia, penguat kuasa atau pihak berkuasa lain yang bertindak dengan kuasa yang sewajarnya; dan</li><li>pihak lain dengan persetujuan berasingan anda.</li></ul>
+<p>Perkhidmatan teknikal semasa mungkin termasuk Vercel, Google Workspace, Google Sheets, Google Apps Script, Zoom, Meta/Facebook, Google/YouTube, Stripe dan PayPal. Jika senarai perkhidmatan berubah secara ketara, kami akan mengemas kini Dasar ini atau notis berkaitan.</p>
+<p>Kami tidak menjual data peribadi peserta.</p>
+</section>
+<section class="legal-section" id="s-8">
+  <span class="legal-section-no">08</span>
+  <h2>8. Pemprosesan rentas sempadan</h2>
+  <p>Joyfulness Path beroperasi dari Malaysia dan Soul New Energy terletak di Hong Kong. Data pendaftaran mungkin dipindahkan dari Malaysia ke Hong Kong untuk menyediakan laman web, pengurusan pendaftaran, e-mel, perkhidmatan teknikal dan penerbitan aktiviti.</p>
+<p>Sesetengah penyedia mungkin turut menggunakan pelayan atau pasukan sokongan di Malaysia, Hong Kong atau negara dan wilayah lain, yang undang-undang perlindungan datanya mungkin berbeza daripada undang-undang di lokasi anda.</p>
+<p>Kami akan:</p>
+<ul><li>menerangkan tujuan pemindahan dan kategori penerima semasa data dikumpulkan;</li><li>mendapatkan persetujuan apabila diperlukan;</li><li>memindahkan hanya data yang perlu bagi tujuan yang dinyatakan;</li><li>mengenakan sekatan kerahsiaan, keselamatan dan penggunaan terhadap pemproses data;</li><li>menyimpan rekod munasabah tentang penerima dan pemprosesan rentas sempadan; dan</li><li>mengambil langkah keselamatan munasabah serta menyemak penyedia berkaitan.</li></ul>
+</section>
+<section class="legal-section" id="s-9">
+  <span class="legal-section-no">09</span>
+  <h2>9. Penyimpanan</h2>
+  <p>Kami tidak menyimpan data peribadi lebih lama daripada yang diperlukan bagi tujuannya. Tempoh rujukan semasa ialah:</p>
+<ul><li>rekod pendaftaran dan aktiviti umum: sehingga 24 bulan selepas aktiviti atau interaksi bermakna yang terakhir;</li><li>rekod bayaran, bayaran balik dan perakaunan: bagi tempoh yang dikehendaki oleh undang-undang terpakai, lazimnya tidak lebih daripada tujuh tahun;</li><li>log teknikal dan keselamatan: lazimnya sehingga 90 hari jika berada dalam kawalan kami;</li><li>data mesej susulan dan surat berita: sehingga anda menarik balik persetujuan atau perkhidmatan tamat;</li><li>rekod berhenti melanggan atau sekatan: data minimum yang diperlukan untuk mengelakkan anda dihubungi lagi; dan</li><li>data berkaitan pertikaian, siasatan atau keperluan undang-undang: sehingga perkara tersebut selesai dan tempoh yang terpakai tamat.</li></ul>
+<p>Apabila data tidak lagi diperlukan, kami akan mengambil langkah munasabah untuk memadam, menyahkenal pasti atau melupuskannya dengan selamat. Data yang disimpan secara bebas oleh platform pihak ketiga juga mungkin tertakluk pada dasar dan kitaran sandarannya.</p>
+</section>
+<section class="legal-section" id="s-10">
+  <span class="legal-section-no">10</span>
+  <h2>10. Keselamatan</h2>
+  <p>Kami mengambil langkah munasabah yang bersesuaian dengan sifat dan risiko data, termasuk:</p>
+<ul><li>mengehadkan akses kepada individu yang memerlukannya untuk kerja;</li><li>menggunakan akaun individu, kata laluan yang sesuai dan pengesahan berbilang faktor apabila tersedia;</li><li>mengelakkan pautan umum atau saluran tanpa perlindungan untuk pemindahan data setakat yang munasabah;</li><li>menyimpan rekod sistem, ralat dan kebenaran yang perlu;</li><li>menyemak akses dan membuang kebenaran yang tidak lagi diperlukan;</li><li>menghendaki penyedia perkhidmatan dan rakan kerjasama menjaga kerahsiaan dan keselamatan; dan</li><li>mengekalkan proses untuk melaporkan, membendung dan membuat susulan terhadap insiden data.</li></ul>
+<p>Tiada penghantaran atau sistem dalam talian yang boleh dijamin selamat sepenuhnya. Hubungi kami dengan segera jika anda mengesyaki penggunaan data atau akaun anda tanpa kebenaran.</p>
+</section>
+<section class="legal-section" id="s-11">
+  <span class="legal-section-no">11</span>
+  <h2>11. Kuki dan analitik laman web</h2>
+  <p>Laman web mungkin menggunakan kuki atau teknologi serupa yang perlu untuk fungsi, keselamatan dan pilihan pengguna. Jika analitik atau penjejakan promosi yang tidak perlu diperkenalkan, kami akan memberikan notis dan pilihan seperti yang dikehendaki.</p>
+<p>Anda boleh mengehadkan kuki melalui pelayar, walaupun sesetengah fungsi mungkin tidak beroperasi dengan betul.</p>
+</section>
+<section class="legal-section" id="s-12">
+  <span class="legal-section-no">12</span>
+  <h2>12. Hak dan pilihan anda</h2>
+  <p>Tertakluk pada undang-undang terpakai dan pengesahan identiti yang munasabah, anda boleh meminta untuk:</p>
+<ul><li>mengakses data peribadi yang kami pegang tentang anda;</li><li>membetulkan data yang tidak tepat, tidak lengkap atau lapuk;</li><li>menarik balik pemprosesan yang berasaskan persetujuan;</li><li>berhenti menerima mesej susulan atau surat berita;</li><li>mengehadkan pemprosesan tertentu atau membuat aduan;</li><li>menerima atau memindahkan data jika undang-undang terpakai dan ia boleh dilaksanakan secara teknikal; dan</li><li>memadam data yang tidak lagi diperlukan dan tidak mempunyai asas sah lain untuk disimpan.</li></ul>
+<p>Penarikan balik tidak menjejaskan pemprosesan yang telah dijalankan sebelum penarikan balik. Kami mungkin meminta maklumat munasabah untuk mengesahkan identiti dan melindungi data anda.</p>
+</section>
+<section class="legal-section" id="s-13">
+  <span class="legal-section-no">13</span>
+  <h2>13. Kanak-kanak dan individu bawah umur</h2>
+  <p>Laman web dan aktiviti ini terutamanya ditujukan kepada individu berumur 18 tahun dan ke atas. Individu di bawah umur 18 tahun hendaklah terlebih dahulu mendapat persetujuan ibu bapa atau penjaga yang sah. Jika kami mengetahui bahawa data individu bawah umur dikumpulkan tanpa persetujuan yang sesuai, kami akan mengambil langkah munasabah untuk mengehadkan penggunaannya atau memadamkannya.</p>
+</section>
+<section class="legal-section" id="s-14">
+  <span class="legal-section-no">14</span>
+  <h2>14. Siaran umum dan rakaman aktiviti</h2>
+  <p>Pendaftaran atau penerimaan terma aktiviti umum bukan kebenaran untuk menggunakan nama, suara atau imej anda secara umum. Melainkan persetujuan nyata yang berasingan diperoleh, siaran umum biasanya hanya memaparkan hos dan tetamu yang telah diberi kebenaran.</p>
+<p>Jika aktiviti melibatkan rakaman, rakaman ulangan atau kandungan umum, halaman aktiviti atau pengumuman sebelum aktiviti akan menerangkan skop rakaman, tujuan dan pihak yang boleh melihatnya. Peserta hendaklah mengelakkan maklumat yang tidak mahu dilihat orang lain pada nama paparan atau sembang umum.</p>
+</section>
+<section class="legal-section" id="s-15">
+  <span class="legal-section-no">15</span>
+  <h2>15. Laman web pihak ketiga</h2>
+  <p>Laman web ini mungkin memaut ke platform pihak ketiga. Dasar mereka sendiri mengawal cara mereka mengumpul dan menggunakan data. Sila semak terma dan dasar privasi mereka sebelum digunakan.</p>
+</section>
+<section class="legal-section" id="s-16">
+  <span class="legal-section-no">16</span>
+  <h2>16. Kemas kini Dasar</h2>
+  <p>Kami boleh mengemas kini Dasar ini untuk mencerminkan perubahan perkhidmatan, teknologi atau keperluan undang-undang. Tarikh kuat kuasa baharu akan dipaparkan. Jika perubahan penting menjejaskan tujuan, pendedahan atau pilihan data, kami akan memberikan notis tambahan atau mendapatkan persetujuan baharu apabila diperlukan.</p>
+</section>
+<section class="legal-section" id="s-17">
+  <span class="legal-section-no">17</span>
+  <h2>17. Versi bahasa</h2>
+  <p>Versi Bahasa Melayu ini disediakan bersama versi English dan Bahasa Cina Tradisional. Jika terdapat perbezaan antara versi, versi-versi tersebut akan ditafsirkan secara selaras dengan undang-undang terpakai dan teks rasmi yang telah disemak, tanpa mengurangkan hak anda di sisi undang-undang.</p>
+</section>
+<section class="legal-section" id="s-18">
+  <span class="legal-section-no">18</span>
+  <h2>18. Hubungi kami</h2>
+  <p>Pengawal data: Winnie Lim 林曉怡, yang mengendalikan Joyfulness Path</p>
+<p>Pertanyaan privasi dan permintaan hak: <code>winnie.joyfulness.path@gmail.com</code></p>
+<p>Penyedia perkhidmatan teknikal dan penerbitan: SOUL NEW ENERGY LIMITED (心靈新能量有限公司) No. Sijil Pendaftaran Perniagaan: <code>79188635-000-11-25-9</code> Tempat pendaftaran: Hong Kong Pertanyaan teknikal dan syarikat: <code>hello@soulnewenergy.com</code></p>
+</section>
+        <div class="legal-entity">
+          SOUL NEW ENERGY LIMITED (心靈新能量有限公司)<br>Berdaftar di Hong Kong · No. Pendaftaran Perniagaan: 79188635-000-11-25-9<br>hello@soulnewenergy.com
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer><div class="footer-inner">
+    <span class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡</span>
+    <span class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="/jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="/sne-icon.png" alt=""></a></span>
+    <span class="f-meta"><span class="f-legal"><a href="/ms/terms/">Terma Aktiviti</a><a href="/ms/privacy/">Dasar Privasi</a><a href="mailto:winnie.joyfulness.path@gmail.com">Hubungi</a></span><br>© <span id="year">2026</span> Joyfulness Path with Winnie Lim 林曉怡</span>
+  </div></footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
