@@ -306,6 +306,19 @@
     .joy-path-node { fill: var(--paper); stroke: var(--gold); stroke-width: 1.4; transition: fill .5s ease; }
     .joy-path-node.is-lit { fill: var(--gold); }
     @media (max-width: 900px) { .joy-path { display: none; } }
+    /* Invitation branch: peels off the main line and feeds the CTA button,
+       distinguishing Invitation from Statement's plain curtain-open instead
+       of repeating the same lit-dot treatment. Draws in as scroll passes it,
+       then loops a slow spark + arrival glow while that segment is active. */
+    .joy-branch-track { fill: none; stroke: rgba(195, 164, 108, .4); stroke-width: 2; }
+    .joy-branch-spark { fill: var(--gold); opacity: 0; filter: drop-shadow(0 0 6px rgba(195, 164, 108, .9)); }
+    .joy-branch-arrival { fill: none; stroke: var(--gold); stroke-width: 1.5; opacity: 0; transform-box: fill-box; transform-origin: center; }
+    @media (prefers-reduced-motion: no-preference) {
+      .joy-branch-spark.is-active { animation: joyBranchTravel 3.6s cubic-bezier(.45,0,.55,1) infinite; }
+      .joy-branch-arrival.is-active { animation: joyBranchArrive 3.6s ease-out infinite; }
+    }
+    @keyframes joyBranchTravel { 0% { offset-distance: 0%; opacity: 0; } 6% { opacity: 1; } 90% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+    @keyframes joyBranchArrive { 0%, 76% { opacity: 0; transform: scale(.6); } 88% { opacity: .8; transform: scale(1); } 100% { opacity: 0; transform: scale(1.7); } }
 
     .song-player { position: fixed; z-index: 60; right: 20px; bottom: 20px; left: auto; display: flex; align-items: center; transition: opacity .25s ease, transform .25s ease; }
     .song-player.is-hidden { opacity: 0; transform: translateY(8px) scale(.9); pointer-events: none; }
