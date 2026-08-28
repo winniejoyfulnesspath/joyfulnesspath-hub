@@ -252,7 +252,7 @@
     @media (prefers-reduced-motion: reduce) { .signpost-line { width: 18px !important; transition: none !important; } }
     .social-index { color: var(--rose-deep); font-family: var(--serif); font-size: 13px; }
     .social-link strong { display: block; font-family: var(--serif); font-size: 24px; font-weight: 500; }
-    .social-link small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; letter-spacing: .06em; }
+    .social-link small { display: block; margin-top: 2px; color: #6f645f; font-size: 11px; letter-spacing: .06em; }
     .social-arrow { display: inline-block; font-size: 21px; font-weight: 300; opacity: .5; transition: transform .25s ease, opacity .25s ease; }
     .social-link:hover .social-arrow { transform: translateX(5px); opacity: 1; }
     footer { padding: 38px 0; color: rgba(255,255,255,.64); background: #1f2923; }
@@ -325,7 +325,7 @@
     }
     @media (max-width: 600px) {
       :root { --content: calc(100vw - 34px); }
-      .site-header { padding: 20px 0; } .wordmark span { display: none; } .site-nav .nav-cta { font-size: 10px; }
+      .site-header { padding: 20px 0; } .wordmark span { display: none; } .wordmark-logo { height: 56px; } .site-nav .nav-cta { font-size: 10px; }
       .hero { min-height: 760px; padding: 120px 0 90px; } .hero-copy { width: calc(100vw - 34px); }
       .hero::after { right: -13%; bottom: -5%; font-size: 92vw; }
       .hero-lead { font-size: 19px; line-height: 1.65; } .hero-note { font-size: 12px; }
@@ -509,6 +509,14 @@
       range.addEventListener('input', function(){
         const duration = audio.duration || 0;
         if (duration) { audio.currentTime = duration * (range.value / 100); }
+      });
+      // Stop background music when the visitor leaves the tab/page — same fix
+      // already shipped on friday-energy-reset (2026-08-28), applied here too.
+      document.addEventListener('visibilitychange', function(){
+        if (document.hidden && !audio.paused) audio.pause();
+      });
+      addEventListener('pagehide', function(){
+        if (!audio.paused) audio.pause();
       });
     })();
   </script>
