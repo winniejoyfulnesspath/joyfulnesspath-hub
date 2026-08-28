@@ -63,6 +63,7 @@
       --muted: #756a65; --rose: #c7929b; --rose-soft: #ead4d5; --rose-deep: #985f6b;
       --sage: #b7c3b2; --sage-soft: #e1e8de; --forest: #26332c; --forest-soft: #334238;
       --gold: #c3a46c; --gold-deep: #967743; --line: rgba(70, 52, 47, .16);
+      --terra: #bd7256; --terra-dark: #95533f;
       --serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
       --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
       --content: min(1180px, calc(100vw - 56px));
@@ -209,6 +210,11 @@
     .event-card--muted .status { background: var(--muted); box-shadow: none; }
     .event-card--muted .status::before { animation: none; }
     .event-card--muted .event-link { background: transparent; color: var(--muted); border: 1px solid var(--line); box-shadow: none; }
+    .event-card--forest { background: var(--sage-soft); }
+    .event-card--forest .status { background: var(--forest); box-shadow: 0 8px 20px rgba(38, 51, 44, .28); }
+    .event-card--forest .event-link { background: var(--terra-dark); box-shadow: 0 12px 28px rgba(149, 83, 63, .22); }
+    .event-card--forest .status::before { background: var(--paper); box-shadow: 0 0 0 5px rgba(255,255,255,.28); }
+    .event-card--forest .event-date { color: var(--terra-dark); }
     .status { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-bottom: 42px; padding: 8px 16px 8px 12px; border-radius: 999px; background: var(--rose-deep); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .16em; box-shadow: 0 8px 20px rgba(152,95,107,.28); }
     .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 5px rgba(255,255,255,.28); animation: statusPulse 1.8s ease-in-out infinite; }
     @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
@@ -432,9 +438,9 @@
             <div data-reveal><span class="status">OCTOBER · 深度同行</span><p class="event-date">2 / 3 / 4 OCT 2026 · FRI–SUN · 8:30PM–11:00PM · ZOOM · GMT+8</p><h3>大天使<br>財富指令</h3><p>三日深度調頻課程。從匱乏慣性、允許承載與實際行動出發，逐步整理你與豐盛的關係，讓內在選擇與生活方向重新對齊，把覺察真正落地成每日可用的行動。</p></div>
             <div data-reveal><div class="event-meta"><span>三日線上深度課程</span><span>Zoom 完整課程</span><span>費用 RM233</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://wealth10.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">了解 10 月完整課程 <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="event-card event-card--muted">
-            <div data-reveal><span class="status">已圓滿結束</span><p class="event-date">2026.08.15 · 20:30–22:30 · ZOOM · GMT+8</p><h3>大天使夏彌爾<br>心之歸位</h3><p>一場關於放下腦內雜音、重新回到內在清晰的免費公開引導冥想。已於 8 月 15 日順利舉行，感謝所有參與者。</p></div>
-            <div data-reveal><div class="event-meta"><span>活動已結束</span><span>Zoom 線上進行</span><span>新加坡／香港／馬來西亞／台灣時間</span></div><a class="event-link" href="https://heart-return.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">回顧活動頁面 <span aria-hidden="true">↗</span></a></div>
+          <article class="event-card event-card--forest">
+            <div data-reveal><span class="status">FRIDAY · 六週免費同行</span><p class="event-date">4 / 11 / 18 / 25 SEP · 9 / 16 OCT 2026</p><h3>週五，<br>清空一下。</h3><p>由 Winnie Lim 林曉怡引導的六週直播系列。在六個星期五放下累積、回到自己，再把清楚帶回生活。一次登記，走完整個六週。</p></div>
+            <div data-reveal><div class="event-meta"><span>六個星期五</span><span>Zoom 互動</span><span>Facebook・YouTube 同步</span><span>免費參與</span></div><a class="event-link" href="https://friday-energy-reset.joyfulnesspath.com/" target="_blank" rel="noopener noreferrer">免費登記六週系列 <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
         <!-- 活動更新區 END -->
