@@ -434,13 +434,13 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
  filter:drop-shadow(0 22px 14px rgba(0,0,0,.5)) drop-shadow(0 48px 32px rgba(1,8,18,.4));
 }
 .hero-visual .hero-card-image,
-.journey-item,.lesson,.price-card{
+.journey-item,.lesson,.price-card,.faq details{
  touch-action:pan-y;
- transform-origin:center 80%;
- transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .45s ease;
+ transform-origin:center 78%;
+ transition:transform .7s cubic-bezier(.22,1,.36,1),box-shadow .45s ease;
 }
 .hero-visual .hero-card-image.is-nudged,
-.journey-item.is-nudged,.lesson.is-nudged,.price-card.is-nudged{transition:transform .08s linear,box-shadow .2s ease}
+.journey-item.is-nudged,.lesson.is-nudged,.price-card.is-nudged,.faq details.is-nudged{transition:none}
 .journey-item{
  box-shadow:inset 0 1px 0 rgba(255,228,180,.24),inset 0 0 0 5px #102c36,0 18px 22px rgba(2,10,18,.24),0 42px 58px rgba(2,8,16,.38);
 }
@@ -450,12 +450,8 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
 .pricing .price-card{
  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 0 0 5px #f8f1de,inset 0 0 0 6px rgba(189,155,97,.28),0 20px 24px rgba(72,46,16,.14),0 46px 62px rgba(48,28,8,.22);
 }
-@media (hover:hover) and (pointer:fine){
- .motion-ready .journey-item.is-in:hover:nth-child(odd),.journey-item:hover:nth-child(odd){transform:translateY(-10px) rotate(-2.2deg)}
- .motion-ready .journey-item.is-in:hover:nth-child(even),.journey-item:hover:nth-child(even){transform:translateY(-12px) rotate(2deg)}
- .motion-ready .lesson.is-in:hover,.lesson:hover{transform:translateY(-8px) rotate(-1.4deg)}
- .motion-ready .price-card.is-in:hover,.price-card:hover{transform:translateY(-10px) rotate(.8deg)}
- .price-card.alumni:hover{transform:translateY(-10px) rotate(-.8deg)}
+.faq details{
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 12px 16px rgba(46,37,23,.08),0 28px 40px rgba(46,37,23,.12);
 }
 </style>
 </head>
@@ -679,49 +675,63 @@ if(/^\d{8,15}$/.test(verifiedNumber)){
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
  function bind(el, tilt, lift){
   if(!el) return;
-  var hold=0, downY=0, touching=false;
-  function pose(e){
-   var r=el.getBoundingClientRect();
-   var x=Math.max(-0.5,Math.min(0.5,(e.clientX-r.left)/r.width-0.5));
-   var y=Math.max(-0.5,Math.min(0.5,(e.clientY-r.top)/r.height-0.5));
-   el.style.transform='perspective(860px) rotateX('+(-y*tilt).toFixed(2)+'deg) rotateY('+(x*tilt).toFixed(2)+'deg) translateY('+lift+'px)';
+  var tx=0, ty=0, tz=0, gx=0, gy=0, gz=0, raf=0, downY=0, touching=false;
+  function frame(){
+   tx+=(gx-tx)*0.14;
+   ty+=(gy-ty)*0.14;
+   tz+=(gz-tz)*0.14;
+   var home=!gx&&!gy&&!gz&&Math.abs(tx)<0.015&&Math.abs(ty)<0.015&&Math.abs(tz)<0.4;
+   if(home){
+    el.style.transform='';
+    el.classList.remove('is-nudged');
+    raf=0;
+    return;
+   }
+   el.style.transform='perspective(980px) rotateX('+(-ty*tilt).toFixed(2)+'deg) rotateY('+(tx*tilt).toFixed(2)+'deg) translateY('+tz.toFixed(2)+'px)';
+   raf=requestAnimationFrame(frame);
   }
-  function release(){
+  function wake(){
+   el.classList.add('is-nudged');
+   if(!raf) raf=requestAnimationFrame(frame);
+  }
+  function aim(e){
+   var r=el.getBoundingClientRect();
+   gx=Math.max(-0.5,Math.min(0.5,(e.clientX-r.left)/r.width-0.5));
+   gy=Math.max(-0.5,Math.min(0.5,(e.clientY-r.top)/r.height-0.5));
+   gz=lift;
+   wake();
+  }
+  function settle(){
    touching=false;
-   el.classList.remove('is-nudged');
-   el.style.transform='';
+   gx=0; gy=0; gz=0;
+   wake();
   }
   el.addEventListener('pointerdown',function(e){
    if(e.pointerType==='mouse'&&e.button!==0) return;
    touching=e.pointerType!=='mouse';
    downY=e.clientY;
-   clearTimeout(hold);
-   el.classList.add('is-nudged');
-   pose(e);
+   aim(e);
   });
   el.addEventListener('pointermove',function(e){
-   if(e.pointerType==='touch'&&(!touching||Math.abs(e.clientY-downY)>16)){
-    if(touching) release();
+   if(e.pointerType==='touch'&&(!touching||Math.abs(e.clientY-downY)>18)){
+    if(touching) settle();
     return;
    }
    if(e.pointerType!=='mouse'&&!touching) return;
-   el.classList.add('is-nudged');
-   pose(e);
+   aim(e);
   });
   el.addEventListener('pointerup',function(e){
    if(e.pointerType==='mouse') return;
-   touching=false;
-   clearTimeout(hold);
-   hold=setTimeout(release,420);
+   settle();
   });
   el.addEventListener('pointerleave',function(e){
    if(e.pointerType==='touch') return;
-   release();
+   settle();
   });
-  el.addEventListener('pointercancel',release);
+  el.addEventListener('pointercancel',settle);
  }
- bind(document.querySelector('.hero-card-image'),16,-14);
- document.querySelectorAll('.journey-item,.lesson,.price-card').forEach(function(el){bind(el,12,-8);});
+ bind(document.querySelector('.hero-card-image'),14,-12);
+ document.querySelectorAll('.journey-item,.lesson,.price-card,.faq details').forEach(function(el){bind(el,10,-7);});
 })();
 </script>
 </body>
