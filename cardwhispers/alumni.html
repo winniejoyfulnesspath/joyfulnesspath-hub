@@ -4,49 +4,101 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="robots" content="noindex, nofollow"/>
+<meta name="theme-color" content="#071c24"/>
+<meta name="description" content="塔羅・牌語 CardWhispers｜實戰課舊生報名。先填寫資料，建立報名紀錄後再前往付款。"/>
 <title>舊生報名｜塔羅・牌語 CardWhispers｜實戰課</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
-:root{--ink:#163436;--gold:#a47e42;--paper:#fcf4e2}
+:root{--night:#061b24;--cream:#f3ebd8;--paper:#f8f0dc;--ink:#163136;--gold:#dfbc72;--goldlight:#f9dfa0;--golddeep:#a47834;--line:rgba(218,184,108,.38);--sans:"Noto Sans CJK TC","PingFang TC",sans-serif;--serif:"Noto Serif CJK TC","Songti TC",serif}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;color:var(--ink);background:#071f28;font-family:"Noto Sans TC",sans-serif}
-main{width:min(100% - 28px,640px);margin:28px auto 48px;background:var(--paper);border:1px solid #b5965b;border-radius:8px;padding:28px 22px 24px}
-h1{font-family:"Noto Serif TC",serif;font-weight:600;font-size:clamp(1.6rem,5vw,2rem);line-height:1.35;margin:8px 0}
-p{line-height:1.8}
-.eyebrow{letter-spacing:.16em;color:var(--gold);font-size:.75rem}
-.fields{display:grid;gap:4px 14px}
-label{display:block;margin:10px 0;font-size:.9rem}
-input,textarea{display:block;width:100%;margin-top:6px;min-height:44px;border:1px solid #baa47b;border-radius:5px;padding:10px 12px;font:inherit;background:#fffdf8;color:var(--ink)}
-textarea{min-height:72px}
+body{margin:0;min-height:100vh;color:var(--cream);background:radial-gradient(ellipse at 70% 0%,#1a4550 0%,transparent 42%),radial-gradient(ellipse at 8% 90%,#123c36 0%,transparent 38%),linear-gradient(180deg,#081c25,#061821 70%);font-family:var(--sans);line-height:1.75}
+a{color:inherit}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid #7ad2bf;outline-offset:3px}
+.wrap{width:min(760px,calc(100% - 32px));margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-size:18px}
+.brand-name{font:500 16px/1.15 Georgia,serif;letter-spacing:.03em;color:#f2e2be}
+.brand-sub{display:block;font:9px/1.5 Georgia,serif;color:#e6c790;letter-spacing:.18em}
+.seal{font-size:.72rem;letter-spacing:.16em;color:var(--goldlight);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+main{padding:18px 0 36px}
+.eyebrow{margin:0;font-size:.75rem;letter-spacing:.2em;color:var(--gold)}
+h1{margin:8px 0 0;font:600 clamp(2rem,6vw,3.1rem)/1.25 var(--serif);letter-spacing:.06em;color:#f6d898}
+.course-name{margin:8px 0 0;font:500 1.15rem/1.5 var(--serif);color:#f7e6bc}
+.lede{max-width:38rem;margin:14px 0 0;color:#d7dfd8}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0 0;padding:0;list-style:none}
+.facts li{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:rgba(8,28,37,.45)}
+.facts b{display:block;font-size:.72rem;letter-spacing:.12em;font-weight:600;color:var(--gold)}
+.facts span{display:block;margin-top:4px;color:#f4ead4;font-size:.92rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.steps li{display:flex;gap:10px;align-items:baseline;color:#e7d7b4;font-size:.88rem}
+.steps span{font:500 1rem Georgia,serif;color:var(--goldlight)}
+.sheet{margin-top:22px;color:var(--ink);background:var(--paper);border:1px solid #b5965b;border-radius:8px;padding:26px 22px 22px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.sheet h2{margin:0;font:600 1.45rem/1.4 var(--serif)}
+.sheet .hint{margin:6px 0 4px;font-size:.86rem;color:#5c6562}
+.fields{display:grid;gap:2px 14px}
+label{display:block;margin:12px 0 0;font-size:.9rem}
+input,textarea{display:block;width:100%;margin-top:6px;min-height:46px;border:1px solid #baa47b;border-radius:5px;padding:10px 12px;background:#fffdf8;color:var(--ink);font-size:1rem}
+textarea{min-height:76px;resize:vertical}
 .check{display:flex;gap:10px;align-items:flex-start}
-.check input{width:18px;height:18px;min-height:18px;margin-top:4px}
+.check input{width:18px;height:18px;min-height:18px;margin-top:3px}
 .required{color:#aa4d36}
-button{width:100%;min-height:48px;margin-top:8px;border-radius:999px;border:1px solid #aa7e37;background:#8d6740;color:#fffaf0;font-weight:700;letter-spacing:.04em}
-button:disabled{opacity:.55}
-.notice{min-height:2.4em;background:#fff8e5;border-left:3px solid var(--gold);padding:8px 12px;font-size:.86rem}
-@media(min-width:640px){.fields{grid-template-columns:1fr 1fr}}
+button[type="submit"]{width:100%;min-height:50px;margin-top:16px;border-radius:999px;border:1px solid #aa7e37;background:linear-gradient(180deg,#fae2a8,#d4a455 74%,#ba873c);color:#352b1b;font-weight:700;letter-spacing:.06em}
+button[type="submit"]:disabled{opacity:.55;cursor:wait}
+.notice{min-height:2.6em;margin:14px 0 0;background:#fff8e5;border-left:3px solid var(--golddeep);padding:8px 12px;font-size:.86rem;color:#5c4a32}
+footer{padding:8px 0 28px;border-top:1px solid rgba(172,140,79,.35);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.75rem;color:#c0b8a2}
+footer a{color:#e6d3a8}
+@media(min-width:680px){.fields{grid-template-columns:1fr 1fr}.fields .wide{grid-column:1 / -1}}
+@media(max-width:640px){.facts,.steps{grid-template-columns:1fr}.wrap{width:min(100% - 24px,760px)}header{padding-top:16px}.seal{display:none}}
 </style>
 </head>
 <body>
+<div class="wrap">
+<header>
+<a class="brand" href="https://cardwhispers.joyfulnesspath.com/">
+<span class="brand-mark" aria-hidden="true">✺</span>
+<span><span class="brand-name">Joyfulness Path</span><span class="brand-sub">WITH WINNIE LIM</span></span>
+</a>
+<span class="seal">舊生專用</span>
+</header>
 <main>
 <p class="eyebrow">RETURNING STUDENT</p>
 <h1>舊生報名與付款</h1>
-<p>這頁只供已獲 Winnie 確認資格的舊生使用。請先填寫資料，系統建立報名紀錄後，才會前往舊生付款頁。費用為 USD 143。</p>
-<form id="alumniForm">
+<p class="course-name">塔羅・牌語 CardWhispers｜實戰課</p>
+<p class="lede">這頁只供已獲 Winnie 確認資格的舊生使用。請先填寫資料，系統建立報名紀錄後，才會前往舊生付款。</p>
+<ul class="facts">
+<li><b>核心日期</b><span>2026 年 12 月 11–13 日</span></li>
+<li><b>核心時段</b><span>20:00–23:00 · UTC+8</span></li>
+<li><b>舊生費用</b><span>USD 143</span></li>
+</ul>
+<ol class="steps">
+<li><span>01</span>填寫報名資料</li>
+<li><span>02</span>寫入報名紀錄</li>
+<li><span>03</span>前往舊生付款</li>
+</ol>
+<form class="sheet" id="alumniForm">
+<h2>報名資料</h2>
+<p class="hint">Zoom 參加連結會在付款確認信送出。第 4 堂係 bonus，日期稍後用同一條連結通知。</p>
 <div class="fields">
 <label>姓名 <span class="required">＊</span><input name="name" required maxlength="100" autocomplete="name"/></label>
 <label>電郵地址 <span class="required">＊</span><input name="email" type="email" required maxlength="254" autocomplete="email"/></label>
 <label>WhatsApp（選填）<input name="whatsapp" type="tel" maxlength="28" autocomplete="tel"/></label>
 <label>所在國家／地區 <span class="required">＊</span><input name="region" required maxlength="100" autocomplete="country-name"/></label>
+<label class="wide">目前最想學習的方向（選填）<textarea name="latest_focus_area" maxlength="500" rows="2"></textarea></label>
 </div>
-<label>目前最想學習的方向（選填）<textarea name="latest_focus_area" maxlength="500" rows="2"></textarea></label>
 <label class="check"><input name="event_consent" type="checkbox" required/><span>我同意提供報名及上課安排所需的聯絡資料。 <span class="required">＊</span></span></label>
 <label class="check"><input name="updates_consent" type="checkbox"/><span>我願意收到這次課程的後續更新（選填）。</span></label>
-<p class="notice" id="notice" role="status">提交後先寫入報名紀錄，再前往舊生付款。</p>
+<p class="notice" id="notice" role="status">提交後先寫入報名紀錄，再前往舊生付款。費用為 USD 143。</p>
 <button type="submit">提交資料，繼續付款</button>
 </form>
 </main>
+<footer>
+<span>© 2026 Joyfulness Path with Winnie Lim</span>
+<span><a href="https://joyfulnesspath.com/terms/">活動條款</a> · <a href="https://joyfulnesspath.com/privacy/">私隱政策</a></span>
+</footer>
+</div>
 <script>
 const ENDPOINT='https://script.google.com/macros/s/AKfycbzEHNWnXvWTBx4LBKvW68hKUxyUxWkd3xgo1f9jqOa0reS-_X7nTEN2pZiwgTbdImmJ/exec';
 document.querySelector('#alumniForm').addEventListener('submit',async(event)=>{
