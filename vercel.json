@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "cardwhispers.joyfulnesspath.com" }],
+      "destination": "/cardwhispers/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "cardwhispers.joyfulnesspath.com" }],
+      "destination": "/cardwhispers/:path*"
+    }
+  ]
+}
