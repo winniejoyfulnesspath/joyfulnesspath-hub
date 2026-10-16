@@ -56,6 +56,13 @@ footer .f-role{display:block;margin-top:4px;line-height:1.7;color:rgba(224,214,1
 footer .f-collab{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 footer .f-logo{width:18px;height:18px;border-radius:50%;object-fit:cover}
 footer .f-legal{display:flex;flex-wrap:wrap;gap:8px 14px}
+.pay-terms{margin:12px 0 0;font-size:.82rem;line-height:1.75;color:#5c4a32}
+.payment-links{font-size:.82rem}
+.link-btn{background:none;border:0;padding:0;font:inherit;color:#6d5428;text-decoration:underline;cursor:pointer}
+#bmPayDialog{position:relative;border:1px solid #b5965b;border-radius:8px;max-width:560px;width:calc(100% - 28px);background:#fcf4e2;color:#163136;padding:28px 22px}
+#bmPayDialog::backdrop{background:#01161dcc}
+#bmPayDialog h2{font:600 1.4rem/1.4 var(--serif);margin:0 28px 12px 0}
+#bmPayDialog button[data-close-bm]{position:absolute;right:12px;top:8px;background:none;border:0;font-size:28px;cursor:pointer}
 @media(min-width:680px){.fields{grid-template-columns:1fr 1fr}.fields .wide{grid-column:1 / -1}}
 @media(max-width:640px){.facts,.steps{grid-template-columns:1fr}.wrap{width:min(100% - 24px,760px)}header{padding-top:16px}.seal{display:none}}
 </style>
@@ -96,6 +103,8 @@ footer .f-legal{display:flex;flex-wrap:wrap;gap:8px 14px}
 <label class="check"><input name="event_consent" type="checkbox" required/><span>我同意提供報名及上課安排所需的聯絡資料。 <span class="required">＊</span></span></label>
 <label class="check"><input name="updates_consent" type="checkbox"/><span>我願意收到這次課程的後續更新（選填）。</span></label>
 <p class="notice" id="notice" role="status">提交後會保存資料並前往付款。付款頁的電郵已鎖定，請使用同一個電郵。未付款尚未算正式報名。費用為 USD 143。確認信在付款完成後寄出，若未收到請查看垃圾郵件。</p>
+<p class="pay-terms">舊生費用 USD 143，以 Stripe 付款。其他幣別以付款前顯示為準。課程由 Winnie Lim 林曉怡於馬來西亞網上主理。自行取消、缺席或網絡問題不自動退款；開始前不少於 48 小時可申請一次改期或轉讓。本課程屬塔羅學習與個人成長練習，不構成醫療、心理、財務或專業諮詢，亦不保證特定結果。</p>
+<p class="payment-links"><a href="https://joyfulnesspath.com/terms/" target="_blank" rel="noopener noreferrer">活動條款</a> · <a href="https://joyfulnesspath.com/privacy/" target="_blank" rel="noopener noreferrer">私隱政策</a> · <button type="button" class="link-btn" data-open-bm>Maklumat Pembayaran (BM)</button></p>
 <button type="submit">提交資料，繼續付款</button>
 </form>
 </main>
@@ -106,7 +115,22 @@ footer .f-legal{display:flex;flex-wrap:wrap;gap:8px 14px}
 <p>© 2026 Joyfulness Path with Winnie Lim 林曉怡</p>
 </footer>
 </div>
+<dialog id="bmPayDialog">
+ <button type="button" data-close-bm aria-label="Tutup">×</button>
+ <h2>Maklumat Pembayaran</h2>
+ <p>Kursus ini dianjurkan oleh Winnie Lim 林曉怡 di bawah Joyfulness Path, dengan sokongan teknikal SOUL NEW ENERGY LIMITED.</p>
+ <p>Kursus berlangsung melalui Zoom pada 11–13 Disember 2026, dari 8:00 malam hingga 11:00 malam (UTC+8). Ia merangkumi tiga sesi teras. Sesi bonus keempat akan dijalankan kemudian melalui pautan Zoom yang sama.</p>
+ <p>Harga pelajar yang kembali ialah USD 143. Mata wang lain, jika tersedia, akan dipaparkan oleh Stripe sebelum pembayaran. Gunakan e-mel yang sama seperti borang. Jika e-mel pengesahan tidak kelihatan, sila semak folder spam.</p>
+ <p>Pembatalan sendiri, ketidakhadiran atau masalah rangkaian tidak secara automatik memberi hak bayaran balik. Permintaan penjadualan semula atau pemindahan hendaklah dibuat sekurang-kurangnya 48 jam sebelum kursus. Hak pengguna yang tidak boleh dikecualikan tidak terjejas.</p>
+ <p>Program ini ialah pembelajaran tarot dan pertumbuhan peribadi. Ia bukan nasihat perubatan, psikologi, kewangan atau khidmat perundingan profesional, dan tidak menjamin hasil tertentu.</p>
+ <p>Hubungi: +60 12-234 9607 · <a href="mailto:winnie.joyfulness.path@gmail.com">winnie.joyfulness.path@gmail.com</a><br>Operasi: Malaysia · dalam talian sahaja</p>
+ <p><a href="https://joyfulnesspath.com/ms/terms/" target="_blank" rel="noopener noreferrer">Terma penuh</a> · <a href="https://joyfulnesspath.com/ms/privacy/" target="_blank" rel="noopener noreferrer">Dasar Privasi</a></p>
+</dialog>
 <script>
+const bm=document.querySelector('#bmPayDialog');
+document.querySelectorAll('[data-open-bm]').forEach(b=>b.addEventListener('click',()=>bm.showModal()));
+document.querySelectorAll('[data-close-bm]').forEach(b=>b.addEventListener('click',()=>bm.close()));
+bm.addEventListener('click',e=>{if(e.target===bm)bm.close()});
 const ENDPOINT='https://script.google.com/macros/s/AKfycbzEHNWnXvWTBx4LBKvW68hKUxyUxWkd3xgo1f9jqOa0reS-_X7nTEN2pZiwgTbdImmJ/exec';
 document.querySelector('#alumniForm').addEventListener('submit',async(event)=>{
  event.preventDefault();
@@ -114,7 +138,7 @@ document.querySelector('#alumniForm').addEventListener('submit',async(event)=>{
  if(!form.reportValidity())return;
  const fd=new FormData(form);
  const v=k=>String(fd.get(k)||'').trim();
- const button=form.querySelector('button');
+ const button=form.querySelector('button[type="submit"]');
  const notice=document.querySelector('#notice');
  button.disabled=true;
  notice.textContent='正在提交報名資料，請稍候……';
