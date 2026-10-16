@@ -67,7 +67,7 @@ footer a{color:#e6d3a8}
 <p class="eyebrow">RETURNING STUDENT</p>
 <h1>舊生報名與付款</h1>
 <p class="course-name">塔羅・牌語 CardWhispers｜實戰課</p>
-<p class="lede">這頁只供已獲 Winnie 確認資格的舊生使用。請先填寫資料，系統建立報名紀錄後，才會前往舊生付款。</p>
+<p class="lede">這頁只供已獲 Winnie 確認資格的舊生使用。請先填寫資料。付款頁會鎖定你剛剛填寫的電郵，必須使用同一個電郵。付款完成並核對成功後，才算正式報名。確認信會寄到這個電郵；如果收件匣未見，請查看垃圾郵件。</p>
 <ul class="facts">
 <li><b>核心日期</b><span>2026 年 12 月 11–13 日</span></li>
 <li><b>核心時段</b><span>20:00–23:00 · UTC+8</span></li>
@@ -75,8 +75,8 @@ footer a{color:#e6d3a8}
 </ul>
 <ol class="steps">
 <li><span>01</span>填寫報名資料</li>
-<li><span>02</span>寫入報名紀錄</li>
-<li><span>03</span>前往舊生付款</li>
+<li><span>02</span>用同一個電郵付款</li>
+<li><span>03</span>核對成功後才算報名</li>
 </ol>
 <form class="sheet" id="alumniForm">
 <h2>報名資料</h2>
@@ -90,7 +90,7 @@ footer a{color:#e6d3a8}
 </div>
 <label class="check"><input name="event_consent" type="checkbox" required/><span>我同意提供報名及上課安排所需的聯絡資料。 <span class="required">＊</span></span></label>
 <label class="check"><input name="updates_consent" type="checkbox"/><span>我願意收到這次課程的後續更新（選填）。</span></label>
-<p class="notice" id="notice" role="status">提交後先寫入報名紀錄，再前往舊生付款。費用為 USD 143。</p>
+<p class="notice" id="notice" role="status">提交後會保存資料並前往付款。付款頁的電郵已鎖定，請使用同一個電郵。未付款尚未算正式報名。費用為 USD 143。確認信在付款完成後寄出，若未收到請查看垃圾郵件。</p>
 <button type="submit">提交資料，繼續付款</button>
 </form>
 </main>
@@ -121,7 +121,7 @@ document.querySelector('#alumniForm').addEventListener('submit',async(event)=>{
   if(!res.ok||!payload||payload.ok!==true||!payload.regId||payload.status!=='pending_payment'||typeof payload.checkout_url!=='string'||!/^https:\/\/buy\.stripe\.com\//.test(payload.checkout_url)){
    throw new Error((payload&&payload.error)||'未能確認報名紀錄，請稍後再試。');
   }
-  notice.textContent='報名紀錄已建立，正在前往付款頁……';
+  notice.textContent='資料已保存。正在前往付款頁，請使用已鎖定的同一個電郵……';
   window.location.assign(payload.checkout_url);
  }catch(err){
   notice.textContent=err instanceof Error?err.message:'傳送失敗，請稍後再試。';
