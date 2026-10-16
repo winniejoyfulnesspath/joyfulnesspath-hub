@@ -396,6 +396,19 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
 .hero-tail-lock{white-space:nowrap}
 @media(max-width:360px){.pricing .container.center{padding-top:43px}}
 </style>
+<style id="cw-safari-typography-qc">
+/* Mobile: Safari focuses form fields without zooming the whole page. */
+@media(max-width:760px){
+ .enrollment-dialog input:not([type="checkbox"]),.enrollment-dialog textarea{font-size:16px}
+ .hero-description,.section-intro,.lesson p,.fit-card p,.mentor-copy p,
+ .price-card p,.price-card .fine,.faq summary,.faq details p,
+ .course-time,.info-subtitle,.mentor-quote,.section-heading,.hero h1,.hero h2,
+ .final .site-footer .f-meta,.final .site-footer .f-copy{text-wrap:balance}
+ .cw-page-card{line-break:strict}
+ .final .site-footer{padding-inline:max(12px,4vw)}
+}
+.cw-phrase-lock{white-space:nowrap}
+</style>
 </head>
 <body>
 <div class="cw-page-card" id="cardPage">
@@ -414,7 +427,7 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
    <div class="hero-overline">TAROT · THE LANGUAGE OF CARDS</div>
    <h1>塔羅・牌語</h1><h2>CardWhispers <span style="color:#d9b976">｜</span>實戰課</h2>
    <div class="hero-slogan">看懂牌，連成話，說到點。</div>
-   <p class="hero-description">從基本牌義開始，練習在牌與牌之間<span class="hero-tail-lock">看出關係。</span><br/>不只逐張解釋，而是把三至五張牌串成一段有依據、能回應生活問題的完整解讀。</p>
+   <p class="hero-description">從基本牌義開始，練習在牌與牌之間<span class="hero-tail-lock">看出關係。</span><br/>不只逐張解釋，而是把三至五張牌串成一段<span class="cw-phrase-lock">有依據、能</span>回應生活問題的完整解讀。</p>
    <div class="hero-actions"><button class="button button-primary" type="button" data-open-new>立即報名新生課程 <span>→</span></button><span class="hero-aside">3 堂核心教學 ＋ 1 堂整合實戰</span></div>
   </div>
   <div class="hero-visual" aria-label="金色尖拱月夜山巒、星星月亮太陽塔羅牌組的藝術構圖"><div class="hero-art-stack" aria-label="星星月亮太陽塔羅牌與燭光花飾分層主景">
@@ -426,7 +439,7 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
  <div class="container hero-footer"><span class="benefit"><img src="assets/icon-hero-book.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-05"/><span class="benefit-label">從基礎建立理解</span></span><span class="benefit"><img src="assets/icon-hero-sun.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-06"/><span class="benefit-label">練習牌與牌的關係</span></span><span class="benefit"><img src="assets/icon-hero-hands-heart.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-07"/><span class="benefit-label">把建議連回生活</span></span><span class="benefit"><img src="assets/icon-hero-compass.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-08"/><span class="benefit-label">找到自己的說牌順序</span></span></div>
 </section>
 <section id="journey" class="section parchment journey">
- <div class="container center"><span class="eyebrow">FROM ONE CARD TO A COMPLETE READING</span><h2 class="section-heading">從一張牌，到一段<span class="journey-heading-tail">完整的解讀。</span></h2><p class="section-intro">不是背完牌義就自然會解讀，而是逐步學習：看懂線索、看見牌與牌的關係，再把它們說成對方聽得懂的話。</p><div class="gold-divider"></div></div>
+ <div class="container center"><span class="eyebrow">FROM ONE CARD TO A COMPLETE READING</span><h2 class="section-heading">從一張牌，到一段<span class="journey-heading-tail">完整的解讀。</span></h2><p class="section-intro">不是背完牌義就自然會解讀，而是逐步學習：看懂線索、看見牌與牌的<span class="cw-phrase-lock">關係，再把</span>它們說成對方聽得懂的話。</p><div class="gold-divider"></div></div>
  <div class="container journey-grid">
   <article class="journey-item"><div class="journey-label">一張牌</div><div class="journey-visual"><img src="assets/prog-illust-1card.webp" alt="隱者牌 THE HERMIT，提燈探索方向的塔羅藝術插畫" width="800" height="600" decoding="async" loading="lazy" data-asset-id="A-13"/></div><h3>看懂意義，找到重點</h3><p>觀察牌面象徵，分辨眼前問題真正值得回應的部分。</p><span class="journey-step" aria-hidden="true">➜</span></article>
   <article class="journey-item"><div class="journey-label">三張牌</div><div class="journey-visual"><img src="assets/three-card-spread.webp" alt="三張塔羅牌牌陣藝術插畫" width="1050" height="789" loading="lazy"/></div><h3>找到關係，連成話</h3><p>辨認牌與牌之間的補充、衝突、轉折，說出解讀依據。</p><span class="journey-step" aria-hidden="true">➜</span></article>
@@ -439,7 +452,7 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
   <article class="lesson"><div class="lesson-symbol"><img src="assets/icon-curr-eye.svg" alt="" loading="lazy"/></div><div class="lesson-index">01</div><h3>看懂牌，也看懂問題</h3><p>建立大牌、四元素與數字牌的基礎，練習把一個模糊問題<span class="cjk-tail">問清楚。</span></p></article>
   <article class="lesson"><div class="lesson-symbol"><img src="assets/icon-curr-triple-moon.svg" alt="" loading="lazy"/></div><div class="lesson-index">02</div><h3>三張牌，連成一段話</h3><p>認識宮廷牌與<span class="cjk-tail">牌面關係，</span>找到主軸，不再逐張念完就停。</p></article>
   <article class="lesson"><div class="lesson-symbol"><img src="assets/icon-curr-scales.svg" alt="" loading="lazy"/></div><div class="lesson-index">03</div><h3>五張牌，回答到點</h3><p>整合主軸、<span class="cjk-tail">阻力與發展，</span>讓建議可落到生活中的下一步。</p></article>
-  <article class="lesson"><div class="lesson-symbol"><img src="assets/icon-curr-sprout.svg" alt="" loading="lazy"/></div><div class="lesson-index">＋1</div><h3>整合實戰與答疑</h3><p>透過案例、示範與回饋，修正含糊、跳躍或缺少<span class="cjk-tail">依據的解讀。</span></p></article>
+  <article class="lesson"><div class="lesson-symbol"><img src="assets/icon-curr-sprout.svg" alt="" loading="lazy"/></div><div class="lesson-index">＋1</div><h3>整合實戰與答疑</h3><p>透過案例、示範與回饋，修正<span class="cw-phrase-lock">含糊、跳躍</span>或缺少<span class="cjk-tail">依據的解讀。</span></p></article>
  </div>
  <p class="container lesson-note"><span>老師示範</span><span>拆解過程</span><span>學員練習</span><span>回饋修正</span></p>
 </section>
@@ -472,7 +485,7 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
    <div class="info-facts">
     <div class="info-fact"><img class="info-symbol" src="assets/icon-info-calendar.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-30-calendar"/><div><b>核心日期</b><span>2026 年 12 月 11–13 日</span><small>連續三晚</small></div></div>
     <div class="info-fact"><img class="info-symbol" src="assets/icon-info-clock.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-30-clock"/><div><b>核心時段</b><span>20:00–23:00</span><small>UTC+8</small></div></div>
-    <div class="info-fact"><img class="info-symbol" src="assets/icon-info-camera.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-30-camera"/><div><b>上課形式</b><span>Zoom 線上直播</span><small>付款確認信會附上同一條參加連結</small></div></div>
+    <div class="info-fact"><img class="info-symbol" src="assets/icon-info-camera.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-30-camera"/><div><b>上課形式</b><span>Zoom 線上直播</span><small>Zoom 上課連結將於開課前另行寄出</small></div></div>
     <div class="info-fact"><img class="info-symbol" src="assets/icon-info-students.svg" alt="" aria-hidden="true" width="64" height="64" decoding="async" data-asset-id="A-30-students"/><div><b>課程安排</b><span>3 堂核心 ＋ 1 堂整合實戰</span><small>第 4 堂係 bonus，日期稍後用同一條 Zoom 連結通知</small></div></div>
    </div>
    <a class="info-link" href="#pricing">查看報名方式 <span aria-hidden="true">→</span></a>
@@ -482,7 +495,7 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
 <section id="pricing" class="section parchment pricing">
  <div class="container center"><span class="eyebrow">ENROLLMENT · COURSE ACCESS</span><h2 class="section-heading">為自己的學習，<span class="pricing-tail-lock">留下一個位置。</span></h2><p class="section-intro">新生先填寫資料，再到付款頁用同一個電郵付款，核對成功後才算正式報名。曾參加 Winnie 塔羅課程的舊生，須經老師核實後由老師私下發送專屬報名及付款表單連結。</p><div class="gold-divider"></div></div>
  <div class="container pricing-grid">
-  <article class="price-card"><img class="price-emblem price-emblem-sun" src="assets/price-card-left-sun.webp" alt="" aria-hidden="true" width="400" height="400"/><img class="price-flora price-flora-left" src="assets/price-fg-tarot-flora-corners.webp" alt="" aria-hidden="true" width="400" height="400"/><div class="price-kicker">NEW STUDENT / 新生</div><h3>完整實戰課程</h3><div class="price"><small>USD</small> 286</div><p>包含 3 堂核心教學、1 堂整合實戰與答疑，以及課堂示範與練習。</p><button class="button button-primary" type="button" data-open-new>填表報名新生課程 →</button><div class="fine">先填表，再用同一個電郵付款。未付款尚未算正式報名。</div><div class="pay-terms"><p>本課程由 Winnie Lim 林曉怡於馬來西亞網上主理，Soul New Energy 提供技術及付款處理支援。Zoom 線上，2026年12月11–13日，20:00–23:00（UTC+8），三堂核心；第4堂 bonus 日期稍後以同一條 Zoom 通知。新生費用 USD 286，以 Stripe 付款。其他幣別以付款前顯示為準。自行取消、缺席或網絡問題不自動退款；開始前不少於 48 小時可申請一次改期或轉讓。本課程屬塔羅學習與個人成長練習，不構成醫療、心理、財務或專業諮詢，亦不保證特定結果。查詢：+60 12-234 9607。</p><p class="payment-links"><a href="https://joyfulnesspath.com/terms/" target="_blank" rel="noopener noreferrer">活動條款</a> · <a href="https://joyfulnesspath.com/privacy/" target="_blank" rel="noopener noreferrer">私隱政策</a> · <button type="button" class="link-btn" data-open-bm>Maklumat Pembayaran (BM)</button></p><p>付款後確認信如未見到，請查看垃圾郵件。</p></div></article>
+  <article class="price-card"><img class="price-emblem price-emblem-sun" src="assets/price-card-left-sun.webp" alt="" aria-hidden="true" width="400" height="400"/><img class="price-flora price-flora-left" src="assets/price-fg-tarot-flora-corners.webp" alt="" aria-hidden="true" width="400" height="400"/><div class="price-kicker">NEW STUDENT / 新生</div><h3>完整實戰課程</h3><div class="price"><small>USD</small> 286</div><p>包含 3 堂核心教學、1 堂整合實戰與答疑，以及課堂示範與練習。</p><button class="button button-primary" type="button" data-open-new>填表報名新生課程 →</button><div class="fine">先填表，再用同一個電郵<span class="cw-phrase-lock">付款。未付款</span>尚未算正式報名。</div><div class="pay-terms"><p>本課程由 Winnie Lim 林曉怡於馬來西亞網上主理，Soul New Energy 提供技術及付款處理支援。Zoom 線上，<span class="cw-phrase-lock">2026年12月11–13日</span>，20:00–23:00（UTC+8），三堂核心；第4堂 bonus 日期稍後以同一條 Zoom 通知。新生費用 USD 286，以 Stripe 付款。其他幣別以付款前顯示為準。自行取消、缺席或網絡問題不自動退款；開始前不少於 48 小時可申請一次改期或轉讓。本課程屬塔羅學習與個人成長練習，不構成<span class="cw-phrase-lock">醫療、心理</span>、財務或專業諮詢，亦不保證特定結果。查詢：+60 12-234 9607。</p><p class="payment-links"><a href="https://joyfulnesspath.com/terms/" target="_blank" rel="noopener noreferrer">活動條款</a> · <a href="https://joyfulnesspath.com/privacy/" target="_blank" rel="noopener noreferrer">私隱政策</a> · <button type="button" class="link-btn" data-open-bm>Maklumat Pembayaran (BM)</button></p><p>付款後確認信如<span class="cw-phrase-lock">未見到，請</span>查看垃圾郵件。</p></div></article>
   <article class="price-card alumni"><img class="price-emblem price-emblem-moon" src="assets/price-card-right-moon.webp" alt="" aria-hidden="true" width="400" height="400"/><img class="price-flora price-flora-right" src="assets/price-fg-tarot-flora-corners-right.webp" alt="" aria-hidden="true" width="400" height="400"/><div class="price-kicker">RETURNING STUDENT / 舊生禮遇</div><h3>再次練習，讀得更深</h3><div class="alumni-exclusive">塔羅課舊生專屬安排</div><p>僅適用於曾參加 Winnie 塔羅課程的學員；其他工作坊或課程不適用。由 Winnie 核實資格，再私下發送專屬價錢的報名及付款表單連結。</p><a class="button button-whatsapp" data-alumni-whatsapp href="https://wa.me/60122349607?text=Winnie%20%E8%80%81%E5%B8%AB%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%9B%BE%E5%8F%83%E5%8A%A0%E6%82%A8%E7%9A%84%E5%A1%94%E7%BE%85%E8%AA%B2%E7%A8%8B%EF%BC%8C%E6%83%B3%E5%A0%B1%E5%90%8D%E3%80%8A%E5%A1%94%E7%BE%85%E3%83%BB%E7%89%8C%E8%AA%9E%20CardWhispers%EF%BD%9C%E5%AF%A6%E6%88%B0%E8%AA%B2%E3%80%8B%E3%80%82%E8%AB%8B%E8%80%81%E5%B8%AB%E5%B9%AB%E6%88%91%E7%A2%BA%E8%AA%8D%E5%A1%94%E7%BE%85%E8%88%8A%E7%94%9F%E8%B3%87%E6%A0%BC%EF%BC%8C%E4%B8%A6%E6%96%BC%E7%A2%BA%E8%AA%8D%E5%BE%8C%E7%99%BC%E9%80%81%E8%88%8A%E7%94%9F%E5%B0%88%E5%B1%AC%E5%A0%B1%E5%90%8D%E5%8F%8A%E4%BB%98%E6%AC%BE%E8%A1%A8%E5%96%AE%E9%80%A3%E7%B5%90%EF%BC%8C%E8%AC%9D%E8%AC%9D%E3%80%82" target="_blank" rel="noopener noreferrer"><span class="wa" aria-hidden="true">✉</span>WhatsApp 聯絡 Winnie 核實舊生資格 →</a><span class="tarot-alumni-contact-notice" id="alumniContactNotice" role="status" aria-live="polite">由 Winnie 親自確認後，私下發送塔羅課舊生專屬報名及付款表單連結。</span><div class="fine">專屬表單只由 Winnie 私下發送。付款頁會鎖定表單電郵，核對成功後才算正式報名。</div></article>
  </div>
 </section>
@@ -501,7 +514,7 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
 </section>
 <section class="section final night-panel stars">
  <img class="footer-crescent" src="assets/footer-crescent-v16.svg" width="160" height="160" alt="" aria-hidden="true" decoding="async"/>
- <div class="container"><div class="ornament">☽ ✧ ☼ ✧ ☾</div><h2 class="section-heading">把你看到的牌，講成對方聽得懂的話。</h2><p>看懂牌，也看見那些原本沒有被說清楚的問題。</p><a class="button button-primary" href="#pricing">選擇我的學習方式 →</a><div class="footer site-footer"><p class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡<span class="f-role">Winnie Lim 林曉怡於馬來西亞主理活動；Soul New Energy 為香港註冊公司，提供網站、活動製作及技術支援。</span></p><p class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="assets/jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="assets/sne-icon.png" alt=""></a></p><p class="f-meta"><span class="f-legal"><a href="https://joyfulnesspath.com/terms/">活動條款</a><a href="https://joyfulnesspath.com/privacy/">私隱政策</a><a href="https://www.facebook.com/groups/joyfulnesspath31/">Facebook 群組</a><a href="mailto:winnie.joyfulness.path@gmail.com">聯絡</a></span><span class="f-copy">© 2026 Joyfulness Path with Winnie Lim 林曉怡</span></p></div></div>
+ <div class="container"><div class="ornament">☽ ✧ ☼ ✧ ☾</div><h2 class="section-heading">把你看到的牌，講成對方聽得懂的話。</h2><p>看懂牌，也看見那些原本沒有被說清楚的問題。</p><a class="button button-primary" href="#pricing">選擇我的學習方式 →</a><div class="footer site-footer"><p class="f-title">JOYFULNESS PATH · WINNIE LIM 林曉怡<span class="f-role">Winnie Lim 林曉怡於馬來西亞主理活動；Soul New Energy 為香港註冊公司，提供網站、活動製作及技術支援。</span></p><p class="f-collab"><a href="https://joyfulnesspath.com/" target="_blank" rel="noopener noreferrer"><img class="f-logo" src="assets/jp-icon.png" alt="">Joyfulness Path</a><span class="x">×</span><a href="https://soulnewenergy.com" target="_blank" rel="noopener noreferrer">Soul New Energy<img class="f-logo" src="assets/sne-icon.png" alt=""></a></p><p class="f-meta"><span class="f-legal"><a href="https://joyfulnesspath.com/terms/">活動條款</a><a href="https://joyfulnesspath.com/privacy/">私隱政策</a><a href="https://www.facebook.com/groups/joyfulnesspath31/">Facebook 群組</a><a href="mailto:winnie.joyfulness.path@gmail.com">聯絡</a></span><span class="f-copy">© 2026 Joyfulness Path with <span class="cw-phrase-lock">Winnie Lim 林曉怡</span></span></p></div></div>
 </section>
 </main>
 </div><!-- /cw-page-card: one continuous outer gold frame -->
