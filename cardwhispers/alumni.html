@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>舊生報名｜塔羅・牌語 CardWhispers｜實戰課</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#163436;--gold:#a47e42;--paper:#fcf4e2}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);background:#071f28;font-family:"Noto Sans TC",sans-serif}
+main{width:min(100% - 28px,640px);margin:28px auto 48px;background:var(--paper);border:1px solid #b5965b;border-radius:8px;padding:28px 22px 24px}
+h1{font-family:"Noto Serif TC",serif;font-weight:600;font-size:clamp(1.6rem,5vw,2rem);line-height:1.35;margin:8px 0}
+p{line-height:1.8}
+.eyebrow{letter-spacing:.16em;color:var(--gold);font-size:.75rem}
+.fields{display:grid;gap:4px 14px}
+label{display:block;margin:10px 0;font-size:.9rem}
+input,textarea{display:block;width:100%;margin-top:6px;min-height:44px;border:1px solid #baa47b;border-radius:5px;padding:10px 12px;font:inherit;background:#fffdf8;color:var(--ink)}
+textarea{min-height:72px}
+.check{display:flex;gap:10px;align-items:flex-start}
+.check input{width:18px;height:18px;min-height:18px;margin-top:4px}
+.required{color:#aa4d36}
+button{width:100%;min-height:48px;margin-top:8px;border-radius:999px;border:1px solid #aa7e37;background:#8d6740;color:#fffaf0;font-weight:700;letter-spacing:.04em}
+button:disabled{opacity:.55}
+.notice{min-height:2.4em;background:#fff8e5;border-left:3px solid var(--gold);padding:8px 12px;font-size:.86rem}
+@media(min-width:640px){.fields{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">RETURNING STUDENT</p>
+<h1>舊生報名與付款</h1>
+<p>這頁只供已獲 Winnie 確認資格的舊生使用。請先填寫資料，系統建立報名紀錄後，才會前往舊生付款頁。費用為 USD 143。</p>
+<form id="alumniForm">
+<div class="fields">
+<label>姓名 <span class="required">＊</span><input name="name" required maxlength="100" autocomplete="name"/></label>
+<label>電郵地址 <span class="required">＊</span><input name="email" type="email" required maxlength="254" autocomplete="email"/></label>
+<label>WhatsApp（選填）<input name="whatsapp" type="tel" maxlength="28" autocomplete="tel"/></label>
+<label>所在國家／地區 <span class="required">＊</span><input name="region" required maxlength="100" autocomplete="country-name"/></label>
+</div>
+<label>目前最想學習的方向（選填）<textarea name="latest_focus_area" maxlength="500" rows="2"></textarea></label>
+<label class="check"><input name="event_consent" type="checkbox" required/><span>我同意提供報名及上課安排所需的聯絡資料。 <span class="required">＊</span></span></label>
+<label class="check"><input name="updates_consent" type="checkbox"/><span>我願意收到這次課程的後續更新（選填）。</span></label>
+<p class="notice" id="notice" role="status">提交後先寫入報名紀錄，再前往舊生付款。</p>
+<button type="submit">提交資料，繼續付款</button>
+</form>
+</main>
+<script>
+const ENDPOINT='https://script.google.com/macros/s/AKfycbzEHNWnXvWTBx4LBKvW68hKUxyUxWkd3xgo1f9jqOa0reS-_X7nTEN2pZiwgTbdImmJ/exec';
+document.querySelector('#alumniForm').addEventListener('submit',async(event)=>{
+ event.preventDefault();
+ const form=event.currentTarget;
+ if(!form.reportValidity())return;
+ const fd=new FormData(form);
+ const v=k=>String(fd.get(k)||'').trim();
+ const button=form.querySelector('button');
+ const notice=document.querySelector('#notice');
+ button.disabled=true;
+ notice.textContent='正在提交報名資料，請稍候……';
+ try{
+  const res=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},redirect:'follow',body:JSON.stringify({
+   eventId:'cardwhispers-2026-12',source:'cardwhispers-alumni',registration_type:'alumni',
+   name:v('name'),email:v('email'),whatsapp:v('whatsapp'),region:v('region'),
+   focusArea:v('latest_focus_area'),eventConsent:fd.has('event_consent'),updatesConsent:fd.has('updates_consent')
+  })});
+  const payload=await res.json();
+  if(!res.ok||!payload||payload.ok!==true||!payload.regId||payload.status!=='pending_payment'||typeof payload.checkout_url!=='string'||!/^https:\/\/buy\.stripe\.com\//.test(payload.checkout_url)){
+   throw new Error((payload&&payload.error)||'未能確認報名紀錄，請稍後再試。');
+  }
+  notice.textContent='報名紀錄已建立，正在前往付款頁……';
+  window.location.assign(payload.checkout_url);
+ }catch(err){
+  notice.textContent=err instanceof Error?err.message:'傳送失敗，請稍後再試。';
+  button.disabled=false;
+ }
+});
+</script>
+</body>
+</html>

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://joyfulnesspath.com/sitemap.xml
+Disallow: /cardwhispers/alumni.html

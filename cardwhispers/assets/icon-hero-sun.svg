@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+<defs><linearGradient id="gold" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#FBEEBE"/><stop offset=".44" stop-color="#D8B778"/><stop offset="1" stop-color="#A77A36"/></linearGradient><radialGradient id="background"><stop stop-color="#193B42"/><stop offset="1" stop-color="#061C27"/></radialGradient></defs>
+<circle cx="32" cy="32" r="30" fill="url(#background)" stroke="url(#gold)" stroke-width="1.3"/>
+<circle cx="32" cy="32" r="26.3" fill="none" stroke="#B68D4C" opacity=".64" stroke-width=".65"/>
+<g fill="none" stroke="url(#gold)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><circle cx="32" cy="32" r="10.7"/><path d="M32 10.4v7.9M32 45.7v7.9M10.4 32h7.9M45.7 32h7.9M16.7 16.7l5.6 5.6M41.7 41.7l5.6 5.6M47.3 16.7l-5.6 5.6M22.3 41.7l-5.6 5.6"/><path d="M27 30.4q5.1-6.8 10 0M26.8 35q5.2 5.4 10.4 0" stroke-width="1.15" opacity=".8"/></g>
+<g fill="#F5D996"><path d="M32 1l2.2 4-2.2 4-2.2-4zM32 55l2.2 4-2.2 4-2.2-4zM1 32l4-2.2 4 2.2-4 2.2zM55 32l4-2.2 4 2.2-4 2.2z" opacity=".92"/></g>
+</svg>
