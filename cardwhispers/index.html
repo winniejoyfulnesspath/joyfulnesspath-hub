@@ -448,7 +448,35 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
  box-shadow:inset 0 1px 0 rgba(255,228,180,.18),inset 0 0 0 4px rgba(7,22,33,.92),inset 0 0 0 5px rgba(198,164,96,.22),0 20px 24px rgba(0,8,16,.30),0 46px 64px rgba(0,6,14,.40);
 }
 .pricing .price-card{
- box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 0 0 5px #f8f1de,inset 0 0 0 6px rgba(189,155,97,.28),0 20px 24px rgba(72,46,16,.14),0 46px 62px rgba(48,28,8,.22);
+ border:2px solid #e7d199;
+ border-radius:16px;
+ box-shadow:
+  inset 0 0 0 4px #fbf6ea,
+  inset 0 0 0 6px #c59645,
+  inset 0 0 0 10px #f8f1de,
+  inset 0 0 0 11px #8d6428,
+  inset 0 1px 0 rgba(255,255,255,.9),
+  0 18px 24px rgba(72,46,16,.12),
+  0 42px 58px rgba(48,28,8,.18);
+}
+.pricing .price-card::before{
+ content:"";
+ display:block;
+ position:absolute;
+ inset:16px;
+ z-index:1;
+ pointer-events:none;
+ border:1px solid rgba(166,124,52,.72);
+ border-radius:9px;
+ background:
+  linear-gradient(#b8893c,#b8893c) left 8px top 8px / 18px 1.5px no-repeat,
+  linear-gradient(#b8893c,#b8893c) left 8px top 8px / 1.5px 18px no-repeat,
+  linear-gradient(#b8893c,#b8893c) right 8px top 8px / 18px 1.5px no-repeat,
+  linear-gradient(#b8893c,#b8893c) right 8px top 8px / 1.5px 18px no-repeat,
+  linear-gradient(#b8893c,#b8893c) left 8px bottom 8px / 18px 1.5px no-repeat,
+  linear-gradient(#b8893c,#b8893c) left 8px bottom 8px / 1.5px 18px no-repeat,
+  linear-gradient(#b8893c,#b8893c) right 8px bottom 8px / 18px 1.5px no-repeat,
+  linear-gradient(#b8893c,#b8893c) right 8px bottom 8px / 1.5px 18px no-repeat;
 }
 .faq details{
  box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 12px 16px rgba(46,37,23,.08),0 28px 40px rgba(46,37,23,.12);
