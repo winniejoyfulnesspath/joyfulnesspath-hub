@@ -432,14 +432,13 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
 /* Touch or hover a card and it tips toward the finger, then settles. Desktop and mobile. */
 .hero-visual .hero-art-stack{
  filter:drop-shadow(0 22px 14px rgba(0,0,0,.5)) drop-shadow(0 48px 32px rgba(1,8,18,.4));
+ animation:none;
 }
-.hero-visual .hero-card-image,
 .journey-item,.lesson,.price-card,.faq details{
  touch-action:pan-y;
  transform-origin:center 78%;
  transition:transform .7s cubic-bezier(.22,1,.36,1),box-shadow .45s ease;
 }
-.hero-visual .hero-card-image.is-nudged,
 .journey-item.is-nudged,.lesson.is-nudged,.price-card.is-nudged,.faq details.is-nudged{transition:none}
 .journey-item{
  box-shadow:inset 0 1px 0 rgba(255,228,180,.24),inset 0 0 0 5px #102c36,0 18px 22px rgba(2,10,18,.24),0 42px 58px rgba(2,8,16,.38);
@@ -448,36 +447,25 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
  box-shadow:inset 0 1px 0 rgba(255,228,180,.18),inset 0 0 0 4px rgba(7,22,33,.92),inset 0 0 0 5px rgba(198,164,96,.22),0 20px 24px rgba(0,8,16,.30),0 46px 64px rgba(0,6,14,.40);
 }
 .pricing .price-card{
- border:2px solid #e7d199;
- border-radius:16px;
- box-shadow:
-  inset 0 0 0 4px #fbf6ea,
-  inset 0 0 0 6px #c59645,
-  inset 0 0 0 10px #f8f1de,
-  inset 0 0 0 11px #8d6428,
-  inset 0 1px 0 rgba(255,255,255,.9),
-  0 18px 24px rgba(72,46,16,.12),
-  0 42px 58px rgba(48,28,8,.18);
+ border:0;
+ border-radius:0;
+ padding:18% 11% 15%;
+ background-image:url("assets/frame-gold-portrait.webp"),linear-gradient(165deg,#fff8e5,#f4e7c7);
+ background-repeat:no-repeat;
+ background-position:center,center;
+ background-size:100% 100%,auto;
+ background-origin:border-box,border-box;
+ background-clip:border-box,border-box;
+ box-shadow:0 18px 24px rgba(72,46,16,.12),0 42px 58px rgba(48,28,8,.18);
 }
-.pricing .price-card::before{
- content:"";
- display:block;
- position:absolute;
- inset:16px;
- z-index:1;
- pointer-events:none;
- border:1px solid rgba(166,124,52,.72);
- border-radius:9px;
- background:
-  linear-gradient(#b8893c,#b8893c) left 8px top 8px / 18px 1.5px no-repeat,
-  linear-gradient(#b8893c,#b8893c) left 8px top 8px / 1.5px 18px no-repeat,
-  linear-gradient(#b8893c,#b8893c) right 8px top 8px / 18px 1.5px no-repeat,
-  linear-gradient(#b8893c,#b8893c) right 8px top 8px / 1.5px 18px no-repeat,
-  linear-gradient(#b8893c,#b8893c) left 8px bottom 8px / 18px 1.5px no-repeat,
-  linear-gradient(#b8893c,#b8893c) left 8px bottom 8px / 1.5px 18px no-repeat,
-  linear-gradient(#b8893c,#b8893c) right 8px bottom 8px / 18px 1.5px no-repeat,
-  linear-gradient(#b8893c,#b8893c) right 8px bottom 8px / 1.5px 18px no-repeat;
+.pricing .price-card.alumni{
+ background-image:url("assets/frame-gold-portrait.webp"),linear-gradient(165deg,#f8f1de,#eae1ca);
 }
+.pricing .price-card::before{display:none}
+.pricing .price-emblem{top:-34px}
+.pricing .price-emblem-sun{left:-42px}
+.pricing .price-emblem-moon{right:-38px}
+.pricing .price-flora{bottom:-36px}
 .faq details{
  box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 12px 16px rgba(46,37,23,.08),0 28px 40px rgba(46,37,23,.12);
 }
@@ -758,7 +746,6 @@ if(/^\d{8,15}$/.test(verifiedNumber)){
   });
   el.addEventListener('pointercancel',settle);
  }
- bind(document.querySelector('.hero-card-image'),14,-12);
  document.querySelectorAll('.journey-item,.lesson,.price-card,.faq details').forEach(function(el){bind(el,10,-7);});
 })();
 </script>
