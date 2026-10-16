@@ -429,6 +429,34 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
  .fit-icon img,.lesson-symbol img,.hero-footer .benefit img,.info-fact .info-symbol,.journey-visual img{animation:none}
  .motion-ready [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 }
+/* Touch or hover a card and it tips toward the finger, then settles. Desktop and mobile. */
+.hero-visual .hero-art-stack{
+ filter:drop-shadow(0 22px 14px rgba(0,0,0,.5)) drop-shadow(0 48px 32px rgba(1,8,18,.4));
+}
+.hero-visual .hero-card-image,
+.journey-item,.lesson,.price-card{
+ touch-action:pan-y;
+ transform-origin:center 80%;
+ transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .45s ease;
+}
+.hero-visual .hero-card-image.is-nudged,
+.journey-item.is-nudged,.lesson.is-nudged,.price-card.is-nudged{transition:transform .08s linear,box-shadow .2s ease}
+.journey-item{
+ box-shadow:inset 0 1px 0 rgba(255,228,180,.24),inset 0 0 0 5px #102c36,0 18px 22px rgba(2,10,18,.24),0 42px 58px rgba(2,8,16,.38);
+}
+.course .lesson{
+ box-shadow:inset 0 1px 0 rgba(255,228,180,.18),inset 0 0 0 4px rgba(7,22,33,.92),inset 0 0 0 5px rgba(198,164,96,.22),0 20px 24px rgba(0,8,16,.30),0 46px 64px rgba(0,6,14,.40);
+}
+.pricing .price-card{
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 0 0 5px #f8f1de,inset 0 0 0 6px rgba(189,155,97,.28),0 20px 24px rgba(72,46,16,.14),0 46px 62px rgba(48,28,8,.22);
+}
+@media (hover:hover) and (pointer:fine){
+ .motion-ready .journey-item.is-in:hover:nth-child(odd),.journey-item:hover:nth-child(odd){transform:translateY(-10px) rotate(-2.2deg)}
+ .motion-ready .journey-item.is-in:hover:nth-child(even),.journey-item:hover:nth-child(even){transform:translateY(-12px) rotate(2deg)}
+ .motion-ready .lesson.is-in:hover,.lesson:hover{transform:translateY(-8px) rotate(-1.4deg)}
+ .motion-ready .price-card.is-in:hover,.price-card:hover{transform:translateY(-10px) rotate(.8deg)}
+ .price-card.alumni:hover{transform:translateY(-10px) rotate(-.8deg)}
+}
 </style>
 </head>
 <body>
@@ -646,5 +674,55 @@ if(/^\d{8,15}$/.test(verifiedNumber)){
 })();
 </script>
 <script src="https://joyfulnesspath.com/vendor/reveal-init.js"></script>
+<script>
+(function(){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ function bind(el, tilt, lift){
+  if(!el) return;
+  var hold=0, downY=0, touching=false;
+  function pose(e){
+   var r=el.getBoundingClientRect();
+   var x=Math.max(-0.5,Math.min(0.5,(e.clientX-r.left)/r.width-0.5));
+   var y=Math.max(-0.5,Math.min(0.5,(e.clientY-r.top)/r.height-0.5));
+   el.style.transform='perspective(860px) rotateX('+(-y*tilt).toFixed(2)+'deg) rotateY('+(x*tilt).toFixed(2)+'deg) translateY('+lift+'px)';
+  }
+  function release(){
+   touching=false;
+   el.classList.remove('is-nudged');
+   el.style.transform='';
+  }
+  el.addEventListener('pointerdown',function(e){
+   if(e.pointerType==='mouse'&&e.button!==0) return;
+   touching=e.pointerType!=='mouse';
+   downY=e.clientY;
+   clearTimeout(hold);
+   el.classList.add('is-nudged');
+   pose(e);
+  });
+  el.addEventListener('pointermove',function(e){
+   if(e.pointerType==='touch'&&(!touching||Math.abs(e.clientY-downY)>16)){
+    if(touching) release();
+    return;
+   }
+   if(e.pointerType!=='mouse'&&!touching) return;
+   el.classList.add('is-nudged');
+   pose(e);
+  });
+  el.addEventListener('pointerup',function(e){
+   if(e.pointerType==='mouse') return;
+   touching=false;
+   clearTimeout(hold);
+   hold=setTimeout(release,420);
+  });
+  el.addEventListener('pointerleave',function(e){
+   if(e.pointerType==='touch') return;
+   release();
+  });
+  el.addEventListener('pointercancel',release);
+ }
+ bind(document.querySelector('.hero-card-image'),16,-14);
+ document.querySelectorAll('.journey-item,.lesson,.price-card').forEach(function(el){bind(el,12,-8);});
+})();
+</script>
 </body>
 </html>
