@@ -408,6 +408,26 @@ dialog{border:1px solid #cba45c;max-width:500px;width:calc(100% - 32px);border-r
  .final .site-footer{padding-inline:max(12px,4vw)}
 }
 .cw-phrase-lock{white-space:nowrap}
+/* Same reveal as the Joyfulness Path home: hidden only after motion-ready, so a script failure stays visible. Desktop and mobile share this. */
+[data-reveal]{opacity:1;transform:none}
+.motion-ready [data-reveal]{opacity:0;transform:translate3d(0,10px,0);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.motion-ready [data-reveal].is-in{opacity:1;transform:none}
+@keyframes cwIconBreath{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+.fit-icon img,.lesson-symbol img,.hero-footer .benefit img,.info-fact .info-symbol,.journey-visual img{animation:cwIconBreath 3.4s ease-in-out infinite alternate;will-change:transform}
+.journey-item,.lesson,.fit-card,.price-card,.info-fact,.faq details,.hero-footer .benefit{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+@media (hover:hover) and (pointer:fine){
+ .journey-item:hover,.fit-card:hover,.price-card:hover,.faq details:hover{transform:translateY(-6px)}
+ .lesson:hover .lesson-symbol,.fit-card:hover .fit-icon,.hero-footer .benefit:hover img,.info-fact:hover .info-symbol{filter:drop-shadow(0 8px 10px rgba(184,143,70,.35))}
+ .journey-item:hover .journey-visual img,.lesson:hover .lesson-symbol img,.fit-card:hover .fit-icon img,.hero-footer .benefit:hover img,.info-fact:hover .info-symbol{animation-play-state:paused;transform:translateY(-8px) scale(1.06)}
+ .nav-links a:not(.button):hover{color:var(--goldlight)}
+}
+@media (hover:none){
+ .journey-item:active,.fit-card:active,.price-card:active,.lesson:active{transform:translateY(-3px)}
+}
+@media (prefers-reduced-motion:reduce){
+ .fit-icon img,.lesson-symbol img,.hero-footer .benefit img,.info-fact .info-symbol,.journey-visual img{animation:none}
+ .motion-ready [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
+}
 </style>
 </head>
 <body>
@@ -606,5 +626,24 @@ if(/^\d{8,15}$/.test(verifiedNumber)){
  alumniWhatsApp.addEventListener('click',event=>{event.preventDefault();alumniContactNotice.textContent='預覽版：Winnie 本人 WhatsApp 號碼尚待核實。暫未啟用跳轉，避免誤發給其他人。';alumniContactNotice.focus?.();});
 }
 </script>
+<script>
+(function(){
+ var root=document.querySelector('main');
+ if(!root) return;
+ var sel=[
+  '.hero-overline','.hero-copy h1','.hero-copy h2','.hero-slogan','.hero-description','.hero-actions','.hero-footer .benefit',
+  '.journey .eyebrow','.journey .section-heading','.journey .section-intro','.journey-item',
+  '.course .eyebrow','.course .section-heading','.course .section-intro','.lesson','.lesson-note',
+  '.mentor-art','.mentor-copy > *',
+  '.fit .eyebrow','.fit .section-heading','.fit .section-intro','.fit-card',
+  '.course-info .eyebrow','.course-info .section-heading','.info-subtitle','.info-fact','.info-link',
+  '.pricing .eyebrow','.pricing .section-heading','.pricing .section-intro','.price-card',
+  '.faq .eyebrow','.faq .section-heading','.faq .section-intro','.faq details',
+  '.final .ornament','.final .section-heading','.final .container > p','.final .container > .button'
+ ].join(',');
+ root.querySelectorAll(sel).forEach(function(el){el.setAttribute('data-reveal','');});
+})();
+</script>
+<script src="https://joyfulnesspath.com/vendor/reveal-init.js"></script>
 </body>
 </html>
