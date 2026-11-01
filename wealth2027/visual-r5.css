@@ -1,0 +1,183 @@
+/* WEALTH10 R5 | USE EXISTING APPROVED IMAGES, NO IMAGE GENERATION.
+   Three image derivatives from prior GPT-generated approved artwork.
+   No baked-in text, fictional controls or node data used as DOM.
+   R4.1 source and user photos/functional JS remain unchanged. */
+
+/* 01 - Threshold. Portal image extracted from approved art, no painted words. */
+.threshold{
+ min-height:980px;
+ background:radial-gradient(ellipse at 63% 70%,#e4c9de75,transparent 61%),linear-gradient(115deg,#fff9f2 0%,#f6ece6 58%,#c6b0cd 100%);
+}
+.threshold::before{
+ width:68%;z-index:2;
+ background:linear-gradient(90deg,#fff9f4 0%,#fff9f4eb 33%,#fbf1e8bc 59%,transparent 100%);
+}
+.threshold-scenography{
+ right:-7%;top:7%;width:72%;height:94%;
+ border:0;border-radius:0;box-shadow:none;
+ opacity:1;filter:saturate(.93) contrast(1.025);
+ background-image:url("assets/threshold_portal_from_approved.webp");
+ background-position:center 51%;background-size:cover;background-repeat:no-repeat;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,#0009 18%,#000 33%,#000 100%);
+ mask-image:linear-gradient(90deg,transparent 0%,#0009 18%,#000 33%,#000 100%);
+}
+.threshold-scenography .threshold-door,.threshold-scenography .threshold-goldline,.threshold-scenography .threshold-small{display:none!important}
+.threshold-content{position:relative;z-index:4;max-width:53%;padding-top:112px}
+.threshold h2{font-size:clamp(42px,4.3vw,62px);line-height:1.56;max-width:620px;color:#382a43;text-shadow:0 1px 2px #fffcfb}
+.threshold .quiet-copy{max-width:490px;line-height:2.1;color:#594e61;text-shadow:0 1px 2px #fff9f6}
+.threshold .scene-footnote{z-index:5;color:#6c5477}
+
+/* 02 - Tree. Architectural environment from original approved artwork.
+   All ten crisp nodes and connecting SVG paths remain native and interactive. */
+.tree-section{
+ position:relative;isolation:isolate;
+ background-image:linear-gradient(90deg,#0c0c18a3 0%,#1712248c 49%,#110e1eed 100%),url("assets/tree_stage_composite_v3.webp");
+ background-position:center,center 52%;background-size:cover,cover;background-repeat:no-repeat;
+}
+.tree-section::before{opacity:.08}
+.tree-section::after{
+ content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+ background:linear-gradient(180deg,#100d1bdc 0%,transparent 28%,#140e25a6 85%,#110d1de5 100%);
+}
+.tree-intro,.tree-experience,.tree-disclaimer{position:relative;z-index:1}
+.tree-environment{
+ isolation:isolate;
+ background:radial-gradient(ellipse 53% 71% at 50% 48%,#6e4c9147 0%,transparent 72%);
+}
+.tree-aura{background:radial-gradient(ellipse at 50% 38%,#ddbaaf30,transparent 70%);filter:blur(25px)}
+.tree-backplate{
+ background:linear-gradient(100deg,#1b1536f4 0%,#34234cdb 45%,#21182fed 100%);
+ border:1px solid #f3dbc18a;
+ box-shadow:inset 14px 0 43px #bf9fc21f,inset -20px 0 50px #090a1a9a,0 36px 100px #070614b7;
+}
+.tree-backplate::before{border-color:#edc8a95e}
+.tree-path{filter:drop-shadow(0 0 3px #ecd5bd3d);stroke-width:1.9;opacity:.96}
+.tree-path.active{stroke:#f8d4b2;filter:drop-shadow(0 0 9px #f5c8ab)}
+.node-crystal{box-shadow:inset 1px 1px 2px #ffeed7bb,0 0 18px #f5d5cb73,0 4px 14px #070612}
+.node-orb .node-label{color:#e8d3e9;opacity:.90;text-shadow:0 2px 5px #0e0c19,0 0 9px #0e0c19}
+.tree-insight{
+ background:linear-gradient(105deg,#100d20f2 0%,#20152cfa 65%,#170f26f7 100%);
+ border:1px solid #d9b5c65a;
+ box-shadow:-32px 27px 75px #070515c2;
+ backdrop-filter:blur(15px);
+}
+.tree-heading,.tree-intro{filter:drop-shadow(0 2px 8px #0c0616b2)}
+
+/* 03 - Closing page: existing approved panorama. Built-in lettering has
+   been feather-masked out in the source derivative, real HTML stays crisp. */
+.last-section{
+ isolation:isolate;overflow:hidden;
+ min-height:730px;
+ background-image:linear-gradient(180deg,#130f24b4 0%,#150f26a1 48%,#110b1ec9 100%),url("assets/outro_architecture_from_approved.webp");
+ background-position:center,center center;background-size:cover,cover;background-repeat:no-repeat;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.last-section::before{
+ content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+ background:radial-gradient(ellipse 51% 58% at 50% 41%,#171127ef 0%,#171127c7 51%,transparent 93%);
+}
+.last-section::after{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+ background:linear-gradient(0deg,#0c0b19ad 0%,transparent 27%,transparent 74%,#130e1f75 100%);
+}
+.last-section>.last-glyph,.last-section>.eyebrow,.last-section>h2,.last-section>p,.last-section>a{
+ position:relative;z-index:2;
+ text-shadow:0 3px 22px #090716d9;
+}
+.last-section>p:not(.eyebrow){color:#e3cfdc;max-width:650px}
+.last-section h2{font-size:clamp(44px,5vw,83px)}
+.last-section .last-link{border-color:#e7c8bcaa}
+
+@media(max-width:1100px) and (min-width:761px){
+ .threshold-scenography{right:-12%;width:78%}
+ .threshold-content{max-width:56%}
+}
+@media(max-width:760px){
+ .threshold{min-height:925px;padding-top:48px}
+ .threshold::before{height:53%;width:100%;top:0;left:0;bottom:auto;
+   background:linear-gradient(180deg,#fff9f2 0%,#fff9f2 62%,#fff9f2d6 80%,transparent 100%);
+ }
+ .threshold-content{max-width:100%;padding-top:80px}
+ .threshold h2{font-size:clamp(34px,7.7vw,49px);line-height:1.55}
+ .threshold .quiet-copy{font-size:13px}
+ .threshold-scenography{
+  right:-4%;top:43%;width:108%;height:53%;background-position:50% 46%;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,#0009 11%,#000 24%,#000 91%,transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0%,#0009 11%,#000 24%,#000 91%,transparent 100%);
+ }
+ .threshold .scene-footnote{bottom:12px;left:24px;right:24px;max-width:calc(100% - 48px)}
+ .tree-section{background-position:center,47% center;background-size:cover,auto 100%}
+ .tree-section::after{background:linear-gradient(180deg,#100c1de0,#181129a0 43%,#120d22dd)}
+ .tree-environment{height:560px}
+ .tree-backplate{background:linear-gradient(100deg,#1b1536f6,#36274bee 50%,#20182ef6)}
+ .tree-insight{border-right:0;padding-top:42px}
+ .last-section{min-height:760px;padding:115px 24px 110px;
+  background-position:center,center;background-size:cover,auto 100%;
+ }
+ .last-section::before{
+ background:radial-gradient(ellipse 76% 50% at 50% 45%,#130d23fc 0%,#130d23ed 60%,transparent 100%);
+ }
+ .last-section h2{font-size:clamp(40px,8vw,58px)}
+ .last-section>p:not(.eyebrow){font-size:12px}
+}
+@media(max-width:480px){
+ .threshold{min-height:850px}
+ .threshold-content{padding-top:63px}
+ .threshold-scenography{top:41%;height:55%}
+ .tree-environment{height:545px}
+ .last-section{min-height:670px}
+}
+@media(prefers-reduced-motion:reduce){
+ .last-section *, .tree-section .tree-aura{animation:none!important}
+}
+
+/* R5 final readback: cathedral and floor scene is now sourced from existing
+   approved images, without baked-in node labels or fake interactive hotspots. */
+.tree-section{
+ background-image:
+ linear-gradient(90deg,#110d1c70 0%,#180f2a5c 52%,#130f21bd 100%),
+ url("assets/tree_stage_composite_v3.webp");
+ background-position:center,center center;
+ background-size:cover,cover;
+}
+.tree-section::after{
+ background:linear-gradient(180deg,#100c1cb2 0%,#0e0a1670 18%,transparent 45%,#140e2694 86%,#110d1dc9 100%);
+}
+.tree-backplate{
+ background:linear-gradient(100deg,#1b1536da 0%,#34234ccf 45%,#21182fde 100%);
+}
+@media(max-width:760px){
+ .tree-section{background-image:linear-gradient(180deg,#100b1ba8,#120c1ebc),url("assets/tree_stage_composite_v3.webp");background-size:cover,auto 100%;background-position:center,center center}
+ .tree-section::after{background:linear-gradient(180deg,#0e0b1ad5,transparent 38%,#140d24d4)}
+ .tree-backplate{background:linear-gradient(100deg,#1b1536ea,#36274bdf 50%,#20182eea)}
+}
+
+/* Final lighting balance: side pillars and floor carry the closing message
+   while center remains clean for the real DOM headline. */
+.last-section{
+ background-image:linear-gradient(180deg,#130f2482 0%,#130d226a 44%,#110b1e9c 100%),url("assets/outro_architecture_from_approved.webp");
+}
+@media(max-width:760px){
+ .last-section{background-image:linear-gradient(180deg,#130f247f,#110b1ea8),url("assets/outro_architecture_from_approved.webp")}
+}
+
+/* Final mobile-specific crops from the SAME already selected reference artwork. */
+@media(max-width:760px){
+ .tree-section{
+  background-image:linear-gradient(180deg,#100b1b7a 0%,#100b1b85 45%,#120c1eab 100%),url("assets/tree_mobile_pillar_from_approved.webp");
+  background-size:cover,auto 100%;
+  background-position:center,58% 50%;
+  background-repeat:no-repeat;
+ }
+ .tree-section::after{
+  background:linear-gradient(180deg,#0e0b1a76 0%,transparent 35%,#140d24b5 94%);
+ }
+ .last-section{
+  background-image:linear-gradient(180deg,#130f2469 0%,#160e265c 45%,#110b1e7e 100%),url("assets/outro_mobile_columns_from_approved.webp");
+  background-position:center,center center;
+  background-size:cover,cover;
+ }
+ .last-section::before{
+  background:radial-gradient(ellipse 73% 52% at 50% 43%,#130d23e8 0%,#130d23b9 62%,transparent 100%);
+ }
+}

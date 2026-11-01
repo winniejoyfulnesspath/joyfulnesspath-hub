@@ -1,0 +1,22 @@
+/* R4.1 - surgical mobile Tree readability fix only. R4 visual source immutable. */
+@media(max-width:480px) {
+ .tree-environment{height:545px}
+ .sculpture-frame{top:45%}
+ .sculpture-legend{
+  bottom:7px;letter-spacing:.13em;font-size:9px;
+  color:#d3c1d9;text-shadow:0 2px 10px #090716;
+ }
+ .node-orb .node-label{
+  font-size:9px;letter-spacing:.02em;opacity:.9;
+  color:#e8d7eb;text-shadow:0 1px 5px #0a0718,0 0 9px #090714;
+  left:35px;top:16px;
+ }
+ .node-orb:nth-child(2n) .node-label{left:auto;right:35px}
+ .node-orb:focus-visible{outline:2px solid #f2d6ad;outline-offset:2px;border-radius:50%}
+}
+@media(max-width:480px){
+ .node-orb[data-id="10"] .node-label{
+  left:50%;right:auto;top:41px;transform:translateX(-50%);
+  color:#f1d9e9;opacity:.94;white-space:nowrap;
+ }
+}

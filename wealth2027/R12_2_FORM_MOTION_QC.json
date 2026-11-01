@@ -1,0 +1,130 @@
+[
+  {
+    "name": "desktop",
+    "pass": true,
+    "style": {
+      "loaded": true,
+      "perspective": "1250px",
+      "motion": true,
+      "cardShadow": "rgb(188, 156, 173) 0px 5px 0px 0px, rgb(153, 118, 144) 0px 13px 0px -5px, rgba(95, 62, 98, 0.4) 0px 28px 54px 0px, rgba(255, 255, 255, 0.85) 2px 2px 0px 0px inset, rgba(170, 124, 147, 0.4) -2px -2px 0px 0px inset",
+      "image": 853
+    },
+    "entering": {
+      "cls": true,
+      "opacity": 1
+    },
+    "fields": {
+      "radio": 6,
+      "checks": 4,
+      "optionWidth": "19px",
+      "modalOverflow": true
+    },
+    "selected": {
+      "radio": "努力很多但下一步不夠清晰",
+      "checks": [
+        "課堂引導與反思練習",
+        "把所學帶回日常生活"
+      ]
+    },
+    "overflow": false,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "mobile",
+    "pass": true,
+    "style": {
+      "loaded": true,
+      "perspective": "1250px",
+      "motion": true,
+      "cardShadow": "rgb(184, 155, 172) 0px 4px 0px 0px, rgba(95, 62, 98, 0.32) 0px 18px 34px 0px",
+      "image": 853
+    },
+    "entering": {
+      "cls": true,
+      "opacity": 1
+    },
+    "fields": {
+      "radio": 6,
+      "checks": 4,
+      "optionWidth": "19px",
+      "modalOverflow": true
+    },
+    "selected": {
+      "radio": "努力很多但下一步不夠清晰",
+      "checks": [
+        "課堂引導與反思練習",
+        "把所學帶回日常生活"
+      ]
+    },
+    "overflow": false,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "small",
+    "pass": true,
+    "style": {
+      "loaded": true,
+      "perspective": "1250px",
+      "motion": true,
+      "cardShadow": "rgb(184, 155, 172) 0px 4px 0px 0px, rgba(95, 62, 98, 0.32) 0px 18px 34px 0px",
+      "image": 853
+    },
+    "entering": {
+      "cls": true,
+      "opacity": 1
+    },
+    "fields": {
+      "radio": 6,
+      "checks": 4,
+      "optionWidth": "19px",
+      "modalOverflow": true
+    },
+    "selected": {
+      "radio": "努力很多但下一步不夠清晰",
+      "checks": [
+        "課堂引導與反思練習",
+        "把所學帶回日常生活"
+      ]
+    },
+    "overflow": false,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "reduced",
+    "pass": true,
+    "style": {
+      "loaded": true,
+      "perspective": "1250px",
+      "motion": false,
+      "cardShadow": "rgb(184, 155, 172) 0px 4px 0px 0px, rgba(95, 62, 98, 0.32) 0px 18px 34px 0px",
+      "image": 853
+    },
+    "entering": {
+      "cls": false,
+      "opacity": 1
+    },
+    "fields": {
+      "radio": 6,
+      "checks": 4,
+      "optionWidth": "19px",
+      "modalOverflow": true
+    },
+    "selected": {
+      "radio": "努力很多但下一步不夠清晰",
+      "checks": [
+        "課堂引導與反思練習",
+        "把所學帶回日常生活"
+      ]
+    },
+    "overflow": false,
+    "errors": [],
+    "posts": [],
+    "running": 0
+  }
+]

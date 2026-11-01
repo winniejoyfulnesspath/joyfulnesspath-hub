@@ -1,0 +1,197 @@
+[
+  {
+    "name": "desktop",
+    "pass": true,
+    "bg": [
+      {
+        "s": ".hero",
+        "background": "linear-gradient(105deg, rgba(13, 9, 26, 0.77), rgba(16, 8, 33, 0.37) 48%, rgba(14, 9, 27, 0.21) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/R3_hero_portal_scene.webp\")"
+      },
+      {
+        "s": ".threshold",
+        "background": "linear-gradient(90deg, rgba(253, 248, 244, 0.87) 0%, rgba(254, 247, 239, 0.71) 34%, rgba(245, 228, 236, 0.18) 58%, rgba(199, 164, 197, 0.06) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/threshold_portal_from_approved.webp\")"
+      },
+      {
+        "s": ".tree-section",
+        "background": "linear-gradient(100deg, rgba(13, 7, 26, 0.31), rgba(33, 17, 50, 0.04) 46%, rgba(20, 8, 39, 0.47)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/tree_stage_composite_v3.webp\")"
+      },
+      {
+        "s": ".matrix-section",
+        "background": "radial-gradient(72% 50% at 88% 0%, rgba(218, 173, 213, 0.16), rgba(0, 0, 0, 0)), linear-gradient(145deg, rgb(255, 246, 237) 0%, rgb(240, 226, 226) 57%, rgb(220, 198, 216) 100%)"
+      },
+      {
+        "s": ".matrix-visual",
+        "background": "linear-gradient(rgba(18, 10, 29, 0.02), rgba(24, 9, 41, 0.14) 59%, rgba(15, 9, 29, 0.38)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/matrix_cathedral.webp\")"
+      },
+      {
+        "s": ".mentor-section",
+        "background": "linear-gradient(90deg, rgb(17, 11, 31) 0%, rgb(32, 18, 46) 58%, rgb(24, 13, 38) 100%)"
+      },
+      {
+        "s": ".practice-strip",
+        "background": "linear-gradient(100deg, rgba(255, 246, 237, 0.88), rgba(246, 230, 232, 0.87) 52%, rgba(235, 215, 226, 0.9)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/gallery_cathedral.webp\")"
+      },
+      {
+        "s": ".last-section",
+        "background": "linear-gradient(rgba(18, 10, 33, 0.2) 0%, rgba(16, 9, 28, 0.12) 40%, rgba(16, 9, 31, 0.31) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/outro_architecture_from_approved.webp\")"
+      }
+    ],
+    "loaded": [
+      {
+        "name": "winnie_white_suit_hero.png",
+        "ok": true
+      },
+      {
+        "name": "winnie_black_gold_portrait.jpg",
+        "ok": true
+      },
+      {
+        "name": "winnie_taro_red_workshop.jpg",
+        "ok": true
+      },
+      {
+        "name": "winnie_workshop_table.png",
+        "ok": true
+      },
+      {
+        "name": "winnie_taro_talking.png",
+        "ok": true
+      }
+    ],
+    "errors": [],
+    "state": {
+      "selected": "true",
+      "axis": "你願意做哪一步？"
+    }
+  },
+  {
+    "name": "tablet",
+    "pass": true,
+    "bg": [
+      {
+        "s": ".hero",
+        "background": "linear-gradient(105deg, rgba(13, 9, 26, 0.77), rgba(16, 8, 33, 0.37) 48%, rgba(14, 9, 27, 0.21) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/R3_hero_portal_scene.webp\")"
+      },
+      {
+        "s": ".threshold",
+        "background": "linear-gradient(90deg, rgba(253, 248, 244, 0.87) 0%, rgba(254, 247, 239, 0.71) 34%, rgba(245, 228, 236, 0.18) 58%, rgba(199, 164, 197, 0.06) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/threshold_portal_from_approved.webp\")"
+      },
+      {
+        "s": ".tree-section",
+        "background": "linear-gradient(100deg, rgba(13, 7, 26, 0.31), rgba(33, 17, 50, 0.04) 46%, rgba(20, 8, 39, 0.47)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/tree_stage_composite_v3.webp\")"
+      },
+      {
+        "s": ".matrix-section",
+        "background": "radial-gradient(72% 50% at 88% 0%, rgba(218, 173, 213, 0.16), rgba(0, 0, 0, 0)), linear-gradient(145deg, rgb(255, 246, 237) 0%, rgb(240, 226, 226) 57%, rgb(220, 198, 216) 100%)"
+      },
+      {
+        "s": ".matrix-visual",
+        "background": "linear-gradient(rgba(18, 10, 29, 0.02), rgba(24, 9, 41, 0.14) 59%, rgba(15, 9, 29, 0.38)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/matrix_cathedral.webp\")"
+      },
+      {
+        "s": ".mentor-section",
+        "background": "linear-gradient(90deg, rgb(17, 11, 31) 0%, rgb(32, 18, 46) 58%, rgb(24, 13, 38) 100%)"
+      },
+      {
+        "s": ".practice-strip",
+        "background": "linear-gradient(100deg, rgba(255, 246, 237, 0.88), rgba(246, 230, 232, 0.87) 52%, rgba(235, 215, 226, 0.9)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/gallery_cathedral.webp\")"
+      },
+      {
+        "s": ".last-section",
+        "background": "linear-gradient(rgba(18, 10, 33, 0.2) 0%, rgba(16, 9, 28, 0.12) 40%, rgba(16, 9, 31, 0.31) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/outro_architecture_from_approved.webp\")"
+      }
+    ],
+    "loaded": [
+      {
+        "name": "winnie_white_suit_hero.png",
+        "ok": true
+      },
+      {
+        "name": "winnie_black_gold_portrait.jpg",
+        "ok": true
+      },
+      {
+        "name": "winnie_taro_red_workshop.jpg",
+        "ok": true
+      },
+      {
+        "name": "winnie_workshop_table.png",
+        "ok": true
+      },
+      {
+        "name": "winnie_taro_talking.png",
+        "ok": true
+      }
+    ],
+    "errors": [],
+    "state": {
+      "selected": "true",
+      "axis": "你願意做哪一步？"
+    }
+  },
+  {
+    "name": "mobile",
+    "pass": true,
+    "bg": [
+      {
+        "s": ".hero",
+        "background": "linear-gradient(105deg, rgba(13, 9, 26, 0.77), rgba(16, 8, 33, 0.37) 48%, rgba(14, 9, 27, 0.21) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/R3_hero_portal_scene.webp\")"
+      },
+      {
+        "s": ".threshold",
+        "background": "linear-gradient(rgba(253, 249, 243, 0.94) 0%, rgba(253, 247, 238, 0.82) 33%, rgba(246, 228, 233, 0.03) 62%, rgba(183, 146, 195, 0.07) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/threshold_portal_from_approved.webp\")"
+      },
+      {
+        "s": ".tree-section",
+        "background": "linear-gradient(100deg, rgba(13, 7, 26, 0.31), rgba(33, 17, 50, 0.04) 46%, rgba(20, 8, 39, 0.47)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/tree_stage_composite_v3.webp\")"
+      },
+      {
+        "s": ".matrix-section",
+        "background": "radial-gradient(72% 50% at 88% 0%, rgba(218, 173, 213, 0.16), rgba(0, 0, 0, 0)), linear-gradient(145deg, rgb(255, 246, 237) 0%, rgb(240, 226, 226) 57%, rgb(220, 198, 216) 100%)"
+      },
+      {
+        "s": ".matrix-visual",
+        "background": "linear-gradient(rgba(18, 10, 29, 0.02), rgba(24, 9, 41, 0.14) 59%, rgba(15, 9, 29, 0.38)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/matrix_cathedral.webp\")"
+      },
+      {
+        "s": ".mentor-section",
+        "background": "linear-gradient(90deg, rgb(17, 11, 31) 0%, rgb(32, 18, 46) 58%, rgb(24, 13, 38) 100%)"
+      },
+      {
+        "s": ".practice-strip",
+        "background": "linear-gradient(100deg, rgba(255, 246, 237, 0.88), rgba(246, 230, 232, 0.87) 52%, rgba(235, 215, 226, 0.9)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/gallery_cathedral.webp\")"
+      },
+      {
+        "s": ".last-section",
+        "background": "linear-gradient(rgba(19, 11, 33, 0.17), rgba(18, 11, 32, 0.18) 45%, rgba(16, 10, 31, 0.34)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R8_SELECTED_ART/assets/outro_mobile_columns_from_approved.webp\")"
+      }
+    ],
+    "loaded": [
+      {
+        "name": "winnie_white_suit_hero.png",
+        "ok": true
+      },
+      {
+        "name": "winnie_black_gold_portrait.jpg",
+        "ok": true
+      },
+      {
+        "name": "winnie_taro_red_workshop.jpg",
+        "ok": true
+      },
+      {
+        "name": "winnie_workshop_table.png",
+        "ok": true
+      },
+      {
+        "name": "winnie_taro_talking.png",
+        "ok": true
+      }
+    ],
+    "errors": [],
+    "state": {
+      "selected": "true",
+      "axis": "你願意做哪一步？"
+    }
+  }
+]

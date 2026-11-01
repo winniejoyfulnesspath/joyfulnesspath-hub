@@ -1,0 +1,40 @@
+<dialog id="r12-dialog" class="r12-dialog" aria-labelledby="r12-dialog-title">
+<button class="r12-close" type="button" data-r12-close aria-label="關閉報名表">×</button>
+<p class="r12-kicker">JAN 8–10 · REGISTRATION FORM PREVIEW</p>
+<h2 id="r12-dialog-title">報名資料預覽</h2>
+<p>這是表單預覽，尚未接入新活動報名系統。輸入內容不會傳送、儲存或用於付款。</p>
+<form id="r12-form" method="dialog">
+<input type="hidden" name="studentType" value="new">
+<p id="r124-route-note" role="status" aria-live="polite">新生報名預覽：未啟用正式付款及儲存。</p>
+<label>姓名（必填）<input name="name" type="text" autocomplete="name" maxlength="100" required></label>
+<label>電郵地址（必填）<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+<label>WhatsApp（選填）<input name="whatsapp" type="tel" autocomplete="tel" maxlength="28"></label>
+<label>國家／地區（必填）<input name="region" type="text" autocomplete="country-name" maxlength="100" required></label>
+<fieldset class="r12-topic-fieldset">
+<legend>你現時最希望整理哪個方向？（選填一項）</legend>
+<p class="r12-choice-help">幫助導師了解參加者較關注的主題，並非入學評估。</p>
+<div class="r12-choice-grid" role="group" aria-label="個人關注方向">
+<label class="r12-choice-row"><input type="radio" name="focusArea" value="金錢與未來規劃時的不安"><span>金錢與未來規劃時的不安</span></label>
+<label class="r12-choice-row"><input type="radio" name="focusArea" value="對自身價值或選擇的懷疑"><span>對自身價值或選擇的懷疑</span></label>
+<label class="r12-choice-row"><input type="radio" name="focusArea" value="努力很多但下一步不夠清晰"><span>努力很多，但下一步不夠清晰</span></label>
+<label class="r12-choice-row"><input type="radio" name="focusArea" value="面對支持或新機會時的猶豫"><span>面對支持或新機會時的猶豫</span></label>
+<label class="r12-choice-row"><input type="radio" name="focusArea" value="把理解轉化為實際行動"><span>把理解轉化為實際行動</span></label>
+<label class="r12-choice-row"><input type="radio" name="focusArea" value="其他或尚未確定"><span>其他／尚未確定</span></label>
+</div></fieldset>
+<fieldset class="r12-topic-fieldset">
+<legend>你希望課程多談及甚麼？（可多選，選填）</legend>
+<div class="r12-choice-grid" role="group" aria-label="課程主題興趣">
+<label class="r12-choice-row"><input type="checkbox" name="topicInterest" value="認識自己的慣性想法"><span>認識自己的慣性想法</span></label>
+<label class="r12-choice-row"><input type="checkbox" name="topicInterest" value="課堂引導與反思練習"><span>課堂引導與反思練習</span></label>
+<label class="r12-choice-row"><input type="checkbox" name="topicInterest" value="金錢與價值的日常選擇"><span>金錢與價值的日常選擇</span></label>
+<label class="r12-choice-row"><input type="checkbox" name="topicInterest" value="把所學帶回日常生活"><span>把所學帶回日常生活</span></label>
+</div></fieldset>
+<label>其他想補充的方向（選填）<textarea name="focus" maxlength="500" rows="3" placeholder="只需分享你願意提供的部分"></textarea></label>
+<p class="r12-data-note">這些問題只用作了解參加者的學習需要；無須分享個人收入、帳戶、詳細財務情況或其他敏感資料。此預覽不會傳送或儲存答案。</p>
+<label class="r12-check"><input name="eventConsent" type="checkbox" required><span>我已閱讀 <a href="https://joyfulnesspath.com/privacy/" target="_blank" rel="noopener noreferrer">私隱政策</a>，理解正式報名將需要提供聯絡資料。*</span></label>
+<label class="r12-check"><input name="updatesConsent" type="checkbox"><span>願意收到本次課程後續通知（選填）</span></label>
+<label class="r12-check"><input name="newsletterConsent" type="checkbox"><span>願意收到其他 Joyfulness Path 活動消息（選填）</span></label>
+<p class="r12-legal">正式報名時須查閱最新 <a href="https://joyfulnesspath.com/terms/" target="_blank" rel="noopener noreferrer">活動條款</a> 及 <a href="https://joyfulnesspath.com/privacy/" target="_blank" rel="noopener noreferrer">私隱政策</a>；1 月課程專屬退款及取消條件待公布。</p>
+<p data-form-status role="status" aria-live="polite">目前為預覽模式，不會送出資料或開啟付款。</p>
+<div class="r12-actions"><button type="submit" class="r12-submit">檢查資料（不送出）</button><button type="button" class="r12-cancel" data-r12-close>返回</button></div>
+</form></dialog>

@@ -1,0 +1,126 @@
+/* R12.2 - existing page enhancement only; no new images, API or payment. */
+:root { --r122-edge:#f7dab9; --r122-depth:#23132f; }
+html { scroll-padding-top:28px; }
+.r12-dates { background:
+  radial-gradient(ellipse at 8% 2%, #fffaf4 0%, transparent 39%),
+  radial-gradient(ellipse at 91% 85%, #c3a8d9 0%, transparent 43%),
+  linear-gradient(125deg,#f9f0e7,#e3d3e2 58%,#ecdae3); }
+.r12-date-grid { perspective:1250px; perspective-origin:50% 40%; }
+.r12-date-grid .r12-date-link {
+  transform-style:preserve-3d; overflow:hidden;
+  border:1px solid #b882a5;
+  background:linear-gradient(146deg,#fffefa 0%,#f7e9ef 46%,#e1cbdb 100%);
+  box-shadow:0 5px 0 #bc9cad,0 13px 0 -5px #997690,0 28px 54px #5f3e6266,
+             inset 2px 2px 0 #ffffffd9,inset -2px -2px 0 #aa7c9366;
+}
+.r12-date-grid .r12-date-link::before {
+  content:"";position:absolute;left:-13%;top:-46%;width:86%;height:86%;
+  background:radial-gradient(circle,#ffffffc4 0%,transparent 68%);
+  pointer-events:none;transform:rotate(-15deg);
+}
+.r12-date-grid .r12-date-link > * { position:relative;z-index:1; }
+.r12-date-grid .r12-date-action { color:#4d2b55; }
+.r12-enroll-card {
+  position:relative;isolation:isolate;overflow:hidden;
+  border:1px solid #f5d5b9;
+  background:linear-gradient(145deg,#59406a 0%,#2e1944 43%,#160d27 100%);
+  box-shadow:0 7px 0 #4a294f,0 32px 66px #04010a9e,
+             inset 2px 2px 0 #fbe1d355,inset -2px -3px 0 #070314aa;
+}
+.r12-enroll-card::before {
+  content:"";position:absolute;top:-43%;right:-29%;width:90%;aspect-ratio:1;
+  background:radial-gradient(circle,#fff0cf36,transparent 66%);
+  pointer-events:none;z-index:-1;
+}
+.matrix-installation {
+  border:1px solid #c8a9c3;
+  box-shadow:0 8px 0 #b69db1,0 19px 0 -8px #92738d,
+             0 45px 78px #3017354b,inset 0 1px 0 #fff8eb45;
+}
+.tree-insight {
+  margin:12px clamp(12px,2vw,30px) 12px 0;
+  border:1px solid #bda2c660;border-radius:17px;
+  background:linear-gradient(138deg,#54406180,#281c3b77 48%,#1717279e 100%);
+  box-shadow:0 6px 0 #2d213eaa,18px 33px 60px #02030ab0,inset 1px 1px 0 #eed0dc1f;
+}
+.practice-strip figure {
+  border-radius:13px;transform:translateZ(0);
+  border:1px solid #dfcbd7;
+  box-shadow:0 6px 0 #bcabba,0 24px 38px #4e305b42;
+  transition:transform .65s cubic-bezier(.2,.7,.2,1),box-shadow .65s ease;
+}
+.practice-strip figure::after {
+  content:"";position:absolute;inset:0;pointer-events:none;
+  border-radius:inherit;box-shadow:inset 1px 1px 0 #ffffffa6,inset -1px -1px 0 #53354f69;
+}
+.r12-dialog {
+  border:1px solid #b887a8;
+  background:linear-gradient(135deg,#fffefa 0%,#f4e7ee 45%,#e5cfe3 100%);
+  box-shadow:0 10px 0 #866882,0 35px 100px #070312d9,inset 2px 2px 0 #ffffff;
+}
+.r12-topic-fieldset { margin:3px 0 5px;padding:18px 15px 16px;min-width:0;
+  border:1px solid #bfa1b9;border-radius:14px;
+  background:linear-gradient(145deg,#fffdf9,#f3e6f0);
+  box-shadow:0 4px 0 #c2a8bc,0 10px 20px #4e264b13,inset 1px 1px 0 #fff;
+}
+.r12-topic-fieldset legend {max-width:100%;padding:0 6px;
+  font-size:16px;font-weight:700;line-height:1.5;color:#402747;}
+.r12-topic-fieldset .r12-choice-help {margin:0 0 12px;color:#715776;font-size:13px;line-height:1.7;}
+.r12-choice-grid {display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.r12-dialog .r12-choice-row {display:flex;align-items:center;gap:10px;min-width:0;
+  border:1px solid #d2b9cb;border-radius:11px;background:#fffafcf0;
+  padding:11px 12px;font-size:14px;font-weight:500;line-height:1.65;color:#452e50;
+  cursor:pointer;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.r12-dialog .r12-choice-row input {display:inline-block;width:19px;height:19px;min-height:19px;flex:none;
+  margin:0;padding:0;appearance:auto;accent-color:#795288;cursor:pointer;
+  border:0;background:transparent;box-shadow:none;}
+.r12-dialog .r12-choice-row input[type=radio] {border-radius:50%;}
+.r12-dialog .r12-choice-row input[type=checkbox] {border-radius:4px;}
+.r12-choice-row:has(input:checked) {border-color:#7b4e83!important;
+  background:linear-gradient(140deg,#f2e1ee,#ffffff)!important;
+  box-shadow:0 0 0 2px #a77caa40,0 4px 12px #744b722b;
+}
+.r12-choice-row:focus-within {outline:3px solid #a975ab;outline-offset:2px;}
+.r12-dialog .r12-choice-row:hover {border-color:#8c638b;transform:translateY(-2px);}
+.r12-data-note {color:#704d68!important;font-size:13px!important;
+  border-left:3px solid #98749e;padding:8px 13px;background:#f7eef5;}
+.depth-motion-ready .depth-enter {
+  opacity:0;filter:blur(3px);
+  transform:translate3d(0,29px,0) scale(.978);
+  transition:opacity .8s cubic-bezier(.2,.7,.25,1),
+    transform .85s cubic-bezier(.18,.78,.2,1),filter .7s ease;
+  transition-delay:var(--depth-delay,0ms);
+}
+.depth-motion-ready .depth-enter.is-visible {
+  opacity:1;filter:none;transform:translate3d(0,0,0) scale(1);
+}
+@media (hover:hover) and (pointer:fine) {
+ .r12-date-grid .r12-date-link:hover,
+ .depth-motion-ready .depth-enter.r12-date-link.is-visible:hover,
+ .r12-date-grid .r12-date-link:focus-visible,
+ .depth-motion-ready .depth-enter.r12-date-link.is-visible:focus-visible {
+  transform:translate3d(0,-9px,0) rotateX(2deg) rotateY(-2deg);
+  box-shadow:0 12px 0 #b38ca5,0 44px 66px #4e285873,
+       inset 2px 2px 0 #fff,inset -2px -2px 0 #a1788b;
+ }
+ .practice-strip figure:hover {transform:translateY(-7px) rotateX(2deg);
+   box-shadow:0 12px 0 #b9a3b5,0 35px 50px #4e305b55;}
+}
+@media(max-width:760px) {
+ .r12-choice-grid {grid-template-columns:1fr;}
+ .r12-date-grid .r12-date-link {box-shadow:0 4px 0 #b89bac,0 18px 34px #5f3e6252;}
+ .tree-insight {margin:12px 13px 24px;border-radius:13px;}
+ .matrix-installation {box-shadow:0 5px 0 #ad94ac,0 28px 52px #3017354b;}
+ .r12-enroll-card {box-shadow:0 5px 0 #4a294f,0 25px 42px #04010a91;}
+ .depth-motion-ready .depth-enter {transform:translate3d(0,16px,0) scale(.99);filter:none;
+   transition-duration:.62s;}
+}
+@media(prefers-reduced-motion:reduce) {
+ .depth-motion-ready .depth-enter,.depth-motion-ready .depth-enter.is-visible {
+  opacity:1!important;transform:none!important;filter:none!important;transition:none!important;
+ }
+ .r12-date-grid .r12-date-link,.practice-strip figure,.r12-choice-row {
+  transform:none!important;transition:none!important;
+ }
+}

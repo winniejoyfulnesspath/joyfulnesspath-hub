@@ -1,0 +1,52 @@
+/* R12.3: new/returning student entry choice. No pricing, form submission or routing. */
+.r123-student-paths{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin:0;align-items:stretch}
+.r123-student-card .r12-fine{margin:14px 0 0;font-size:13px;line-height:1.7;color:#f3e2d4}
+.r123-student-card .r12-pay-terms{margin-top:12px;text-align:left}
+.r123-student-card .r12-pay-terms p{margin:8px 0 0;font-size:12px;line-height:1.75;color:#ead8cf}
+.r123-student-card>.r12-pay-links,.r12-card-foot .r12-pay-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:auto;padding-top:16px;border-top:1px solid #f0d2c24d}
+.r123-student-card>.r12-card-foot{margin-top:auto;padding-top:32px}
+.r12-card-foot .r12-pay-links{margin-top:14px}
+.r12-card-lead{margin:10px 0 16px}
+.r123-student-card .r12-pay-note{margin:0;font-size:13px;line-height:1.75;color:#fff1e6}
+.r12-pay-note .tel{white-space:nowrap}
+.r12-pay-links a,.r12-pay-links .link-btn,.r12-legal .link-btn{color:#ffe4ba;background:none;border:0;padding:0;font:inherit;cursor:pointer;text-decoration:underline}
+.r12-dialog .r12-pay-links a,.r12-dialog .r12-legal .link-btn{color:#6f4186}
+@media(max-width:680px){.r123-student-paths{grid-template-columns:1fr}}
+.r123-student-card{min-width:0;position:relative;overflow:hidden;display:flex;flex-direction:column;padding:20px 20px 22px;
+  border-radius:16px;border:1px solid #e8c8bd94;
+  background:linear-gradient(138deg,#6a4870 0%,#462a55 44%,#21132f 100%);
+  box-shadow:inset 1px 1px 0 #fff2e73c,0 5px 0 #21112ea8,0 18px 33px #0b061e78}
+.r123-student-card.r123-returning{background:linear-gradient(135deg,#554065 0%,#372744 57%,#21152d 100%);border-color:#cbacd380}
+.r123-student-card .r123-student-tag{display:block;margin-bottom:8px;font-size:11px;line-height:1.6;
+ color:#e6c9d9;letter-spacing:.14em;font-weight:700}
+.r123-student-card strong{font-size:24px;line-height:1.5;display:block;color:#fff2e4;font-weight:650}
+.r123-student-card p{font-size:14px;line-height:1.8;color:#e8d6e6;margin:10px 0 17px}
+.r123-student-card .r125-card-price{display:inline-block;margin:7px 0 4px;padding:5px 11px;border:1px solid #f8d4aa70;border-radius:999px;background:#1a0e2b62;color:#ffebc4;font-size:15px;font-weight:750;letter-spacing:.02em;line-height:1.6}
+.r123-student-card .r12-cta,.r123-student-card .r123-alumni-button{
+ box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;
+ padding:12px 14px;border-radius:999px;font-size:14px;line-height:1.45;font-weight:700;
+ white-space:normal;cursor:pointer;text-align:center;text-decoration:none}
+.r123-student-card .r123-alumni-button{color:#fff5ea;background:linear-gradient(140deg,#755475,#50375f);
+ border:1px solid #f3d5cf;box-shadow:0 6px 20px #0e081c6e,inset 0 1px 0 #ffffff29}
+.r123-student-card .r123-alumni-button:hover,
+.r123-student-card .r123-alumni-button[aria-expanded=true]{
+ background:linear-gradient(140deg,#96749a,#60446e);box-shadow:0 10px 25px #0e081c8c}
+.r123-student-card .r123-alumni-button:focus-visible{outline:3px solid #ffe1a6;outline-offset:4px}
+.r123-alumni-panel[hidden]{display:none!important}
+.r123-alumni-panel{margin:2px 0 20px;padding:18px 19px 19px;border:1px solid #e9c5d4;border-radius:14px;
+ background:linear-gradient(130deg,#392548,#271831);
+ box-shadow:inset 1px 1px 0 #e0badb38,0 16px 37px #0a061883}
+.r123-alumni-panel strong{font-size:18px;color:#fff1e5;font-weight:700}
+.r123-alumni-panel p{font-size:14px;color:#f0dfeb;line-height:1.85;margin:10px 0}
+.r123-contact-link{display:inline-flex;align-items:center;min-height:44px;margin-top:5px;padding:10px 0;
+ font-size:14px;color:#ffe4ba;text-decoration:underline;text-underline-offset:4px}
+.r123-contact-link:focus-visible{outline:3px solid #ffe4ba;outline-offset:4px}
+.r12-dialog input[name=studentType]{display:none}
+@media(max-width:390px){
+ .r123-student-card{padding:18px 15px 20px}
+ .r123-student-card strong{font-size:22px}
+ .r123-alumni-panel{padding:17px 14px}
+}
+@media(prefers-reduced-motion:reduce){
+ .r123-student-card .r123-alumni-button{transition:none!important;transform:none!important}
+}

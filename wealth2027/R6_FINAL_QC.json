@@ -1,0 +1,60 @@
+[
+  {
+    "name": "desktop",
+    "pass": true,
+    "geometry": {
+      "node10": {
+        "x": 403,
+        "y": -3231,
+        "w": 59,
+        "h": 61,
+        "bottom": -3170
+      },
+      "legend": {
+        "x": 0,
+        "y": -3117,
+        "w": 864,
+        "h": 15,
+        "bottom": -3102
+      },
+      "clearance": 53,
+      "overflow": false,
+      "nodeCount": 10,
+      "css": true
+    },
+    "acts": {
+      "pressed": "true",
+      "title": "你願意做哪一步？"
+    },
+    "err": []
+  },
+  {
+    "name": "mobile",
+    "pass": true,
+    "geometry": {
+      "node10": {
+        "x": 172,
+        "y": -4304,
+        "w": 46,
+        "h": 47,
+        "bottom": -4256
+      },
+      "legend": {
+        "x": 0,
+        "y": -4189,
+        "w": 390,
+        "h": 15,
+        "bottom": -4174
+      },
+      "clearance": 67,
+      "overflow": false,
+      "nodeCount": 10,
+      "css": true
+    },
+    "acts": {
+      "pressed": "true",
+      "title": "你願意做哪一步？"
+    },
+    "err": []
+  }
+]

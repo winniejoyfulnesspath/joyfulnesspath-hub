@@ -1,0 +1,224 @@
+{
+  "cases": [
+    {
+      "w": 320,
+      "h": 720,
+      "data": {
+        "viewport": 320,
+        "scrollWidth": 320,
+        "node10": {
+          "x": 136.937255859375,
+          "y": 2778.9892578125,
+          "w": 46.23725891113281,
+          "h": 47.20703125,
+          "bottom": 2826.1962890625,
+          "top": 2778.9892578125
+        },
+        "legend": {
+          "x": 0,
+          "y": 2908.59375,
+          "w": 320,
+          "h": 13,
+          "bottom": 2921.59375,
+          "top": 2908.59375
+        },
+        "verticalClearance": 82,
+        "labelFont": "9px",
+        "topFrame": {
+          "x": -13.74868106842041,
+          "y": 2445.096435546875,
+          "w": 354.048583984375,
+          "h": 385.307373046875,
+          "bottom": 2830.40380859375,
+          "top": 2445.096435546875
+        },
+        "nodeCount": 10
+      },
+      "pass": {
+        "noOverflow": true,
+        "tenNodes": true,
+        "touch": true,
+        "clearance": true,
+        "labels": true,
+        "interaction": true,
+        "errors": true
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "data": {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "node10": {
+          "x": 171.8589324951172,
+          "y": 2779.732421875,
+          "w": 46.39466857910156,
+          "h": 47.34912109375,
+          "bottom": 2827.08154296875,
+          "top": 2779.732421875
+        },
+        "legend": {
+          "x": 0,
+          "y": 2872.6875,
+          "w": 390,
+          "h": 13,
+          "bottom": 2885.6875,
+          "top": 2872.6875
+        },
+        "verticalClearance": 46,
+        "labelFont": "9px",
+        "topFrame": {
+          "x": -16.733762741088867,
+          "y": 2366.998779296875,
+          "w": 433.27716064453125,
+          "h": 469.599365234375,
+          "bottom": 2836.59814453125,
+          "top": 2366.998779296875
+        },
+        "nodeCount": 10
+      },
+      "pass": {
+        "noOverflow": true,
+        "tenNodes": true,
+        "touch": true,
+        "clearance": true,
+        "labels": true,
+        "interaction": true,
+        "errors": true
+      }
+    },
+    {
+      "w": 428,
+      "h": 926,
+      "data": {
+        "viewport": 428,
+        "scrollWidth": 428,
+        "node10": {
+          "x": 190.80833435058594,
+          "y": 2816.4228515625,
+          "w": 46.480499267578125,
+          "h": 47.461669921875,
+          "bottom": 2863.884521484375,
+          "top": 2816.4228515625
+        },
+        "legend": {
+          "x": 0,
+          "y": 2889.375,
+          "w": 428,
+          "h": 13,
+          "bottom": 2902.375,
+          "top": 2889.375
+        },
+        "verticalClearance": 25,
+        "labelFont": "9px",
+        "topFrame": {
+          "x": -18.349136352539062,
+          "y": 2360.78857421875,
+          "w": 476.56463623046875,
+          "h": 516.33056640625,
+          "bottom": 2877.119140625,
+          "top": 2360.78857421875
+        },
+        "nodeCount": 10
+      },
+      "pass": {
+        "noOverflow": true,
+        "tenNodes": true,
+        "touch": true,
+        "clearance": true,
+        "labels": true,
+        "interaction": true,
+        "errors": true
+      }
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "data": {
+        "viewport": 768,
+        "scrollWidth": 768,
+        "node10": {
+          "x": 185.8790740966797,
+          "y": 3005.57080078125,
+          "w": 58.46699523925781,
+          "h": 59.6396484375,
+          "bottom": 3065.21044921875,
+          "top": 3005.57080078125
+        },
+        "legend": {
+          "x": 0,
+          "y": 3186,
+          "w": 430.078125,
+          "h": 13,
+          "bottom": 3199,
+          "top": 3186
+        },
+        "verticalClearance": 121,
+        "labelFont": "10px",
+        "topFrame": {
+          "x": 15.498393058776855,
+          "y": 2624.0166015625,
+          "w": 407.7538757324219,
+          "h": 442.618896484375,
+          "bottom": 3066.635498046875,
+          "top": 2624.0166015625
+        },
+        "nodeCount": 10
+      },
+      "pass": {
+        "noOverflow": true,
+        "tenNodes": true,
+        "touch": true,
+        "clearance": true,
+        "labels": true,
+        "interaction": true,
+        "errors": true
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "data": {
+        "viewport": 1440,
+        "scrollWidth": 1440,
+        "node10": {
+          "x": 395.3468017578125,
+          "y": 3038.98095703125,
+          "w": 59.0826416015625,
+          "h": 61.241943359375,
+          "bottom": 3100.222900390625,
+          "top": 3038.98095703125
+        },
+        "legend": {
+          "x": 0,
+          "y": 3106.0625,
+          "w": 849.59375,
+          "h": 13,
+          "bottom": 3119.0625,
+          "top": 3106.0625
+        },
+        "verticalClearance": 6,
+        "labelFont": "10px",
+        "topFrame": {
+          "x": 109.01566314697266,
+          "y": 2414.87939453125,
+          "w": 653.8902587890625,
+          "h": 709.828857421875,
+          "bottom": 3124.708251953125,
+          "top": 2414.87939453125
+        },
+        "nodeCount": 10
+      },
+      "pass": {
+        "noOverflow": true,
+        "tenNodes": true,
+        "touch": true,
+        "clearance": true,
+        "labels": true,
+        "interaction": true,
+        "errors": true
+      }
+    }
+  ]
+}

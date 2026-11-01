@@ -1,0 +1,365 @@
+/* R8 / IMAGE-TO-REAL-PAGE / 2026-10-30
+ * Uses crops of already generated approved concepts, NEVER regenerated imagery.
+ * Preserve official Winnie photos, source HTML, button semantics, Tree data and Matrix JS.
+ * Different backdrops per world: R7 Tree != R8 Matrix != Mentor != Gallery.
+ * Last after visual-r7.css. No public deployment. */
+
+:root{
+ --r8-champagne:#f1d0a6;
+ --r8-ivory:#f8ebdd;
+ --r8-orchid:#d9aadf;
+ --r8-midnight:#160d29;
+ --r8-purple:#382248;
+}
+
+/* Shared, restrained spatial treatment: actual light, not just hover movement. */
+.site-header{
+ background:linear-gradient(180deg,rgba(15,8,28,.81),rgba(15,8,28,.38) 85%,transparent);
+ border-bottom:1px solid rgba(238,193,162,.16);
+ backdrop-filter:blur(9px);
+}
+.nav-action{
+ box-shadow:0 0 0 1px rgba(248,220,177,.16),inset 0 0 15px rgba(254,218,172,.04);
+}
+.hero{
+ background-image:
+  linear-gradient(105deg,rgba(13,9,26,.77),rgba(16,8,33,.37) 48%,rgba(14,9,27,.21) 100%),
+  url("assets/R3_hero_portal_scene.webp");
+ background-size:cover,cover;background-position:center,center;
+}
+.hero::before{opacity:.42!important}
+.hero-stage{
+ border:1px solid rgba(244,213,164,.36);
+ box-shadow:0 30px 90px rgba(7,4,18,.73),0 0 0 7px rgba(229,178,190,.08);
+}
+.hero-stage::after{
+ border:1px solid rgba(248,212,171,.69);
+ box-shadow:inset 0 0 24px rgba(252,230,189,.19),0 0 45px rgba(255,210,181,.20);
+}
+.hero-copy .text-cta{
+ border-color:rgba(248,217,174,.46);
+ color:#ffeddf;
+}
+.hero-copy h1{filter:drop-shadow(0 2px 8px rgba(11,3,21,.8))}
+
+/* THRESHOLD: immersive ivory portal, keep all copy real native DOM. */
+.threshold{
+ background-blend-mode:normal;
+ box-shadow:inset 0 -30px 50px rgba(89,43,82,.15);
+}
+.threshold-content::after{
+ content:"";display:block;width:154px;height:1px;margin-top:34px;
+ background:linear-gradient(90deg,rgba(150,102,139,.72),transparent);
+}
+.threshold .scene-footnote{letter-spacing:.06em}
+.threshold-scenography{
+ filter:contrast(1.04) saturate(1.10) drop-shadow(0 24px 22px rgba(98,48,106,.11));
+}
+
+/* TREE: keep the R6/R7 structural layout and live ten buttons. Add real
+   architectural foreground detail rather than a second printed Tree image. */
+.tree-section{
+ position:relative;isolation:isolate;
+ background-image:
+ linear-gradient(100deg,rgba(13,7,26,.31),rgba(33,17,50,.04) 46%,rgba(20,8,39,.47)),
+ url("assets/tree_stage_composite_v3.webp");
+ box-shadow:inset 0 30px 60px rgba(13,8,26,.48),inset 0 -24px 65px rgba(13,8,26,.55);
+}
+.tree-section::before{
+ content:"";position:absolute;inset:7% auto 15% 0;width:17%;
+ background:url("assets/tree_pillar_detail.webp") left center/cover no-repeat;
+ opacity:.29;filter:saturate(1.04);
+ mask-image:linear-gradient(90deg,black,transparent 97%);
+ pointer-events:none;z-index:0;
+}
+.tree-experience{overflow:visible}
+.tree-environment{
+ background:radial-gradient(ellipse 48% 44% at 49% 48%,rgba(246,194,221,.17),transparent 89%);
+}
+.tree-backplate{
+ background:linear-gradient(140deg,rgba(24,12,44,.19),rgba(28,12,45,.02) 60%,rgba(32,19,48,.34));
+ border:1px solid rgba(250,225,179,.67);
+ box-shadow:inset 0 0 45px rgba(250,205,173,.15),0 0 0 7px rgba(200,146,207,.08),0 15px 70px rgba(10,4,22,.48);
+}
+.node-crystal{
+ border:1px solid rgba(255,249,224,.96);
+ box-shadow:inset 2px 2px 5px rgba(255,255,243,.94),inset -4px -4px 12px rgba(101,45,131,.65),
+   0 0 0 6px rgba(222,179,231,.10),0 0 24px rgba(255,219,171,.83);
+}
+.tree-insight{
+ position:relative;overflow:hidden;
+ border:1px solid rgba(244,205,170,.69);
+ border-radius:20px 20px 7px 7px;
+ margin:22px 16px 26px 0;
+ background:
+ linear-gradient(135deg,rgba(35,20,52,.91),rgba(22,12,40,.95) 60%),
+ radial-gradient(circle at 74% 27%,rgba(175,128,193,.17),transparent 50%);
+ box-shadow:0 25px 70px rgba(12,6,25,.61),0 0 0 7px rgba(229,182,219,.06),
+ inset 0 0 37px rgba(228,158,217,.09);
+}
+.tree-insight::before{
+ content:"";position:absolute;pointer-events:none;inset:12px;border-radius:15px 15px 3px 3px;
+ border:1px solid rgba(245,215,187,.29);
+ box-shadow:inset 0 0 28px rgba(250,199,168,.05);
+}
+.tree-insight::after{
+ content:"";position:absolute;pointer-events:none;right:-8%;bottom:-21%;width:65%;height:66%;
+ border:1px solid rgba(216,160,216,.18);
+ border-radius:55% 10% 55% 5%;transform:rotate(-26deg);
+ box-shadow:0 0 22px rgba(233,184,212,.06);
+}
+.tree-insight>*{position:relative;z-index:2}
+.insight-top{
+ border-bottom:1px solid rgba(235,200,179,.34);
+ padding-bottom:24px;
+}
+.insight-divider{
+ background:linear-gradient(90deg,rgba(242,207,175,.70),rgba(206,157,207,.15),transparent);
+}
+.insight-context{color:#f5d3ab}
+.insight-question{color:#fff1e7}
+.tree-controls{border-top:1px solid rgba(241,195,174,.20);padding-top:16px}
+.tree-controls button{
+ border:1px solid rgba(244,208,177,.46);
+ background:rgba(236,174,204,.08);
+ box-shadow:inset 0 0 17px rgba(245,193,219,.09);
+}
+
+/* MATRIX / DIFFERENT GALLERY THAN TREE: source crop of already generated
+   distinctive portal reference, plus real DOM light-axis controls. */
+.matrix-section{
+ background-image:
+  radial-gradient(ellipse 72% 50% at 88% 0%,rgba(218,173,213,.16),transparent),
+  linear-gradient(145deg,#fff6ed 0%,#f0e2e2 57%,#dcc6d8 100%);
+ border-top:1px solid rgba(189,141,176,.54);
+}
+.matrix-top{position:relative;z-index:2}
+.matrix-top::after{
+ content:"";position:absolute;left:0;bottom:-30px;height:1px;width:170px;
+ background:linear-gradient(90deg,rgba(170,113,166,.63),transparent);
+}
+.matrix-installation{
+ margin-top:70px;
+ display:grid;grid-template-columns:minmax(0,58%) minmax(0,42%);
+ border:1px solid rgba(243,213,173,.84);
+ border-radius:18px;
+ overflow:hidden;
+ background:#170e2b;
+ box-shadow:0 0 0 7px rgba(254,241,224,.52),0 35px 90px rgba(57,28,74,.48);
+}
+.matrix-installation::before{
+ content:"";position:absolute;pointer-events:none;z-index:4;inset:8px;
+ border:1px solid rgba(243,211,175,.30);border-radius:12px;
+}
+.matrix-visual{
+ background-color:#160e29;
+ background-image:
+  linear-gradient(180deg,rgba(18,10,29,.02),rgba(24,9,41,.14) 59%,rgba(15,9,29,.38)),
+  url("assets/matrix_cathedral.webp")!important;
+ background-repeat:no-repeat;background-size:cover,cover;
+ background-position:center,center 42%;
+}
+.matrix-visual::before{
+ background:radial-gradient(ellipse 26% 30% at 50% 45%,
+ rgba(20,12,36,.92),rgba(26,11,42,.70) 55%,transparent 91%);
+}
+.matrix-visual::after{
+ z-index:1;background:
+ radial-gradient(ellipse 32% 10% at 50% 84%,rgba(255,227,161,.68),transparent),
+ repeating-linear-gradient(90deg,transparent 0 90px,rgba(249,196,172,.035) 91px 92px);
+ opacity:.78;
+}
+.matrix-perspective{z-index:2;filter:drop-shadow(0 4px 30px rgba(235,168,224,.42))}
+.m-core{
+ border:2px solid rgba(255,248,220,.89);
+ background:linear-gradient(126deg,#fff4df 0%,#eec4ef 23%,#b479d4 45%,#503976 66%,#dbacd9 85%,#fff0d9);
+ box-shadow:inset 8px 8px 15px rgba(255,255,240,.8),inset -11px -14px 17px rgba(49,21,74,.85),
+  0 0 28px 7px rgba(255,223,191,.79),0 0 90px rgba(243,174,235,.65);
+}
+.matrix-interface{
+ padding:78px clamp(32px,4.3vw,70px);
+ background:
+ radial-gradient(ellipse 70% 60% at 98% 100%,rgba(133,68,145,.20),transparent 80%),
+ linear-gradient(132deg,rgba(37,22,55,.96),rgba(18,11,36,.97));
+ border-left:1px solid rgba(244,210,180,.49);
+}
+.matrix-interface::after{
+ content:"✧";position:absolute;right:28px;top:34px;
+ font-size:27px;color:#e3b7df;opacity:.67;
+}
+.axis-tab{border-bottom:1px solid rgba(240,210,189,.24)}
+.axis-tab[aria-selected=true]{background:linear-gradient(90deg,rgba(240,179,215,.17),transparent 90%);color:#f6e8db}
+#matrix-panel{color:#f1dbe7}
+
+/* MENTOR / source collage's architecture only in background, but person's
+   face stays authentic source photograph and stays ABOVE scenery. */
+.mentor-section{
+ position:relative;isolation:isolate;
+ background:linear-gradient(90deg,#110b1f 0%,#20122e 58%,#180d26 100%);
+}
+.mentor-section::before{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+ background:
+  linear-gradient(90deg,rgba(17,10,31,.92) 0%,rgba(19,11,31,.34) 35%,rgba(16,9,27,.69) 67%,rgba(20,8,34,.83)),
+  url("assets/mentor_cathedral.webp") 56% 45% / cover no-repeat;
+ opacity:.66;
+}
+.mentor-media{position:relative;z-index:1}
+.mentor-media img{filter:contrast(1.05) saturate(.98)}
+.mentor-photo-line{
+ border:1px solid rgba(248,215,172,.74);
+ box-shadow:0 0 0 9px rgba(232,177,192,.05),0 0 40px rgba(246,202,172,.18);
+}
+.mentor-story{
+ position:relative;z-index:1;
+ margin:28px 25px 28px 0;
+ border:1px solid rgba(242,206,173,.68);
+ border-radius:18px 18px 5px 5px;
+ background:linear-gradient(126deg,rgba(31,17,48,.93),rgba(23,13,40,.95));
+ box-shadow:inset 0 0 26px rgba(232,170,220,.08),0 18px 55px rgba(10,3,21,.55);
+}
+.mentor-story::before{
+ content:"";position:absolute;inset:10px;pointer-events:none;border:1px solid rgba(244,209,173,.28);
+ border-radius:13px 13px 2px 2px;
+}
+.mentor-story>*{position:relative;z-index:1}
+.mentor-story h2{
+ font-size:clamp(66px,6.4vw,106px);
+ text-shadow:0 4px 22px rgba(4,3,11,.50);
+}
+.mentor-quote{
+ border-top:1px solid rgba(244,207,168,.54);
+ padding-top:28px;
+}
+
+/* GALLERY / generated scenic elements ONLY behind original authentic photos,
+   like three glass-front museum portraits, no generated face or fake captions. */
+.practice-strip{
+ position:relative;isolation:isolate;
+ background:
+  linear-gradient(100deg,rgba(255,246,237,.88),rgba(246,230,232,.87) 52%,rgba(235,215,226,.90)),
+  url("assets/gallery_cathedral.webp") left center/auto 100% no-repeat;
+ padding-top:96px;padding-bottom:115px;
+}
+.practice-strip::before{
+ content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+ background:
+  radial-gradient(ellipse 33% 78% at 9% 50%,rgba(245,211,184,.37),transparent),
+  repeating-linear-gradient(120deg,transparent 0 125px,rgba(199,139,182,.029) 126px 128px);
+}
+.practice-strip>*{position:relative;z-index:1}
+.practice-heading::after{
+ content:"✧ ────────── ✧";display:block;color:#9f6c91;font-size:18px;margin-top:38px;
+ letter-spacing:.25em;
+}
+.practice-strip figure,
+.practice-strip figure:nth-of-type(2),
+.practice-strip figure:nth-of-type(3){
+ position:relative;overflow:hidden;
+ transform:none;
+ border:1px solid rgba(228,186,147,.86);
+ border-radius:12px 12px 4px 4px;
+ padding:7px;
+ background:linear-gradient(140deg,#faefd9,#bc94b7 55%,#e6cda4);
+ box-shadow:0 0 0 6px rgba(255,248,240,.59),0 22px 55px rgba(85,48,87,.32);
+}
+.practice-strip figure::before{
+ content:"";position:absolute;inset:11px;z-index:3;pointer-events:none;
+ border:1px solid rgba(250,229,190,.63);border-radius:7px 7px 0 0;
+}
+.practice-strip figure::after{
+ content:"✧";position:absolute;z-index:4;right:19px;top:18px;
+ font-size:22px;color:#f7dbba;text-shadow:0 0 7px rgba(41,24,45,.8);
+ pointer-events:none;
+}
+.practice-strip figure img{height:100%;object-fit:cover;border-radius:7px 7px 0 0;filter:saturate(.93)}
+.practice-strip figcaption{
+ left:7px;right:7px;bottom:7px;
+ padding:22px 14px 15px;
+ font-size:12px;text-align:center;letter-spacing:.14em;
+ background:linear-gradient(180deg,transparent,rgba(31,15,44,.95));
+ border-top:1px solid rgba(240,197,169,.12);
+}
+.practice-strip figure:hover{
+ transform:translateY(-9px);
+ box-shadow:0 0 0 6px rgba(255,248,240,.61),0 32px 68px rgba(66,36,80,.48);
+}
+
+/* Ending remains its own panorama, not a repeated matrix/gallery image. */
+.last-section{
+ box-shadow:inset 0 35px 75px rgba(11,4,23,.43);
+}
+.last-section>h2{text-shadow:0 4px 30px rgba(8,4,22,.85)}
+.last-link{border-bottom:1px solid rgba(248,215,175,.72)}
+
+/* Mobile: all source photography is real, all form/labels remain real DOM.
+   No nonsemantic image-generated controls. */
+@media(max-width:1100px) and (min-width:761px){
+ .tree-insight{margin:12px 8px 18px 0}
+ .mentor-story{margin-right:12px;padding:65px 35px}
+ .practice-strip{gap:12px}
+ .matrix-interface{padding:50px 30px}
+}
+@media(max-width:760px){
+ .hero{background-position:center,53% center}
+ .tree-section::before{width:24%;opacity:.23}
+ .tree-insight{margin:0;border-radius:6px}
+ .tree-insight::before{inset:8px}
+ .matrix-installation{display:flex;flex-direction:column;border-radius:12px}
+ .matrix-installation::before{inset:6px;border-radius:8px}
+ .matrix-visual{height:485px;min-height:485px;background-position:center,55% center}
+ .matrix-interface{padding:55px 30px 38px;border-left:0;border-top:1px solid rgba(236,200,178,.46)}
+ .mentor-section::before{opacity:.39;background-position:65% 30%}
+ .mentor-media{min-height:490px;height:490px}
+ .mentor-story{margin:0 13px 20px;padding:50px 30px 70px}
+ .mentor-story h2{font-size:clamp(54px,10vw,79px)}
+ .practice-strip{padding:65px 22px 85px;gap:22px}
+ .practice-strip figure,.practice-strip figure:nth-of-type(2),.practice-strip figure:nth-of-type(3){min-height:340px;transform:none}
+ .practice-strip figure:hover{transform:none}
+ .practice-heading::after{margin-top:20px}
+}
+@media(max-width:480px){
+ .hero-stage{box-shadow:0 16px 48px rgba(8,4,17,.64)}
+ .tree-insight{margin:0;border-left:0;border-right:0}
+ .matrix-visual{height:400px;min-height:400px}
+ .matrix-interface{padding:49px 24px 35px}
+ .matrix-section{padding:65px 16px 83px}
+ .mentor-media{min-height:420px;height:420px}
+ .mentor-story{margin:0 8px 18px;padding:44px 25px 65px}
+ .practice-strip figure,.practice-strip figure:nth-of-type(2),.practice-strip figure:nth-of-type(3){min-height:330px}
+}
+@media(prefers-reduced-motion:reduce){
+ .practice-strip figure,.practice-strip figure img,.axis-tab,.hero-stage{transition:none!important}
+}
+
+/* Screenshot correction: Matrix's small flat square -> faceted native CSS prism. */
+.m-core{
+ width:172px;height:202px;top:47%;left:50%;border:1px solid rgba(255,250,222,.94);
+ border-radius:0;clip-path:polygon(50% 0%,78% 19%,94% 53%,50% 100%,6% 53%,22% 19%);
+ transform:translate(-50%,-50%) rotate(0deg);
+ background:linear-gradient(143deg,rgba(255,248,219,.94) 0%,rgba(235,185,237,.65) 19%,transparent 25%),
+ conic-gradient(from 210deg at 50% 42%,#e4aeeb,#62428c 21%,#f9e9e6 35%,#9974c0 52%,#3c286e 68%,#ffd8c1 88%,#c39ce9);
+ box-shadow:0 0 58px 22px rgba(236,177,227,.58),0 0 108px rgba(251,220,170,.41);
+ filter:drop-shadow(0 0 22px rgba(255,217,175,.82));
+ animation:r8GemHover 7s ease-in-out infinite alternate!important;
+}
+.m-core::before{
+ content:"";position:absolute;inset:6% 10%;transform:none;filter:none;
+ clip-path:polygon(50% 0,87% 28%,50% 94%,13% 28%);
+ border:1px solid rgba(255,245,216,.62);
+ background:linear-gradient(145deg,rgba(255,248,233,.90),rgba(190,139,226,.75) 38%,rgba(67,39,111,.91) 72%,rgba(239,191,218,.72));
+ box-shadow:inset 0 0 19px rgba(255,238,191,.78);
+}
+.m-core::after{
+ content:"";position:absolute;inset:11% 17%;transform:none;border:0;
+ clip-path:polygon(50% 0%,100% 45%,50% 100%,0 45%);
+ background:linear-gradient(120deg,rgba(255,250,229,.76),transparent 33%,rgba(66,32,108,.85) 65%,rgba(249,224,186,.48));
+ opacity:.8;
+}
+@keyframes r8GemHover{
+ from{transform:translate(-50%,-50%) translateY(-7px);filter:drop-shadow(0 0 19px rgba(251,223,189,.65))}
+ to{transform:translate(-50%,-50%) translateY(7px);filter:drop-shadow(0 0 29px rgba(249,204,186,.92))}
+}
+@media(max-width:760px){.m-core{width:134px;height:158px}}
+@media(max-width:480px){.m-core{width:106px;height:132px}}
+@media(prefers-reduced-motion:reduce){.m-core{animation:none!important;transform:translate(-50%,-50%)}}

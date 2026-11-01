@@ -1,0 +1,238 @@
+/* WEALTH10 R7 / full-page visual cohesion.
+   Designed against preserved native Stitch V3 source and the R6 browser readback.
+   No new generated images. No duplicate image assigned to two scene stages.
+   Matrix's independent source: R3_matrix_chamber_scene.webp.
+   R6 Tree geometry/content unchanged; all user photos are original. */
+
+/* One connected visual vocabulary, not one repeating plate. */
+:root{--world-deep:#130c25;--world-purple:#392345;--world-gold:#eacba3;--world-ivory:#f4eae4;--world-mauve:#bb8dbe}
+.hero{
+ background:radial-gradient(ellipse 85% 75% at 86% 51%,#443158,transparent 74%),#0e0b1b;
+}
+.hero::before{opacity:.68!important;filter:saturate(.86) contrast(1.08)}
+.hero-copy{filter:drop-shadow(0 10px 20px #130c22)}
+.hero h1{color:var(--world-ivory);text-shadow:0 4px 25px #0a061ba8}
+.hero-stage{filter:drop-shadow(-18px 27px 33px #080519b3)}
+.hero-stage::after{box-shadow:0 0 38px #efd1b84b,inset 0 0 22px #e4c7db42}
+.portrait-arch{box-shadow:0 26px 80px #03020dba,0 0 0 1px #f7d9bf57}
+.hero-bottom{border-top:1px solid #cba8c32f;padding-top:20px}
+
+/* Section 01 Threshold: R6 good, protect text and keep the real perspective.
+   Only polish transition into the Tree's distinct violet gallery. */
+.threshold{border-bottom:1px solid #cfa0cd4f}
+.threshold-content{filter:drop-shadow(0 5px 16px #fbf5ee60)}
+.threshold::after{
+ background:linear-gradient(180deg,#fff8f32b,transparent 46%,#4d244614 100%)
+}
+.threshold .chapter-marker{position:relative;z-index:6}
+
+/* Section 02 Tree / KEEP R6 APPROVED DIRECTION, no image swap. */
+.tree-section{box-shadow:inset 0 24px 50px #11081d50}
+.tree-insight{box-shadow:-20px 28px 85px #100922a6,inset 1px 0 24px #ffd5c91a}
+
+/* Section 03 Matrix / Independent world, NOT Tree's architectural background.
+   Old R3 image is unique but contains a baked crystal; the native CSS/DOM core
+   floats above a darkened central void so no second competing fake control. */
+.matrix-section{
+ isolation:isolate;position:relative;overflow:hidden;
+ background:
+  radial-gradient(ellipse 80% 50% at 82% 5%,rgba(209,173,211,.37),transparent 78%),
+  linear-gradient(175deg,#f8f0e7 0%,#e9d6db 58%,#d5bfcf 100%);
+}
+.matrix-section::before{
+ content:"";position:absolute;inset:7% 0 0;z-index:0;pointer-events:none;
+ background:radial-gradient(ellipse 30% 52% at 93% 70%,rgba(125,73,136,.18),transparent 90%);
+}
+.matrix-section .chapter-marker,.matrix-top,.matrix-installation{position:relative;z-index:1}
+.matrix-top{margin-top:66px;margin-bottom:50px}
+.matrix-top h2{color:#37243f}
+.matrix-top .quiet-copy{font-size:13px;line-height:2.1;color:#51455d}
+.matrix-installation{
+ grid-template-columns:minmax(0,58%) minmax(0,42%);
+ background:#171025;
+ border:1px solid #cfa8c57d;
+ box-shadow:0 42px 100px #381c5452,0 0 0 6px #fff0e961;
+}
+.matrix-visual{
+ position:relative;isolation:isolate;overflow:hidden;
+ background-color:#150c27;
+ background-image:
+  linear-gradient(180deg,rgba(15,7,30,.24) 0%,rgba(24,10,39,.18) 56%,rgba(9,7,21,.68) 100%),
+  url("assets/R3_matrix_chamber_scene.webp")!important;
+ background-size:cover,cover;background-position:center,54% 52%;background-repeat:no-repeat;
+ min-height:670px;
+}
+.matrix-visual::before{
+ z-index:0;inset:0;opacity:1;transform:none;animation:none;filter:none;
+ background:
+  radial-gradient(ellipse 36% 43% at 50% 48%,rgba(18,10,31,.97) 0%,rgba(18,10,31,.91) 40%,rgba(18,10,31,.35) 73%,transparent 100%),
+  linear-gradient(90deg,rgba(12,7,27,.24),transparent 16%,transparent 85%,rgba(11,6,23,.32));
+}
+.matrix-visual::after{
+  z-index:1;inset:0;transform:none;opacity:.68;pointer-events:none;
+  background:
+    radial-gradient(ellipse 58% 17% at 50% 84%,rgba(233,191,145,.25),transparent 90%),
+    linear-gradient(90deg,transparent 10%,rgba(244,196,153,.10) 50%,transparent 90%);
+}
+.matrix-perspective{
+ z-index:2;
+ transform:rotateX(5deg) rotateY(var(--axis-x)) translateY(var(--axis-y));
+}
+.matrix-perspective::before{
+ content:"";position:absolute;inset:12% 23% 4%;
+ pointer-events:none;opacity:.73;
+ background:
+  radial-gradient(ellipse 44% 48% at 50% 45%,rgba(224,177,245,.14),transparent 80%),
+  linear-gradient(180deg,transparent,rgba(244,181,156,.13) 45%,transparent);
+ filter:blur(4px);
+}
+.matrix-perspective::after{
+ content:"";position:absolute;left:19%;right:19%;top:81%;height:11%;border-radius:50%;
+ border:1px solid #f7d5ba5e;box-shadow:0 0 34px #e8bfe350,0 0 80px #d5b19430;
+ transform:rotateX(72deg);pointer-events:none;
+}
+.m-rail{opacity:.46;filter:drop-shadow(0 0 7px #efcebd8a)}
+.rail-center{opacity:.55}
+.m-ring{
+ border:1px solid rgba(239,204,173,.68);
+ box-shadow:0 0 30px rgba(236,201,165,.30),inset 0 0 20px rgba(248,211,191,.11);
+}
+.m-beam{
+ width:2px;box-shadow:0 0 23px 7px #e9bddd54,0 0 48px 11px #e2b5ae35;
+}
+.m-core{
+ width:114px;height:114px;top:47%;
+ border:2px solid #fff1d9ce;border-radius:10px;
+ background:linear-gradient(128deg,
+  #fff7e7 0%,#f4d7e4 17%,#d7a6d9 43%,#694b96 62%,#d7acd9 77%,#ffe1cc 100%);
+ box-shadow:inset 8px 8px 13px #fff9ed8e,inset -10px -12px 18px #472960d2,
+   0 0 13px #fff1ddcc,0 0 52px 17px #d8aae070,0 0 100px #eecbb647;
+}
+.m-core::before{
+ content:"";position:absolute;inset:14%;border:1px solid #fff3d3a6;border-radius:3px;
+ box-shadow:0 0 12px #fff3c6aa;transform:scale(.81);
+}
+.m-laser{background:linear-gradient(90deg,transparent,#ffe7c3b8 40%,#e1b2debe 60%,transparent)}
+.m-floor{border-color:#e7c59a8c;box-shadow:0 0 26px #bca1e054}
+.matrix-interface{
+ background:
+  radial-gradient(ellipse at 22% 0%,rgba(181,120,187,.15),transparent 55%),
+  linear-gradient(105deg,#170e28f0,#150d26 55%,#100c20);
+ box-shadow:inset 1px 0 0 #f3d5b457;
+ padding:78px clamp(30px,4vw,70px);
+}
+.matrix-tabs{gap:7px}
+.axis-tab{letter-spacing:.055em;transition:padding .25s,background .25s,color .25s}
+.axis-tab[aria-selected="true"]{
+ background:linear-gradient(90deg,#e5badc16,transparent 83%);
+ border-color:#f5d6ba9e;
+ box-shadow:inset 3px 0 0 #efd2b4aa;
+ color:#ffebd7;
+}
+#matrix-panel{border-top:1px solid #e1bed23c;padding-top:24px}
+#axis-title{color:#fff3e3}
+
+/* Human section: distinctive real-photo portrait studio, NOT a duplicate arch image. */
+.mentor-section{
+ background:
+  radial-gradient(ellipse 50% 75% at 95% 25%,rgba(109,67,127,.32),transparent),
+  linear-gradient(117deg,#23142e,#110c21 67%);
+ border-top:1px solid #f5d6bc3d;
+}
+.mentor-media{
+ background:#251930;box-shadow:inset -30px 0 60px #100919b3;
+}
+.mentor-media img{
+ filter:saturate(.94) contrast(1.05);
+ object-position:center 31%;
+}
+.mentor-media::after{
+ background:linear-gradient(90deg,rgba(19,10,30,.16) 0%,transparent 48%,#130c22bd 100%);
+}
+.mentor-photo-line{
+ inset:5% 7%;
+ border:1px solid #f5d3bb85;
+ box-shadow:0 0 0 7px #24132d42,0 0 36px #edbda735,inset 0 0 31px #cfaad029;
+}
+.mentor-story{
+ background-image:
+  linear-gradient(90deg,rgba(19,11,34,.20),rgba(13,9,28,.34)),
+  radial-gradient(circle at 85% 14%,rgba(195,142,186,.19),transparent 47%);
+}
+.mentor-story h2{color:#f8ecdf}
+.mentor-quote{border-top:1px solid #d1b1b967}
+.mentor-position{color:#e7cab7}
+
+/* Real photos: off-white editorial gallery with physical frame and depth,
+   not a card grid pretending to be a second immersive hall. */
+.practice-strip{
+ background:linear-gradient(115deg,#f8f1e9 0%,#e8d8db 59%,#dfcad3 100%);
+ gap:clamp(12px,1.3vw,24px);
+ border-top:1px solid rgba(177,135,172,.55);
+}
+.practice-heading{align-self:center}
+.practice-heading h2{color:#36263b}
+.practice-strip figure{
+ border:7px solid #f7f0e8;
+ box-shadow:0 27px 45px #53354a36,0 0 0 1px #9875895c;
+ border-radius:3px;
+ transform:translateY(0);
+ transition:transform .7s cubic-bezier(.18,.65,.2,1),box-shadow .7s;
+}
+.practice-strip figure:nth-of-type(2){transform:translateY(28px)}
+.practice-strip figure:nth-of-type(3){transform:translateY(-10px)}
+.practice-strip figure:hover{
+ transform:translateY(-14px);
+ box-shadow:0 34px 58px #4d2f4a65,0 0 0 1px #a68a9f;
+}
+.practice-strip figcaption{font-weight:500;text-shadow:0 1px 8px #170f20}
+
+/* Finale: own panoramic end world with same gold / violet cues. Not Matrix art. */
+.last-section{
+ background-position:center,center 52%;
+}
+.last-section::before{
+ background:radial-gradient(ellipse 44% 48% at 50% 40%,
+ rgba(18,9,34,.82),rgba(19,10,34,.54) 57%,transparent 92%);
+}
+.last-section>h2,.last-section>p,.last-section>a,.last-section>.eyebrow{position:relative;z-index:3}
+.last-link{background:rgba(25,11,38,.25);padding:12px 16px}
+.last-link:hover{background:rgba(243,207,178,.16)}
+
+/* Responsive checks against saved native Stitch V3: 390px full view,
+   retained focusable tree and Matrix controls; all text remains native. */
+@media(max-width:1100px) and (min-width:761px){
+ .matrix-installation{grid-template-columns:60% 40%}
+ .matrix-interface{padding:48px 24px}
+ .m-core{width:91px;height:91px}
+}
+@media(max-width:760px){
+ .hero::before{opacity:.39!important}
+ .matrix-section{padding:62px 22px 85px}
+ .matrix-installation{display:flex;flex-direction:column}
+ .matrix-visual{min-height:520px;background-position:center,50% 45%}
+ .matrix-visual::before{
+  background:radial-gradient(ellipse 40% 48% at 50% 48%,
+  rgba(17,10,28,.96),rgba(17,10,28,.75) 46%,transparent 90%);
+ }
+ .matrix-interface{padding:38px 23px 49px}
+ .m-core{width:95px;height:95px}
+ .mentor-section{display:block}
+ .mentor-media{height:550px;min-height:0}
+ .mentor-story{padding:55px 25px 80px}
+ .practice-strip{padding:65px 22px}
+ .practice-strip figure:nth-of-type(2),.practice-strip figure:nth-of-type(3){transform:none}
+ .practice-strip figure:hover{transform:none}
+}
+@media(max-width:480px){
+ .matrix-visual{min-height:410px}
+ .matrix-section{padding:55px 18px 75px}
+ .m-core{width:78px;height:78px}
+ .mentor-media{height:470px}
+ .practice-strip figure{border-width:5px}
+ .last-section::before{background:radial-gradient(ellipse 68% 54% at 50% 43%,rgba(17,10,32,.84),rgba(17,10,32,.60) 63%,transparent)}
+}
+@media(prefers-reduced-motion:reduce){
+ .practice-strip figure,.practice-strip figure img{transition:none!important}
+ .m-ring,.m-beam{animation:none!important}
+}

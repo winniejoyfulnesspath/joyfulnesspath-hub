@@ -1,0 +1,98 @@
+[
+  {
+    "name": "desktop",
+    "pass": true,
+    "assets": [
+      {
+        "f": "threshold_portal_from_approved.webp",
+        "ok": true,
+        "w": 967,
+        "h": 941
+      },
+      {
+        "f": "tree_stage_composite_v3.webp",
+        "ok": true,
+        "w": 1440,
+        "h": 1080
+      },
+      {
+        "f": "outro_architecture_from_approved.webp",
+        "ok": true,
+        "w": 1672,
+        "h": 941
+      },
+      {
+        "f": "tree_mobile_pillar_from_approved.webp",
+        "ok": true,
+        "w": 285,
+        "h": 941
+      },
+      {
+        "f": "outro_mobile_columns_from_approved.webp",
+        "ok": true,
+        "w": 720,
+        "h": 1160
+      }
+    ],
+    "values": {
+      "pressed": "true",
+      "axis": "你願意做哪一步？",
+      "overflow": false,
+      "decorativeBg": [
+        "url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R6_SPATIAL_FIX/assets/threshold_portal_from_approved.webp\")",
+        "linear-gradient(90deg, rgba(20, 10, 33, 0.16) 0%, rgba(20, 12, 38, 0.08) 52%, rgba(17, 10, 29, 0.39) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R6_SPATIAL_FIX/assets/tree_stage_composite_v3.webp\")",
+        "linear-gradient(rgba(18, 10, 33, 0.2) 0%, rgba(16, 9, 28, 0.12) 40%, rgba(16, 9, 31, 0.31) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R6_SPATIAL_FIX/assets/outro_architecture_from_approved.webp\")"
+      ],
+      "css": true
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "pass": true,
+    "assets": [
+      {
+        "f": "threshold_portal_from_approved.webp",
+        "ok": true,
+        "w": 967,
+        "h": 941
+      },
+      {
+        "f": "tree_stage_composite_v3.webp",
+        "ok": true,
+        "w": 1440,
+        "h": 1080
+      },
+      {
+        "f": "outro_architecture_from_approved.webp",
+        "ok": true,
+        "w": 1672,
+        "h": 941
+      },
+      {
+        "f": "tree_mobile_pillar_from_approved.webp",
+        "ok": true,
+        "w": 285,
+        "h": 941
+      },
+      {
+        "f": "outro_mobile_columns_from_approved.webp",
+        "ok": true,
+        "w": 720,
+        "h": 1160
+      }
+    ],
+    "values": {
+      "pressed": "true",
+      "axis": "你願意做哪一步？",
+      "overflow": false,
+      "decorativeBg": [
+        "url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R6_SPATIAL_FIX/assets/threshold_portal_from_approved.webp\")",
+        "linear-gradient(rgba(19, 10, 34, 0.39), rgba(25, 12, 41, 0.25) 41%, rgba(19, 11, 33, 0.38) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R6_SPATIAL_FIX/assets/tree_mobile_pillar_from_approved.webp\")",
+        "linear-gradient(rgba(19, 11, 33, 0.17), rgba(18, 11, 32, 0.18) 45%, rgba(16, 10, 31, 0.34)), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R6_SPATIAL_FIX/assets/outro_mobile_columns_from_approved.webp\")"
+      ],
+      "css": true
+    },
+    "errors": []
+  }
+]

@@ -1,0 +1,79 @@
+/* R11: surgical fix for R10 Tree headline regression.
+   Cause: R10 ::after decorative rule was inserted into the FLEX layout
+   as a third item, compressing the title into character-by-character wrapping.
+   The ornament is positioned independently. No art/text/data/motion reset. */
+.r10-motion #constellation .tree-intro{
+ position:relative;
+}
+.r10-motion #constellation .tree-intro::after{
+ position:absolute;
+ left:0;
+ bottom:4px;
+ width:min(51%,520px);
+ height:1px;
+ margin:0;
+ display:block;
+ pointer-events:none;
+}
+.r10-motion #constellation .tree-heading{
+ flex:1 1 0%;
+ min-width:0;
+}
+.r10-motion #constellation .tree-intro>.quiet-copy{
+ flex:0 1 355px;
+ min-width:250px;
+ margin-bottom:15px;
+}
+.r10-motion #constellation #tree-title{
+ max-width:100%;
+ font-size:clamp(39px,4vw,64px);
+ line-height:1.38;
+ letter-spacing:-.025em;
+ overflow-wrap:normal;
+}
+@media(max-width:1100px){
+ .r10-motion #constellation .tree-intro{
+  gap:36px;
+ }
+ .r10-motion #constellation #tree-title{
+  font-size:clamp(34px,3.7vw,49px);
+ }
+ .r10-motion #constellation .tree-intro>.quiet-copy{
+  flex-basis:300px;
+  min-width:235px;
+ }
+}
+@media(max-width:900px){
+ .r10-motion #constellation .tree-intro{
+  display:block;
+  padding-bottom:65px;
+ }
+ .r10-motion #constellation .tree-heading{
+  max-width:100%;
+ }
+ .r10-motion #constellation #tree-title{
+  font-size:clamp(29px,5.2vw,47px);
+  line-height:1.43;
+ }
+ .r10-motion #constellation .tree-intro>.quiet-copy{
+  display:block;
+  max-width:610px;
+  margin-top:15px;
+ }
+ .r10-motion #constellation .tree-intro::after{
+  bottom:20px;
+  width:min(80%,520px);
+ }
+}
+@media(max-width:480px){
+ .r10-motion #constellation #tree-title{
+  font-size:clamp(26px,7.1vw,32px);
+  letter-spacing:-.035em;
+ }
+ .r10-motion #constellation .tree-intro>.quiet-copy{
+  font-size:15px;
+ }
+}
+/* Preserve reduced-motion behavior; this change only affects layout. */
+
+@media(max-width:359px){.r10-motion #constellation #tree-title{font-size:24px;letter-spacing:-.045em}}

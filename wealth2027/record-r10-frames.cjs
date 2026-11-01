@@ -1,0 +1,9 @@
+const{chromium}=require("C:/Users/paulw/Documents/sne-website/node_modules/playwright"),fs=require("fs"),path=require("path");
+(async()=>{const dir=path.join(__dirname,"R10_FRAMES");fs.mkdirSync(dir,{recursive:true});
+const b=await chromium.launch({headless:true,executablePath:"C:/Program Files/Google/Chrome/Application/chrome.exe",args:["--disable-gpu"]});
+const c=await b.newContext({viewport:{width:1000,height:620},reducedMotion:"no-preference"}),p=await c.newPage();const err=[];
+p.on("pageerror",e=>err.push(e.message));await p.goto("file:///"+__dirname.replaceAll("\\","/")+"/index.html",{waitUntil:"load"});
+const steps={6:()=>p.evaluate(()=>document.querySelector("#threshold").scrollIntoView({behavior:"smooth",block:"start"})),18:()=>p.evaluate(()=>document.querySelector("#constellation").scrollIntoView({behavior:"smooth",block:"start"})),32:()=>p.locator(".node-orb[data-id='4']").click(),41:()=>p.evaluate(()=>document.querySelector("#alignment").scrollIntoView({behavior:"smooth",block:"start"})),54:()=>p.locator(".axis-tab[data-axis='2']").click(),62:()=>p.evaluate(()=>document.querySelector("#winnie").scrollIntoView({behavior:"smooth",block:"start"})),73:()=>p.evaluate(()=>document.querySelector(".practice-strip").scrollIntoView({behavior:"smooth",block:"start"}))};
+for(let i=0;i<84;i++){if(steps[i])await steps[i]();await p.waitForTimeout(64);await p.screenshot({path:path.join(dir,"frame"+String(i).padStart(3,"0")+".jpg"),type:"jpeg",quality:75,animations:"allow"});if(i%14===0)console.log("FRAME "+i);}
+await c.close();await b.close();console.log("CAPTURE_DONE "+JSON.stringify({frames:84,errors:err}));if(err.length)process.exitCode=1;
+})().catch(e=>{console.error(e.stack);process.exitCode=2});

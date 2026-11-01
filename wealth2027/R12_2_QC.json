@@ -1,0 +1,232 @@
+[
+  {
+    "name": "desktop",
+    "pass": true,
+    "start": {
+      "fixedHidden": true,
+      "logoBg": "rgba(0, 0, 0, 0)",
+      "logoImage": true,
+      "footerBrands": [
+        {
+          "text": "Joyfulness Path",
+          "url": "https://joyfulnesspath.com/",
+          "img": 160
+        },
+        {
+          "text": "Soul New Energy",
+          "url": "https://soulnewenergy.com/",
+          "img": 160
+        }
+      ],
+      "cards": [
+        {
+          "text": "DAY 01 · 星期五1 月 8 日第一天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "16px"
+        },
+        {
+          "text": "DAY 02 · 星期六1 月 9 日第二天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "16px"
+        },
+        {
+          "text": "DAY 03 · 星期日1 月 10 日第三天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "css": true
+    },
+    "cardNav": true,
+    "enrollStickyHidden": true,
+    "footerVisible": true,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "tablet",
+    "pass": true,
+    "start": {
+      "fixedHidden": true,
+      "logoBg": "rgba(0, 0, 0, 0)",
+      "logoImage": true,
+      "footerBrands": [
+        {
+          "text": "Joyfulness Path",
+          "url": "https://joyfulnesspath.com/",
+          "img": 160
+        },
+        {
+          "text": "Soul New Energy",
+          "url": "https://soulnewenergy.com/",
+          "img": 160
+        }
+      ],
+      "cards": [
+        {
+          "text": "DAY 01 · 星期五1 月 8 日第一天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "16px"
+        },
+        {
+          "text": "DAY 02 · 星期六1 月 9 日第二天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "16px"
+        },
+        {
+          "text": "DAY 03 · 星期日1 月 10 日第三天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "16px"
+        }
+      ],
+      "overflow": false,
+      "css": true
+    },
+    "cardNav": true,
+    "enrollStickyHidden": true,
+    "footerVisible": true,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "mobile",
+    "pass": true,
+    "start": {
+      "fixedHidden": true,
+      "logoBg": "rgba(0, 0, 0, 0)",
+      "logoImage": true,
+      "footerBrands": [
+        {
+          "text": "Joyfulness Path",
+          "url": "https://joyfulnesspath.com/",
+          "img": 160
+        },
+        {
+          "text": "Soul New Energy",
+          "url": "https://soulnewenergy.com/",
+          "img": 160
+        }
+      ],
+      "cards": [
+        {
+          "text": "DAY 01 · 星期五1 月 8 日第一天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        },
+        {
+          "text": "DAY 02 · 星期六1 月 9 日第二天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        },
+        {
+          "text": "DAY 03 · 星期日1 月 10 日第三天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        }
+      ],
+      "overflow": false,
+      "css": true
+    },
+    "cardNav": true,
+    "enrollStickyHidden": true,
+    "footerVisible": true,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "small",
+    "pass": true,
+    "start": {
+      "fixedHidden": true,
+      "logoBg": "rgba(0, 0, 0, 0)",
+      "logoImage": true,
+      "footerBrands": [
+        {
+          "text": "Joyfulness Path",
+          "url": "https://joyfulnesspath.com/",
+          "img": 160
+        },
+        {
+          "text": "Soul New Energy",
+          "url": "https://soulnewenergy.com/",
+          "img": 160
+        }
+      ],
+      "cards": [
+        {
+          "text": "DAY 01 · 星期五1 月 8 日第一天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        },
+        {
+          "text": "DAY 02 · 星期六1 月 9 日第二天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        },
+        {
+          "text": "DAY 03 · 星期日1 月 10 日第三天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        }
+      ],
+      "overflow": false,
+      "css": true
+    },
+    "cardNav": true,
+    "enrollStickyHidden": true,
+    "footerVisible": true,
+    "errors": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "reduced",
+    "pass": true,
+    "start": {
+      "fixedHidden": true,
+      "logoBg": "rgba(0, 0, 0, 0)",
+      "logoImage": true,
+      "footerBrands": [
+        {
+          "text": "Joyfulness Path",
+          "url": "https://joyfulnesspath.com/",
+          "img": 160
+        },
+        {
+          "text": "Soul New Energy",
+          "url": "https://soulnewenergy.com/",
+          "img": 160
+        }
+      ],
+      "cards": [
+        {
+          "text": "DAY 01 · 星期五1 月 8 日第一天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        },
+        {
+          "text": "DAY 02 · 星期六1 月 9 日第二天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        },
+        {
+          "text": "DAY 03 · 星期日1 月 10 日第三天查看報名安排 ↗",
+          "href": "#enroll",
+          "font": "17px"
+        }
+      ],
+      "overflow": false,
+      "css": true
+    },
+    "cardNav": true,
+    "enrollStickyHidden": true,
+    "footerVisible": true,
+    "errors": [],
+    "posts": [],
+    "running": 0
+  }
+]

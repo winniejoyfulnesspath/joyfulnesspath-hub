@@ -1,0 +1,230 @@
+/* R12.1 isolated visual QA repair: small-screen header, one sticky CTA, visible footer logo.
+   R12 source remains unchanged; business/payment/API unchanged. */
+@media(min-width:761px){
+  .r12-fixed{display:none!important}
+}
+@media(max-width:760px){
+  .site-header{gap:10px;padding:0 16px}
+  .site-header .brand{flex:1 1 auto;min-width:0;gap:8px}
+  .site-header .brand-name{min-width:0;font-size:11px;letter-spacing:.08em;white-space:normal;line-height:1.3}
+  .site-header .brand-name small{font-size:10px;line-height:1.5;color:#e8d9e7;white-space:normal}
+  .site-header .r12-logo{width:36px;height:36px;flex:0 0 36px}
+  .site-header .nav-action{flex:0 0 auto;max-width:none;min-height:40px;
+    padding:8px 16px;font-size:14px;line-height:1;white-space:nowrap;letter-spacing:.08em}
+  .site-header .nav-action span{margin-left:2px}
+  .r12-fixed{opacity:0;pointer-events:none;transform:translateY(13px)}
+  .r12-fixed.r12-scroll-active:not(.r12-hidden-near-enroll){opacity:1;pointer-events:auto;transform:none}
+}
+@media(max-width:390px){
+  .site-header{gap:8px;padding-inline:12px}
+  .site-header .r12-logo{width:32px;height:32px;flex-basis:32px}
+  .site-header .brand{gap:6px}
+  .site-header .brand-name{font-size:10px}
+  .site-header .brand-name small{font-size:9px}
+  .site-header .nav-action{flex-basis:auto;max-width:none;min-height:38px;padding:7px 14px;font-size:14px}
+}
+@media(max-width:340px){
+  .site-header .brand-name{font-size:9px}
+  .site-header .brand-name small{font-size:9px}
+  .site-header .nav-action{flex-basis:auto;max-width:none;min-height:36px;padding:6px 12px;font-size:13px}
+}
+.r12-footer-brand img{background:radial-gradient(circle at 50% 45%,#fff2e1,#d9b6c6 90%);
+  border:1px solid #edd1b994;border-radius:50%;padding:5px;box-shadow:0 0 15px #f3c9ad38}
+@media(prefers-reduced-motion:reduce){
+  .r12-fixed{transition:none!important}
+}
+
+/* R12.1 — four user screenshot fixes; no image generation. */
+/* 01 / Brand mark: opaque ivory backing for letter-form contrast. */
+.site-header .r12-logo{
+  box-sizing:border-box;
+  width:54px;height:54px;flex:none;padding:7px;
+  background:linear-gradient(145deg,#fffaf2 0%,#f0dabe 72%,#edd5db 100%);
+  border:1px solid #fff5dd;border-radius:13px;
+  box-shadow:0 0 0 4px #faf0de20,0 11px 22px #08051861;
+  object-fit:contain;
+}
+.r12-footer-brand img{
+  box-sizing:border-box;
+  padding:7px;
+  background:linear-gradient(150deg,#fff9ed,#eed5c2)!important;
+  border:1px solid #f5dfb6!important;
+  border-radius:12px!important;
+  filter:none;
+}
+/* 02 / Floating CTA is CONTEXTUAL: no initial portrait obstruction;
+   the existing R12.1 JS only enables it after the dates and before enrollment. */
+.r12-fixed:not(.r12-scroll-active){opacity:0!important;pointer-events:none!important;transform:translateY(18px)}
+@media(min-width:761px){.r12-fixed{display:none!important}}
+/* 03 / Date cards are clearly keyboard-/touch-interactive, not decoration. */
+.r12-date-grid .r12-date-link{
+ position:relative;display:flex;flex-direction:column;gap:4px;
+ min-height:0;padding:26px 27px 22px;
+ border:1px solid #bd8aa5;border-radius:17px;
+ background:linear-gradient(140deg,#fffdf7,#ecdae4);
+ text-decoration:none;color:#3a2444;
+ box-shadow:0 19px 39px #63465d2c,inset 0 0 0 6px #ffffff70;
+ cursor:pointer;
+ transition:transform .2s ease,box-shadow .2s ease,border-color .2s;
+}
+.r12-date-grid .r12-date-link::after{
+ content:"";position:absolute;inset:9px;pointer-events:none;
+ border:1px solid #c4a5ba77;border-radius:10px
+}
+.r12-date-grid .r12-date-link small{
+ display:block;font-size:15px;font-weight:750;letter-spacing:.025em;
+ color:#815478;margin-bottom:4px
+}
+.r12-date-grid .r12-date-link strong{
+ display:block;color:#38213e;font-size:clamp(30px,2.6vw,40px);line-height:1.2;
+ letter-spacing:-.02em;margin-bottom:8px
+}
+.r12-date-grid .r12-date-link>span:not(.r12-date-action){
+ font-size:17px;color:#664967;line-height:1.55;
+}
+.r12-date-grid .r12-date-action{
+ display:flex;align-items:center;justify-content:space-between;
+ margin-top:auto;padding-top:15px;
+ border-top:1px solid #ad81a36e;
+ font-size:16px;font-weight:750;color:#67395f;
+}
+.r12-date-grid .r12-date-action span{font-size:26px;line-height:1;color:#74416c}
+.r12-date-grid .r12-date-link:is(:hover,:focus-visible){
+ transform:translateY(-5px);border-color:#76456f;
+ box-shadow:0 23px 50px #69425c4a,0 0 0 4px #e4c4d66b
+}
+.r12-date-grid .r12-date-link:focus-visible{outline:3px solid #945886;outline-offset:4px}
+.r12-dates>p{font-size:17px;line-height:1.9}
+.r12-date-fee span{white-space:nowrap}
+.hero-description + .r12-hero-detail{display:block;margin-top:18px}
+.r12-date-grid .r12-date-link>span.r12-night-kicker{font-size:14px;font-weight:750;letter-spacing:.16em;color:#6a345c}
+.r12-date-grid .r12-date-link>span.r12-night-line{max-width:14em;font-size:18px;line-height:1.55;font-weight:650;color:#241628}
+.tree-heading .eyebrow{color:#f6d7ae}
+.tree-intro .quiet-copy{color:#f7eaf4;font-size:16px;line-height:1.8}
+/* 04 / Use the same JP × SNE co-brand structure as verified earlier course footer. */
+.r12-footer-collab{
+ display:flex;gap:18px;align-items:center;justify-content:center;
+ flex-wrap:wrap;padding:27px 18px;margin-top:38px;
+ border-top:1px solid #d3b7c64f;border-bottom:1px solid #d3b7c64f;
+}
+.r12-footer-collab a{
+ display:inline-flex;gap:12px;align-items:center;
+ color:#f5e8dc;font-size:17px;font-weight:650;text-decoration:none;
+ padding:9px 12px;border-radius:12px;
+}
+.r12-footer-collab a:hover{background:#d9b6ce24}
+.r12-footer-collab a:focus-visible{outline:2px solid #f3d4a9;outline-offset:3px}
+.r12-footer-collab img{
+ display:block;width:49px;height:49px;object-fit:contain;
+ padding:4px;box-sizing:border-box;
+ background:linear-gradient(140deg,#fff9ee,#ead4c9);
+ border:1px solid #f0ddc1;border-radius:12px;
+}
+.r12-partner-x{font:400 24px Georgia,serif;color:#e4c4bb}
+@media(max-width:760px){
+ .site-header .r12-logo{width:43px;height:43px;flex:0 0 43px;padding:6px;border-radius:11px}
+ .r12-date-grid .r12-date-link{min-height:0;padding:22px 22px 18px}
+ .r12-date-grid .r12-date-link strong{font-size:34px}
+ .r12-date-grid .r12-date-link small{font-size:15px}
+ .r12-date-grid .r12-date-link>span:not(.r12-date-action){font-size:17px}
+ .r12-date-grid .r12-date-link>span.r12-night-kicker{font-size:13px}
+ .r12-date-grid .r12-date-link>span.r12-night-line{font-size:16px}
+ .r12-date-grid .r12-date-action{font-size:17px}
+ .r12-footer-collab{gap:8px;justify-content:flex-start;padding:22px 2px;margin-top:28px}
+ .r12-footer-collab a{font-size:14px;gap:6px;padding:8px 5px}
+ .r12-footer-collab img{width:35px;height:35px}
+ .r12-partner-x{font-size:19px}
+}
+@media(max-width:390px){
+ .site-header .r12-logo{width:38px;height:38px;flex-basis:38px;padding:5px}
+ .r12-footer-collab a{font-size:13px}
+ .r12-footer-collab img{width:31px;height:31px}
+}
+@media(prefers-reduced-motion:reduce){
+ .r12-date-grid .r12-date-link{transition:none!important}
+}
+
+.hero h1,.tree-heading h2,.tree-intro h2,.tree-insight h3,.mentor-story h2,.last-section h2,.r12-enroll h2{
+ font-weight:700;
+ color:#fff6ec;
+ text-shadow:
+  0 1px 0 rgba(255,250,242,.72),
+  0 2px 0 rgba(92,58,108,.28),
+  0 5px 1px rgba(28,12,36,.42),
+  0 16px 28px rgba(0,0,0,.42);
+}
+.hero h1 em,.last-section h2 em,.mentor-story .serif-highlight,.tree-heading .serif-highlight{
+ font-weight:700;
+ filter:drop-shadow(0 2px 0 rgba(48,22,62,.4)) drop-shadow(0 12px 16px rgba(0,0,0,.32));
+}
+.threshold h2,.r12-dates h2,.matrix-top h2,.practice-heading h2{
+ font-weight:700;
+ color:#2a1c36;
+ text-shadow:
+  0 1px 0 rgba(255,255,255,.96),
+  0 2px 0 rgba(255,248,242,.6),
+  0 4px 0 rgba(90,52,72,.14),
+  0 14px 22px rgba(70,36,58,.2);
+}
+.threshold .serif-highlight,.matrix-top .serif-highlight,.practice-heading h2 i{
+ color:#8a567f;
+ font-weight:700;
+ font-style:normal;
+ filter:drop-shadow(0 1px 0 rgba(255,255,255,.92)) drop-shadow(0 8px 12px rgba(90,40,70,.22));
+}
+.hero h1{white-space:normal}
+.node-orb .node-label{opacity:.95;color:#f6e4ef;font-size:14px;text-shadow:0 1px 2px rgba(0,0,0,.65)}
+.tree-section .chapter-marker,.mentor-section .chapter-marker,.last-section .chapter-marker,.sculpture-legend,.hero-bottom,.stage-note{color:#e4d0dc}
+.tree-intro .quiet-copy,.hero-description,.hero-offer{color:#f0e2d4}
+.site-header nav a{position:relative;transition:color .2s ease,text-shadow .2s ease}
+.site-header nav a:hover,.site-header nav a:focus-visible{color:#fff6d8;text-shadow:0 0 14px rgba(243,213,170,.9)}
+.site-header nav a::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:#f6d7a4;transform:scaleX(0);transform-origin:center;transition:transform .22s ease}
+.site-header nav a:hover::after,.site-header nav a:focus-visible::after{transform:scaleX(1)}
+.site-header .nav-action:hover{transform:translateY(-4px) scale(1.05);filter:brightness(1.08);box-shadow:0 18px 40px #ffc27acc,0 0 0 7px #ffe7c259,inset 0 1px 0 #fff8ea}
+.r12-pay-links a:hover,.r12-site-footer a:hover,.r12-dialog a:hover,.text-cta:hover,.last-link:hover{color:#fff4c8;text-shadow:0 0 12px rgba(243,213,170,.75)}
+.r12-dates a:hover,.threshold a:hover,.practice-strip a:hover{color:#5a2d52;text-shadow:none}
+.mentor-story{
+ position:relative;
+ background:
+  radial-gradient(ellipse 78% 62% at 22% 48%,rgba(232,168,190,.48),transparent 62%),
+  radial-gradient(ellipse 55% 48% at 88% 8%,rgba(244,210,150,.32),transparent 68%),
+  linear-gradient(165deg,#5a356e 0%,#321848 46%,#160d24 100%);
+ box-shadow:inset 0 0 0 1px rgba(255,226,196,.46),inset 0 0 120px rgba(190,100,150,.36);
+}
+.mentor-story::before{
+ content:"";position:absolute;inset:22px;z-index:1;border:1px solid rgba(255,228,196,.55);border-radius:18px;
+ pointer-events:none;box-shadow:0 0 28px rgba(255,214,170,.28),inset 0 0 40px rgba(255,210,170,.08);
+}
+.mentor-story>*{position:relative;z-index:2}
+.mentor-story .chapter-marker{margin-bottom:36px}
+.mentor-story .eyebrow{color:#f6d7ae;letter-spacing:.16em;font-weight:650;line-height:1.65;max-width:none}
+.mentor-story h2{
+ font-family:"Cormorant Garamond","Noto Serif TC",serif;
+ font-weight:600;font-size:clamp(72px,6.2vw,108px);letter-spacing:-.03em;line-height:.92;color:#fff8ef;
+ margin:8px 0 0;
+ text-shadow:0 1px 0 rgba(255,250,242,.85),0 4px 0 rgba(72,34,88,.4),0 20px 36px rgba(0,0,0,.48);
+}
+.mentor-story h2 .serif-highlight{
+ font-family:"Noto Serif TC",serif;font-size:.58em;font-weight:700;color:#f3cce2;letter-spacing:.08em;margin:6px 0 0;
+ filter:drop-shadow(0 2px 0 rgba(48,22,62,.5)) drop-shadow(0 16px 20px rgba(0,0,0,.4));
+}
+.mentor-position{margin:14px 0 0;font-size:13px;letter-spacing:.28em;color:#f8e6d4;font-weight:600}
+.mentor-when{margin:22px 0 0;font-size:13px;letter-spacing:.12em;color:#f6d7ae;font-weight:600}
+.mentor-lead{margin:14px 0 0;max-width:22em;color:#f7e7f1;font-size:17px;line-height:1.7}
+.mentor-nights{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:0;max-width:34em}
+.mentor-nights li{display:grid;grid-template-columns:4.8em 1fr;gap:16px;align-items:baseline;padding:13px 0;border-top:1px solid rgba(255,228,196,.32)}
+.mentor-nights b{font-weight:650;letter-spacing:.14em;color:#f6d7ae;font-size:14px}
+.mentor-nights span{color:#f4e4ee;font-size:16px;line-height:1.65}
+.mentor-story .quiet-copy{max-width:26em;margin:16px 0 0;color:#ead9e4;font-size:15px;line-height:1.85}
+.mentor-quote{max-width:12em;margin-top:22px;padding:18px 0 0;border-top:1px solid rgba(255,228,196,.45);font-family:var(--serif);font-size:26px;line-height:1.45;color:#fff6ea;font-weight:600}
+@media(max-width:760px){
+ .mentor-story h2{font-size:64px}
+ .mentor-nights li{grid-template-columns:4.2em 1fr;gap:10px}
+ .mentor-quote{font-size:22px}
+}
+/* Final screenshot readback: raise legal note and partner-name readability. */
+.r12-footer-note{font-size:15px;line-height:1.95;color:#dec9d7}
+@media(min-width:370px) and (max-width:760px){.site-header .brand-name{font-size:11px}.site-header .brand-name small{font-size:10px}.r12-footer-collab a{font-size:14px}}
+.last-section{min-height:520px;padding:108px 24px 56px;justify-content:flex-end}
+@media(max-width:760px){.last-section{min-height:460px;padding:88px 22px 48px}}
+.tree-intro .quiet-copy{color:#f8eef6}

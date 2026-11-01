@@ -1,0 +1,24 @@
+"use strict";
+const fs=require("fs"),path=require("path");
+const p=path.join(__dirname,"index.html");
+let s=fs.readFileSync(p,"utf8");
+const fragment=n=>fs.readFileSync(path.join(__dirname,n),"utf8");
+function once(a,b,label){const n=s.split(a).length-1;if(n!==1)throw Error(label+" count="+n);s=s.replace(a,b);}
+once("2027 · 紫門之後 | Joyfulness Path — Concept Study","大天使・財富指令｜2027 年 1 月 8–10 日｜Joyfulness Path","title");
+once('<link rel="stylesheet" href="layout-r11.css">','<link rel="stylesheet" href="layout-r11.css">\n<link rel="stylesheet" href="enrollment-r12.css">',"stylesheet");
+once('<script defer src="motion-r10.js"></script>','<script defer src="motion-r10.js"></script>\n<script defer src="enrollment-r12.js"></script>',"script");
+once('<div class="concept-status"><span>STUDY / 2027</span><span>PRIVATE DESIGN CONCEPT · 日期：2027年1月8至10日</span></div>','<div class="r12-banner" role="status"><b>已公布課程日期：2027 年 1 月 8–10 日</b>　｜　報名與付款安排確認中</div>',"status");
+once('<span class="brand-glyph">J<span>·</span>P</span>','<img class="r12-logo" src="assets/joyfulness-path-logo.png" alt="Joyfulness Path 官方標誌" width="47" height="47">',"official logo");
+once('<a class="nav-action" href="#threshold">進入探索 <span aria-hidden="true">↗</span></a>','<a class="nav-action" href="#enroll">查看報名安排 <span aria-hidden="true">↗</span></a>',"nav cta");
+once('AN INVITATION TO EXPLORE / 2027','JANUARY 2027 · THREE-DAY COURSE',"hero eyebrow");
+once('大天使・財富指令 <span class="slash">/</span> 2027年1月8至10日','大天使・財富指令 <span class="slash">/</span> 2027 年 1 月 8–10 日',"offer");
+once('<a class="text-cta reveal" href="#threshold"><span>開啟三個探索場景</span><span class="cta-arrow">↗</span></a>','<p class="r12-hero-date">2027 年 1 月 8–10 日</p><p class="r12-hero-detail">課程日期已確認｜時間及上課方式待公布</p><a class="r12-cta" href="#enroll">查看課程及報名安排 ↗</a><p class="r12-hero-detail">報名及付款尚未開放</p>',"hero cta");
+once('<div class="hero-bottom"><span>紫門之後 · A LIVING EXPLORATION</span><a href="#threshold">SCROLL TO ENTER <span aria-hidden="true">↓</span></a></div>','<div class="hero-bottom"><span>大天使・財富指令 · 2027 / 01 / 08–10</span><a href="#enroll">查看報名資訊 ↓</a></div>',"hero bottom");
+once('<section id="constellation" class="tree-section"',fragment("date-fragment.html")+'\n<section id="constellation" class="tree-section"',"dates");
+once('<section class="last-section section-wrap"',fragment("enroll-fragment.html")+'\n<section class="last-section section-wrap"',"enroll");
+once('A CONCEPT — NOT AN ANNOUNCEMENT','YOUR NEXT CHAPTER · JANUARY 2027',"closing eyebrow");
+once('下一次的旅程，<br><em>仍在構思之中。</em>','2027 年 1 月，<br><em>再從理解出發。</em>',"closing title");
+once('2027 年可能復辦，日期、形式與內容尚未確認。這是私人設計研究版本，不接受報名、付款或預約。','1 月 8–10 日日期已確定，報名及付款安排待正式公布。',"closing description");
+once('<a class="last-link" href="#entrance">回到起點 <span aria-hidden="true">↑</span></a>','<a class="last-link r12-cta" href="#enroll">查看報名安排 ↗</a>',"closing link");
+once('<footer class="site-footer"><span>JOYFULNESS PATH WITH WINNIE LIM</span><span>PRIVATE DESIGN EXPLORATION · © 2026</span></footer>',fragment("footer-fragment.html")+'\n'+fragment("form-fragment.html"),"footer and form");
+fs.writeFileSync(p,s,"utf8");console.log("R12 HTML built, chars="+s.length);

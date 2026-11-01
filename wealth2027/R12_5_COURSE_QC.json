@@ -1,0 +1,112 @@
+[
+  {
+    "name": "desktop",
+    "pass": false,
+    "prices": [
+      "US$111",
+      "US$62 · 需通過資格核對"
+    ],
+    "cardZoom": true,
+    "cardTime": false,
+    "introZoom": true,
+    "introTime": false,
+    "heroZoom": true,
+    "cardTimezoneNotice": false,
+    "newPrice": true,
+    "alumniPrice": true,
+    "stillPreview": true,
+    "noEmbeddedStripe": true,
+    "overflow": false,
+    "errs": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "tablet",
+    "pass": false,
+    "prices": [
+      "US$111",
+      "US$62 · 需通過資格核對"
+    ],
+    "cardZoom": true,
+    "cardTime": false,
+    "introZoom": true,
+    "introTime": false,
+    "heroZoom": true,
+    "cardTimezoneNotice": false,
+    "newPrice": true,
+    "alumniPrice": true,
+    "stillPreview": true,
+    "noEmbeddedStripe": true,
+    "overflow": false,
+    "errs": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "mobile",
+    "pass": false,
+    "prices": [
+      "US$111",
+      "US$62 · 需通過資格核對"
+    ],
+    "cardZoom": true,
+    "cardTime": false,
+    "introZoom": true,
+    "introTime": false,
+    "heroZoom": true,
+    "cardTimezoneNotice": false,
+    "newPrice": true,
+    "alumniPrice": true,
+    "stillPreview": true,
+    "noEmbeddedStripe": true,
+    "overflow": false,
+    "errs": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "small",
+    "pass": false,
+    "prices": [
+      "US$111",
+      "US$62 · 需通過資格核對"
+    ],
+    "cardZoom": true,
+    "cardTime": false,
+    "introZoom": true,
+    "introTime": false,
+    "heroZoom": true,
+    "cardTimezoneNotice": false,
+    "newPrice": true,
+    "alumniPrice": true,
+    "stillPreview": true,
+    "noEmbeddedStripe": true,
+    "overflow": false,
+    "errs": [],
+    "posts": [],
+    "running": null
+  },
+  {
+    "name": "reduced",
+    "pass": false,
+    "prices": [
+      "US$111",
+      "US$62 · 需通過資格核對"
+    ],
+    "cardZoom": true,
+    "cardTime": false,
+    "introZoom": true,
+    "introTime": false,
+    "heroZoom": true,
+    "cardTimezoneNotice": false,
+    "newPrice": true,
+    "alumniPrice": true,
+    "stillPreview": true,
+    "noEmbeddedStripe": true,
+    "overflow": false,
+    "errs": [],
+    "posts": [],
+    "running": 0
+  }
+]

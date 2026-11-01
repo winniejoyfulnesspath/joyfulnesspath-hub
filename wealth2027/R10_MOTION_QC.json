@@ -1,0 +1,153 @@
+[
+  {
+    "label": "desktop",
+    "pass": true,
+    "errors": [],
+    "before": {
+      "enhanced": true,
+      "seen": true,
+      "bg": "radial-gradient(42% 60% at 42% 42%, rgba(181, 113, 198, 0.28), rgba(0, 0, 0, 0) 84%), radial-gradient(29% 37% at 41% 66%, rgba(249, 209, 158, 0.3), rgba(0, 0, 0, 0) 82%), linear-gradient(115deg, rgb(26, 17, 40) 2%, rgb(54, 32, 67) 35%, rgb(41, 22, 51) 60%, rgb(20, 11, 36) 100%)",
+      "visible": true
+    },
+    "node": {
+      "selected": "true",
+      "pulse": true
+    },
+    "axis": {
+      "name": "你願意做哪一步？",
+      "pulse": true,
+      "selected": "true"
+    },
+    "visual": {
+      "x": "2.80px",
+      "scrollWidth": 1440,
+      "viewport": 1440,
+      "portrait": true,
+      "activeAnimations": [
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other"
+      ],
+      "reduced": false
+    }
+  },
+  {
+    "label": "tablet",
+    "pass": true,
+    "errors": [],
+    "before": {
+      "enhanced": true,
+      "seen": true,
+      "bg": "radial-gradient(42% 60% at 42% 42%, rgba(181, 113, 198, 0.28), rgba(0, 0, 0, 0) 84%), radial-gradient(29% 37% at 41% 66%, rgba(249, 209, 158, 0.3), rgba(0, 0, 0, 0) 82%), linear-gradient(115deg, rgb(26, 17, 40) 2%, rgb(54, 32, 67) 35%, rgb(41, 22, 51) 60%, rgb(20, 11, 36) 100%)",
+      "visible": true
+    },
+    "node": {
+      "selected": "true",
+      "pulse": true
+    },
+    "axis": {
+      "name": "你願意做哪一步？",
+      "pulse": true,
+      "selected": "true"
+    },
+    "visual": {
+      "x": "",
+      "scrollWidth": 768,
+      "viewport": 768,
+      "portrait": true,
+      "activeAnimations": [
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other"
+      ],
+      "reduced": false
+    }
+  },
+  {
+    "label": "mobile",
+    "pass": true,
+    "errors": [],
+    "before": {
+      "enhanced": true,
+      "seen": true,
+      "bg": "radial-gradient(42% 60% at 42% 42%, rgba(181, 113, 198, 0.28), rgba(0, 0, 0, 0) 84%), radial-gradient(29% 37% at 41% 66%, rgba(249, 209, 158, 0.3), rgba(0, 0, 0, 0) 82%), linear-gradient(115deg, rgb(26, 17, 40) 2%, rgb(54, 32, 67) 35%, rgb(41, 22, 51) 60%, rgb(20, 11, 36) 100%)",
+      "visible": true
+    },
+    "node": {
+      "selected": "true",
+      "pulse": true
+    },
+    "axis": {
+      "name": "你願意做哪一步？",
+      "pulse": true,
+      "selected": "true"
+    },
+    "visual": {
+      "x": "",
+      "scrollWidth": 390,
+      "viewport": 390,
+      "portrait": true,
+      "activeAnimations": [
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other",
+        "other"
+      ],
+      "reduced": false
+    }
+  },
+  {
+    "label": "reduced",
+    "pass": true,
+    "errors": [],
+    "before": {
+      "enhanced": true,
+      "seen": true,
+      "bg": "radial-gradient(42% 60% at 42% 42%, rgba(181, 113, 198, 0.28), rgba(0, 0, 0, 0) 84%), radial-gradient(29% 37% at 41% 66%, rgba(249, 209, 158, 0.3), rgba(0, 0, 0, 0) 82%), linear-gradient(115deg, rgb(26, 17, 40) 2%, rgb(54, 32, 67) 35%, rgb(41, 22, 51) 60%, rgb(20, 11, 36) 100%)",
+      "visible": true
+    },
+    "node": {
+      "selected": "true",
+      "pulse": false
+    },
+    "axis": {
+      "name": "你願意做哪一步？",
+      "pulse": false,
+      "selected": "true"
+    },
+    "visual": {
+      "x": "",
+      "scrollWidth": 390,
+      "viewport": 390,
+      "portrait": true,
+      "activeAnimations": [],
+      "reduced": true
+    }
+  }
+]

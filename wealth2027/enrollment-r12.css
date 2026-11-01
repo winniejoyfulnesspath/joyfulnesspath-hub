@@ -1,0 +1,122 @@
+
+/* R12 | January 2027 course conversion, derived from verified CardWhispers and Heart Return source
+   No new payment endpoint, no fabricated session times or refunds. */
+:root{--r12-gold:#f3d5aa;--r12-ink:#24132f}
+.concept-status{display:none!important}
+.r12-banner{background:linear-gradient(90deg,#2e1741,#68406f,#2a193d);text-align:center;color:#fff1de;
+ padding:11px 18px;font-size:14px;letter-spacing:.035em;border-bottom:1px solid #edd1b057}
+.r12-banner b{color:white}
+@media(max-width:390px){.r12-banner-split{display:block}}
+.r12-brand{display:flex;align-items:center;gap:11px}
+.r12-logo{width:47px;height:47px;object-fit:contain;filter:drop-shadow(0 3px 8px #08041469)}
+.r12-cta,.r12-fixed .r12-cta,.r12-dialog .r12-submit{
+ display:inline-flex;gap:10px;align-items:center;justify-content:center;min-height:53px;
+ padding:13px 25px;border-radius:999px;border:1px solid #fff4cc!important;
+ color:#26152f!important;background:linear-gradient(135deg,#fff4d2,#e6bd90 55%,#f6d9b2)!important;
+ font:750 16px/1.45 "Noto Sans TC",sans-serif;letter-spacing:.03em;text-align:center;
+ text-decoration:none;box-shadow:0 9px 32px #ffbd9460,inset 0 1px 0 #fff8ea,0 0 0 4px #e9b8c920;
+ transition:transform .25s ease,box-shadow .25s ease;
+ cursor:pointer;white-space:normal
+}
+.site-header{top:0}
+.site-header .nav-action{
+ display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:9px 22px;
+ border-radius:999px;border:1px solid #fff4cc!important;color:#26152f!important;
+ background:linear-gradient(135deg,#fff4d2,#e6bd90 55%,#f6d9b2)!important;
+ font:750 15px/1 "Noto Sans TC",sans-serif;letter-spacing:.08em;text-decoration:none;white-space:nowrap;
+ box-shadow:0 9px 32px #ffbd9460,inset 0 1px 0 #fff8ea,0 0 0 4px #e9b8c920;
+}
+.site-header .nav-action:hover{transform:translateY(-3px);box-shadow:0 13px 40px #eec09887,0 0 0 5px #dfb2c23c;color:#26152f!important}
+.r12-cta:hover{transform:translateY(-3px);box-shadow:0 13px 40px #eec09887,0 0 0 5px #dfb2c23c}
+.r12-cta:focus-visible,.r12-dialog :focus-visible{outline:3px solid #fff6bf;outline-offset:4px}
+.r12-hero-date{font-size:clamp(21px,2vw,27px);color:#ffe4b5;font-weight:700;letter-spacing:.035em;line-height:1.7;margin:20px 0 3px}
+.r12-hero-detail{color:#f1d9e9;font-size:15px;line-height:1.8}
+.hero-copy>.r12-cta{margin-top:20px}
+.r12-hero-disclaimer{color:#e8cbdb;font-size:13px;margin-top:11px}
+.r12-dates{position:relative;isolation:isolate;padding:88px max(25px,calc((100vw - 1200px)/2)) 104px;
+ background:linear-gradient(120deg,#f8f1ea,#e8d9e6);color:#31223d;overflow:hidden}
+.r12-dates::before{content:"";position:absolute;inset:0;z-index:-1;
+ background:radial-gradient(ellipse at 85% 5%,#d1a6d36c,transparent 62%),repeating-linear-gradient(125deg,transparent 0 135px,#955f9912 137px 139px)}
+.r12-dates h2{color:#32213c;font:500 clamp(34px,4.3vw,56px)/1.4 "Noto Serif TC",serif;margin:15px 0}
+.r12-dates p{color:#5c4c62;font-size:16px;line-height:1.95;max-width:810px}
+.r12-date-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:32px 0}
+.r12-date-grid article{position:relative;border:1px solid #cbaabd;border-radius:17px;padding:27px 24px;
+ background:linear-gradient(140deg,#fffdf7,#ecdae4);box-shadow:0 19px 39px #63465d2c,inset 0 0 0 6px #ffffff70}
+.r12-date-grid article::after{content:"";position:absolute;inset:9px;border:1px solid #c4a5ba66;border-radius:10px;pointer-events:none}
+.r12-date-grid small{display:block;font-size:14px;color:#875c84;font-weight:700}
+.r12-date-grid strong{display:block;font:550 clamp(32px,3.5vw,49px)/1.5 Georgia,serif;color:#372142}
+.r12-date-grid span{color:#664c68;font-size:15px}
+.r12-enroll{padding:105px max(24px,calc((100vw - 1130px)/2)) 120px;
+ background:radial-gradient(ellipse at 85% 10%,#784a7957,transparent 59%),linear-gradient(125deg,#170d29,#38224b 55%,#190f28);color:#f9e9de}
+.r12-enroll-intro{max-width:40rem;margin:0 auto 28px;text-align:center}
+.r12-enroll-intro h2{text-wrap:balance}
+.r12-enroll h2{font:500 clamp(36px,4.1vw,59px)/1.45 "Noto Serif TC",serif;margin:15px 0;color:#fff1e5}
+.r12-enroll p{font-size:16px;line-height:1.95;color:#ead6e4}
+.r12-kicker{font-size:14px;color:#f5cfaa;font-weight:700;letter-spacing:.12em}
+.r12-enroll-card{padding:35px 34px;border:1px solid #efcda9b7;border-radius:22px;
+ background:radial-gradient(ellipse at 95% 0,#bb8bbb30,transparent 54%),linear-gradient(135deg,#392149f0,#1c102eea);
+ box-shadow:inset 0 0 0 7px #ecd2bc16,0 28px 70px #090414a3}
+.r12-enroll-card h3{color:#fff0e0;font:500 27px/1.5 "Noto Serif TC",serif;margin:7px 0 23px}
+.r12-enroll-card dl{display:grid;gap:14px;margin:0 0 26px}
+.r12-enroll-card dl div{border-bottom:1px solid #dfbdd04b;padding-bottom:12px}
+.r12-enroll-card dt{color:#e9c7d9;font-size:13px}
+.r12-enroll-card dd{color:#fff0df;font-size:17px;font-weight:650;margin:5px 0 0}
+.r12-enroll-card .r12-cta{width:100%}
+.r12-enroll-card small{display:block;color:#e1c9d9;font-size:14px;line-height:1.75;margin-top:14px}
+.r12-footer{background:#100a1d;color:#e7d5df;padding:52px max(22px,calc((100vw - 1170px)/2)) 115px;
+ border-top:1px solid #ad88a568}
+.r12-site-footer{display:grid;grid-template-columns:minmax(0,1.15fr) auto minmax(0,1fr);gap:18px 28px;align-items:start;text-align:left;font-size:12px;letter-spacing:.04em;color:#cfc6b4}
+.r12-site-footer p{margin:0}
+.r12-site-footer .f-title{font-size:12px;letter-spacing:.12em;color:#f4ead4}
+.r12-site-footer .f-role{display:block;margin-top:8px;max-width:34rem;font-size:12px;letter-spacing:.02em;line-height:1.7;color:#e8e0cbad}
+.r12-site-footer .f-collab{display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+.r12-site-footer a{display:inline-flex;align-items:center;gap:6px;color:#fffaf2;font-size:12px;text-decoration:none}
+.r12-site-footer .f-logo{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.r12-site-footer .f-collab a:first-child .f-logo{background:#F7F1E8;object-fit:contain;padding:2px;box-sizing:border-box}
+.r12-site-footer .x{opacity:.55}
+.r12-site-footer .f-meta{text-align:right}
+.r12-site-footer .f-legal{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:flex-end}
+.r12-site-footer .f-legal a{text-decoration:underline;text-underline-offset:3px}
+.r12-site-footer .f-copy{display:block;margin-top:8px}
+@media(max-width:760px){
+ .r12-site-footer{grid-template-columns:1fr;text-align:center;gap:22px}
+ .r12-site-footer .f-role{margin-inline:auto}
+ .r12-site-footer .f-collab{justify-content:center;flex-wrap:wrap;white-space:normal}
+ .r12-site-footer .f-meta{text-align:center}
+ .r12-site-footer .f-legal{justify-content:center}
+}
+.r12-dialog{width:min(93vw,640px);max-height:90vh;overflow-y:auto;position:fixed;
+ border:1px solid #d4ac85;border-radius:18px;background:linear-gradient(135deg,#fffcf4,#eadde9);
+ color:#281b38;padding:32px;box-shadow:0 25px 90px #080316bb}
+.r12-dialog::backdrop{background:#0b061bd9;backdrop-filter:blur(5px)}
+.r12-dialog h2{font:500 34px/1.45 "Noto Serif TC",serif;margin:5px 0 12px}
+.r12-dialog p{font-size:15px;line-height:1.85;color:#4d3b56}
+.r12-dialog form{display:grid;gap:14px}
+.r12-dialog label{display:block;color:#35223f;font-size:15px;font-weight:600;line-height:1.6}
+.r12-dialog input:not([type=checkbox]),.r12-dialog textarea{display:block;width:100%;box-sizing:border-box;margin-top:7px;
+ border:1px solid #b992b1;border-radius:8px;min-height:47px;padding:10px 13px;background:white;color:#251632;font:400 16px "Noto Sans TC",sans-serif}
+.r12-dialog .r12-check{display:flex;gap:12px;align-items:flex-start;font-weight:400}
+.r12-dialog .r12-check input{width:20px;height:20px;flex:none;accent-color:#805185;margin-top:4px}
+.r12-dialog a{color:#6f4186}
+.r12-dialog .r12-close{position:absolute;top:11px;right:16px;font-size:29px;color:#422f50;background:transparent;border:0;cursor:pointer}
+.r12-dialog .r12-actions{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap}
+.r12-dialog .r12-actions>*{flex:1}
+.r12-dialog .r12-cancel{padding:13px 17px;border:1px solid #876f89;border-radius:30px;background:transparent;color:#4c3655;font-size:15px;cursor:pointer}
+.r12-dialog .r12-submit{min-width:190px}
+.r12-dialog [data-form-status]{border-left:3px solid #805185;background:#f7edf3;padding:10px 12px;line-height:1.8;color:#643d6c;font-size:14px}
+.r12-fixed{position:fixed;z-index:90;bottom:19px;right:23px;background:#21152fdc;border:1px solid #d9b7c05e;
+ border-radius:80px;padding:8px;backdrop-filter:blur(11px);box-shadow:0 10px 34px #0c061aaf}
+.r12-fixed .r12-cta{min-height:47px;font-size:14px;padding:10px 21px}
+@media(max-width:800px){.r12-enroll-grid{grid-template-columns:1fr}.r12-footer-inner{flex-direction:column;align-items:flex-start}
+ .r12-footer-links{justify-content:flex-start}}
+@media(max-width:760px){.r12-dates,.r12-enroll{padding:68px 23px 83px}.r12-date-grid{grid-template-columns:1fr}
+ .r12-date-grid article{padding:17px 26px}.r12-date-grid strong{font-size:38px}
+ .r12-enroll-card{padding:26px 23px}.r12-enroll h2{font-size:37px}
+ .r12-fixed{bottom:0;left:0;right:0;border-radius:0;padding:9px 14px}.r12-fixed .r12-cta{width:100%;min-height:51px}
+ body{padding-bottom:69px}.r12-banner{font-size:13px}
+ .r12-logo{width:35px;height:35px}
+ .r12-dialog{padding:25px 19px}.r12-footer{padding:44px 24px 115px}
+ .site-header .nav-action{font-size:14px;min-height:40px;padding:8px 16px}}
+@media(prefers-reduced-motion:reduce){.r12-cta,.site-header .nav-action{transition:none!important;transform:none!important}}
+
+.r12-fixed.r12-hidden-near-enroll{opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .23s ease,transform .23s ease}

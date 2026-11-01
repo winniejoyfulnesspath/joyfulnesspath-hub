@@ -1,0 +1,98 @@
+[
+  {
+    "name": "desktop",
+    "pass": true,
+    "assets": [
+      {
+        "f": "threshold_portal_from_approved.webp",
+        "ok": true,
+        "w": 967,
+        "h": 941
+      },
+      {
+        "f": "tree_stage_composite_v3.webp",
+        "ok": true,
+        "w": 1440,
+        "h": 1080
+      },
+      {
+        "f": "outro_architecture_from_approved.webp",
+        "ok": true,
+        "w": 1672,
+        "h": 941
+      },
+      {
+        "f": "tree_mobile_pillar_from_approved.webp",
+        "ok": true,
+        "w": 285,
+        "h": 941
+      },
+      {
+        "f": "outro_mobile_columns_from_approved.webp",
+        "ok": true,
+        "w": 720,
+        "h": 1160
+      }
+    ],
+    "values": {
+      "pressed": "true",
+      "axis": "你願意做哪一步？",
+      "overflow": false,
+      "decorativeBg": [
+        "url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R5_APPROVED_IMAGES/assets/threshold_portal_from_approved.webp\")",
+        "linear-gradient(90deg, rgba(17, 13, 28, 0.44) 0%, rgba(24, 15, 42, 0.36) 52%, rgba(19, 15, 33, 0.74) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R5_APPROVED_IMAGES/assets/tree_stage_composite_v3.webp\")",
+        "linear-gradient(rgba(19, 15, 36, 0.51) 0%, rgba(19, 13, 34, 0.416) 44%, rgba(17, 11, 30, 0.61) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R5_APPROVED_IMAGES/assets/outro_architecture_from_approved.webp\")"
+      ],
+      "css": true
+    },
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "pass": true,
+    "assets": [
+      {
+        "f": "threshold_portal_from_approved.webp",
+        "ok": true,
+        "w": 967,
+        "h": 941
+      },
+      {
+        "f": "tree_stage_composite_v3.webp",
+        "ok": true,
+        "w": 1440,
+        "h": 1080
+      },
+      {
+        "f": "outro_architecture_from_approved.webp",
+        "ok": true,
+        "w": 1672,
+        "h": 941
+      },
+      {
+        "f": "tree_mobile_pillar_from_approved.webp",
+        "ok": true,
+        "w": 285,
+        "h": 941
+      },
+      {
+        "f": "outro_mobile_columns_from_approved.webp",
+        "ok": true,
+        "w": 720,
+        "h": 1160
+      }
+    ],
+    "values": {
+      "pressed": "true",
+      "axis": "你願意做哪一步？",
+      "overflow": false,
+      "decorativeBg": [
+        "url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R5_APPROVED_IMAGES/assets/threshold_portal_from_approved.webp\")",
+        "linear-gradient(rgba(16, 11, 27, 0.48) 0%, rgba(16, 11, 27, 0.52) 45%, rgba(18, 12, 30, 0.67) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R5_APPROVED_IMAGES/assets/tree_mobile_pillar_from_approved.webp\")",
+        "linear-gradient(rgba(19, 15, 36, 0.41) 0%, rgba(22, 14, 38, 0.36) 45%, rgba(17, 11, 30, 0.494) 100%), url(\"file:///C:/Users/paulw/Documents/_AGENT_CONTROL/scratch/WEALTH10_STITCH_V2_20261030/V3_EXPERIENTIAL_R5_APPROVED_IMAGES/assets/outro_mobile_columns_from_approved.webp\")"
+      ],
+      "css": true
+    },
+    "errors": []
+  }
+]

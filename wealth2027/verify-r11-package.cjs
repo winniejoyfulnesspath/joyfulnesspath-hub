@@ -1,0 +1,11 @@
+const {chromium}=require("C:/Users/paulw/Documents/sne-website/node_modules/playwright"),fs=require("fs"),path=require("path");
+const base="C:/Users/paulw/Downloads/Wealth10_R11_TREE_LAYOUT_FIX_LOCAL_20261030";
+(async()=>{const b=await chromium.launch({headless:true,executablePath:"C:/Program Files/Google/Chrome/Application/chrome.exe"}),results=[];
+for(const [name,rel,w] of [["entry","START_HERE.html",1240],["page-desktop","V3_EXPERIENTIAL_R11_TREE_LAYOUT_FIX/index.html",1240],["page-mobile","V3_EXPERIENTIAL_R11_TREE_LAYOUT_FIX/index.html",390],["review","V3_EXPERIENTIAL_R11_TREE_LAYOUT_FIX/REVIEW_R11.html",1240]]){
+const c=await b.newContext({viewport:{width:w,height:w===390?844:800}}),p=await c.newPage(),errors=[];p.on("pageerror",e=>errors.push(e.message));
+await p.goto("file:///"+base+"/"+rel,{waitUntil:"load",timeout:30000});await p.evaluate(()=>{for(const im of document.images)im.loading="eager";});await p.waitForTimeout(600);
+let st=await p.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.images].map(i=>({ok:i.complete&&i.naturalWidth>0,name:i.src.split("/").pop()})),r11:[...document.styleSheets].some(s=>s.href?.endsWith("layout-r11.css"))}));let interact=null;
+if(name.startsWith("page")){await p.locator(".node-orb[data-id='5']").click();await p.locator(".axis-tab[data-axis='2']").click();interact=await p.evaluate(()=>({pressed:document.querySelector(".node-orb[data-id='5']").getAttribute("aria-pressed"),axis:document.querySelector(".axis-tab[data-axis='2']").getAttribute("aria-selected")}));}
+let pass=!errors.length&&!st.overflow&&st.images.every(i=>i.ok)&&(!interact||(interact.pressed==="true"&&interact.axis==="true"&&st.r11));results.push({name,pass,errors,broken:st.images.filter(i=>!i.ok),interact});console.log("R11_PACKAGE "+JSON.stringify(results.at(-1)));await c.close();}
+await b.close();fs.writeFileSync(path.join(base,"PACKAGE_QC.json"),JSON.stringify(results,null,2));if(results.some(x=>!x.pass))process.exitCode=1;
+})().catch(e=>{console.error(e.stack);process.exitCode=2});

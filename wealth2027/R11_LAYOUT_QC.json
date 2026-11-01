@@ -1,0 +1,256 @@
+{
+  "baseline": {
+    "heading": {
+      "x": 74,
+      "y": -343,
+      "w": 315,
+      "h": 476
+    },
+    "h2": {
+      "x": 74,
+      "y": -274,
+      "w": 315,
+      "h": 409
+    },
+    "copy": {
+      "x": 469,
+      "y": 86,
+      "w": 334,
+      "h": 52
+    },
+    "after": {
+      "position": "static",
+      "width": "282.578px",
+      "display": "block"
+    },
+    "fontSize": "54.56px",
+    "lines": [
+      "把十個質",
+      "點，",
+      "變成一件會",
+      "回應的作",
+      "品。"
+    ],
+    "overflow": false,
+    "overlap": false,
+    "css": false
+  },
+  "after": [
+    {
+      "tag": "desktop",
+      "pass": true,
+      "heading": {
+        "x": 86,
+        "y": -1621,
+        "w": 832,
+        "h": 225
+      },
+      "h2": {
+        "x": 86,
+        "y": -1568,
+        "w": 832,
+        "h": 159
+      },
+      "copy": {
+        "x": 999,
+        "y": -1461,
+        "w": 355,
+        "h": 52
+      },
+      "after": {
+        "position": "absolute",
+        "width": "520px",
+        "display": "block"
+      },
+      "fontSize": "57.6px",
+      "lines": [
+        "把十個質點，",
+        "變成一件會回應的作品。"
+      ],
+      "overflow": false,
+      "overlap": false,
+      "css": true,
+      "errors": []
+    },
+    {
+      "tag": "user-shot",
+      "pass": true,
+      "heading": {
+        "x": 74,
+        "y": -1692,
+        "w": 656,
+        "h": 203
+      },
+      "h2": {
+        "x": 74,
+        "y": -1614,
+        "w": 656,
+        "h": 137
+      },
+      "copy": {
+        "x": 811,
+        "y": -1552,
+        "w": 355,
+        "h": 52
+      },
+      "after": {
+        "position": "absolute",
+        "width": "520px",
+        "display": "block"
+      },
+      "fontSize": "49.6px",
+      "lines": [
+        "把十個質點，",
+        "變成一件會回應的作品。"
+      ],
+      "overflow": false,
+      "overlap": false,
+      "css": true,
+      "errors": []
+    },
+    {
+      "tag": "laptop",
+      "pass": true,
+      "heading": {
+        "x": 61,
+        "y": -1511,
+        "w": 565,
+        "h": 171
+      },
+      "h2": {
+        "x": 61,
+        "y": -1454,
+        "w": 565,
+        "h": 105
+      },
+      "copy": {
+        "x": 663,
+        "y": -1427,
+        "w": 300,
+        "h": 77
+      },
+      "after": {
+        "position": "absolute",
+        "width": "520px",
+        "display": "block"
+      },
+      "fontSize": "37.888px",
+      "lines": [
+        "把十個質點，",
+        "變成一件會回應的作品。"
+      ],
+      "overflow": false,
+      "overlap": false,
+      "css": true,
+      "errors": []
+    },
+    {
+      "tag": "tablet",
+      "pass": true,
+      "heading": {
+        "x": 46,
+        "y": -1539,
+        "w": 676,
+        "h": 153
+      },
+      "h2": {
+        "x": 46,
+        "y": -1497,
+        "w": 676,
+        "h": 114
+      },
+      "copy": {
+        "x": 46,
+        "y": -1368,
+        "w": 610,
+        "h": 52
+      },
+      "after": {
+        "position": "absolute",
+        "width": "520px",
+        "display": "block"
+      },
+      "fontSize": "39.936px",
+      "lines": [
+        "把十個質點，",
+        "變成一件會回應的作品。"
+      ],
+      "overflow": false,
+      "overlap": false,
+      "css": true,
+      "errors": []
+    },
+    {
+      "tag": "mobile",
+      "pass": true,
+      "heading": {
+        "x": 24,
+        "y": -2309,
+        "w": 342,
+        "h": 118
+      },
+      "h2": {
+        "x": 24,
+        "y": -2270,
+        "w": 342,
+        "h": 79
+      },
+      "copy": {
+        "x": 24,
+        "y": -2176,
+        "w": 342,
+        "h": 81
+      },
+      "after": {
+        "position": "absolute",
+        "width": "312px",
+        "display": "block"
+      },
+      "fontSize": "27.69px",
+      "lines": [
+        "把十個質點，",
+        "變成一件會回應的作品。"
+      ],
+      "overflow": false,
+      "overlap": false,
+      "css": true,
+      "errors": []
+    },
+    {
+      "tag": "small",
+      "pass": true,
+      "heading": {
+        "x": 24,
+        "y": -2492,
+        "w": 272,
+        "h": 107
+      },
+      "h2": {
+        "x": 24,
+        "y": -2454,
+        "w": 272,
+        "h": 69
+      },
+      "copy": {
+        "x": 24,
+        "y": -2370,
+        "w": 272,
+        "h": 81
+      },
+      "after": {
+        "position": "absolute",
+        "width": "256px",
+        "display": "block"
+      },
+      "fontSize": "24px",
+      "lines": [
+        "把十個質點，",
+        "變成一件會回應的作品。"
+      ],
+      "overflow": false,
+      "overlap": false,
+      "css": true,
+      "errors": []
+    }
+  ]
+}

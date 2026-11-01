@@ -1,0 +1,127 @@
+/* WEALTH10 R10 | Motion direction informed by saved native Stitch V3 brief
+   and current Google Stitch interaction/prototype documentation.
+   No image generation. R9 content, typography, controls and original JS unchanged.
+   Only 3 choreographed motions: entering a world, interacting with a point,
+   transitioning between visual chapters. Performance: transform/opacity only. */
+
+@media (prefers-reduced-motion: no-preference){
+ /* ONE: chapters reveal space, not text. Existing .reveal text remains source of truth. */
+ .r10-motion #threshold .threshold-scenography{
+   transition:filter 1.1s ease,opacity 1.1s ease;
+   will-change:auto;
+ }
+ .r10-motion #threshold.r10-in-view .threshold-scenography{
+   animation:r10DoorIllumination 1.5s cubic-bezier(.17,.65,.2,1) both;
+ }
+ .r10-motion .tree-intro::after,.r10-motion .matrix-top::after{
+   transform-origin:left center;transition:transform 1.1s cubic-bezier(.16,.73,.25,1);
+ }
+ .r10-motion .tree-intro::after{
+   content:"";display:block;width:min(100%,520px);height:1px;margin-top:29px;
+   background:linear-gradient(90deg,rgba(254,229,193,.89),rgba(206,158,203,.50),transparent);
+   transform:scaleX(.08);
+ }
+ .r10-motion .tree-section.r10-in-view .tree-intro::after{transform:scaleX(1)}
+ .r10-motion .matrix-top::after{transform:scaleX(.08)}
+ .r10-motion .matrix-section.r10-in-view .matrix-top::after{transform:scaleX(1)}
+ .r10-motion .tree-section.r10-in-view #tree-lines{
+   transform-origin:50% 50%;
+   animation:r10TreeLightIn 1.4s cubic-bezier(.21,.65,.18,1) both;
+ }
+ .r10-motion .matrix-section.r10-in-view .matrix-visual::after{
+   animation:r10MatrixReflection 1.6s ease-out both;
+ }
+ /* TWO: interactive feedback reinforces meaning; no perpetual strobe. */
+ .r10-motion .node-orb.r10-selected::before{
+   animation:r10NodeRipple .78s cubic-bezier(.17,.64,.31,1) both;
+ }
+ .r10-motion .matrix-visual.r10-axis-switched::after{
+   animation:r10MatrixAxis 850ms ease-out both;
+ }
+ .r10-motion .matrix-visual::before{
+   transform:translate3d(var(--r10-mx,0px),var(--r10-my,0px),0);
+   transition:transform .45s cubic-bezier(.2,.7,.25,1);
+ }
+ .r10-motion .m-core{
+   animation:r10PrismSlow 9s ease-in-out infinite alternate!important;
+ }
+ /* THREE: story/gallery, not distracting repeated bloom. */
+ .r10-motion .mentor-section.r10-in-view .mentor-photo-line{
+   animation:r10PortraitFrame 1.05s ease-out both;
+ }
+ .r10-motion .mentor-section.r10-in-view .mentor-story::before{
+   animation:r10GoldEdge 1.05s ease-out both;
+ }
+ .r10-motion .practice-strip.r10-in-view figure{
+   animation:r10GalleryArrival .9s cubic-bezier(.2,.67,.22,1) both;
+ }
+ .r10-motion .practice-strip.r10-in-view figure:nth-of-type(2){animation-delay:.12s}
+ .r10-motion .practice-strip.r10-in-view figure:nth-of-type(3){animation-delay:.24s}
+ .r10-motion .last-section.r10-in-view .last-glyph{
+   animation:r10FinalGlyph 3.2s ease-out both;
+ }
+ /* Existing foreground light motion should not compete with primary actions. */
+ .r10-motion .tree-path.foreground{animation-duration:12s;opacity:.27}
+ .r10-motion .tree-path.active{animation-duration:4.8s}
+ .r10-motion .m-beam{animation-duration:6.5s}
+ .r10-motion .m-ring{animation-duration:16s}
+ @keyframes r10DoorIllumination{
+   from{opacity:.80;filter:saturate(.9) brightness(.96)}
+   to{opacity:1;filter:saturate(1.09) brightness(1.035)}
+ }
+ @keyframes r10TreeLightIn{
+   from{opacity:.28;transform:translate3d(0,10px,0) scale(.985)}
+   to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+ }
+ @keyframes r10NodeRipple{
+   from{opacity:.85;transform:scale(.5)}
+   to{opacity:0;transform:scale(2.3)}
+ }
+ @keyframes r10MatrixReflection{
+   from{opacity:.18;transform:translate3d(-23px,10px,0)}
+   to{opacity:.78;transform:translate3d(0,0,0)}
+ }
+ @keyframes r10MatrixAxis{
+   from{opacity:.28;transform:translate3d(-15px,0,0)}
+   to{opacity:.78;transform:translate3d(0,0,0)}
+ }
+ @keyframes r10PrismSlow{
+   from{transform:translate(-50%,-50%) translate3d(0,-5px,0) rotate(-1.2deg)}
+   to{transform:translate(-50%,-50%) translate3d(0,5px,0) rotate(1.2deg)}
+ }
+ @keyframes r10PortraitFrame{
+   from{opacity:.55;transform:translate3d(-8px,0,0)}
+   to{opacity:1;transform:translate3d(0,0,0)}
+ }
+ @keyframes r10GoldEdge{
+   from{opacity:.32;transform:scale(.982)}
+   to{opacity:1;transform:scale(1)}
+ }
+ @keyframes r10GalleryArrival{
+   from{opacity:.72;transform:translate3d(0,19px,0)}
+   to{opacity:1;transform:translate3d(0,0,0)}
+ }
+ @keyframes r10FinalGlyph{
+   0%{opacity:.45;transform:rotate(-28deg) scale(.86)}
+   100%{opacity:1;transform:rotate(0) scale(1)}
+ }
+}
+/* Large hover-only devices: use shallow parallax solely on decorative visual.
+   Tree's existing pointer geometry, focusable buttons, matrix axis rotation stay intact. */
+@media (min-width:900px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .r10-motion .matrix-visual::before{
+   transform:translate3d(var(--r10-mx,0px),var(--r10-my,0px),0);
+ }
+}
+/* No motion means NO new animations, no forced focus traps or hidden copy.
+   The original page's tested reduced-motion rules still apply. */
+@media (prefers-reduced-motion:reduce){
+ .r10-motion .matrix-visual::before{transform:none!important;transition:none!important}
+ .r10-motion .m-core{animation:none!important}
+ .r10-motion .tree-intro::after,.r10-motion .matrix-top::after{transform:none!important;transition:none!important}
+ .r10-motion .tree-section #tree-lines,
+ .r10-motion .node-orb::before,
+ .r10-motion .practice-strip figure,
+ .r10-motion .mentor-photo-line,
+ .r10-motion .last-glyph{animation:none!important}
+}

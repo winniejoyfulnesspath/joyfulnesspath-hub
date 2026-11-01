@@ -1,0 +1,458 @@
+{
+  "at": "2026-10-30T10:34:08.537Z",
+  "browser": "chrome headless no GUI window/no Comet tab opened",
+  "hashes": {
+    "index.html": "3a98bc45603c6ceca5fd188a9787196b58ba306bd534070ec6211695ac33eca0",
+    "style.css": "c3ccee363f1a1fcf329a54f1a250e9db98e967e461db5519616287c3124ae5d2",
+    "experience.js": "d05e2b67af8b757865f67ec2f3337ea4125d6f39ed9bbc9683a825ddcac0b60d"
+  },
+  "cases": [
+    {
+      "spec": {
+        "n": "desktop",
+        "w": 1440,
+        "h": 900,
+        "m": "no-preference"
+      },
+      "before": {
+        "vw": 1440,
+        "docW": 1440,
+        "reduced": false,
+        "animations": [
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-a"
+          },
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-b"
+          },
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-c"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-a"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-b"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-c"
+          },
+          {
+            "name": "r2GatewayBreath",
+            "cls": "hero-stage"
+          },
+          {
+            "name": "portraitDrift",
+            "cls": ""
+          },
+          {
+            "name": "downNudge",
+            "cls": ""
+          },
+          {
+            "name": "haloBreath",
+            "cls": "tree-aura"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-one"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-two"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-three"
+          },
+          {
+            "name": "beamRise",
+            "cls": "m-beam"
+          },
+          {
+            "name": "r10PrismSlow",
+            "cls": "m-core"
+          },
+          {
+            "name": "slowTurn",
+            "cls": "last-glyph"
+          }
+        ],
+        "hero": "portraitDrift",
+        "portrait": {
+          "y": 236.06063842773438,
+          "h": 620.43115234375,
+          "w": 528.41650390625,
+          "loaded": true
+        }
+      },
+      "interaction": {
+        "nodePressed": "true",
+        "nodeName": "力量輪",
+        "axis": "你願意做哪一步？"
+      },
+      "errors": [],
+      "pass": {
+        "noOverflow": true,
+        "portrait": true,
+        "interaction": true,
+        "reduced": true,
+        "script": true
+      }
+    },
+    {
+      "spec": {
+        "n": "tablet",
+        "w": 768,
+        "h": 1024,
+        "m": "no-preference"
+      },
+      "before": {
+        "vw": 768,
+        "docW": 768,
+        "reduced": false,
+        "animations": [
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-a"
+          },
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-b"
+          },
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-c"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-a"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-b"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-c"
+          },
+          {
+            "name": "r2GatewayBreath",
+            "cls": "hero-stage"
+          },
+          {
+            "name": "portraitDrift",
+            "cls": ""
+          },
+          {
+            "name": "downNudge",
+            "cls": ""
+          },
+          {
+            "name": "haloBreath",
+            "cls": "tree-aura"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-one"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-two"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-three"
+          },
+          {
+            "name": "beamRise",
+            "cls": "m-beam"
+          },
+          {
+            "name": "r10PrismSlow",
+            "cls": "m-core"
+          },
+          {
+            "name": "slowTurn",
+            "cls": "last-glyph"
+          }
+        ],
+        "hero": "portraitDrift",
+        "portrait": {
+          "y": 273.0845031738281,
+          "h": 627.6439208984375,
+          "w": 277.8003234863281,
+          "loaded": true
+        }
+      },
+      "interaction": {
+        "nodePressed": "true",
+        "nodeName": "力量輪",
+        "axis": "你願意做哪一步？"
+      },
+      "errors": [],
+      "pass": {
+        "noOverflow": true,
+        "portrait": true,
+        "interaction": true,
+        "reduced": true,
+        "script": true
+      }
+    },
+    {
+      "spec": {
+        "n": "mobile",
+        "w": 390,
+        "h": 844,
+        "m": "no-preference"
+      },
+      "before": {
+        "vw": 390,
+        "docW": 390,
+        "reduced": false,
+        "animations": [
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-a"
+          },
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-b"
+          },
+          {
+            "name": "haloBreath",
+            "cls": "halo halo-c"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-a"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-b"
+          },
+          {
+            "name": "rayTravel",
+            "cls": "ray ray-c"
+          },
+          {
+            "name": "r2GatewayBreath",
+            "cls": "hero-stage"
+          },
+          {
+            "name": "downNudge",
+            "cls": ""
+          },
+          {
+            "name": "haloBreath",
+            "cls": "tree-aura"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathLight",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "pathFlow",
+            "cls": "[object SVGAnimatedString]"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-one"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-two"
+          },
+          {
+            "name": "matrixOrbit",
+            "cls": "m-ring ring-three"
+          },
+          {
+            "name": "beamRise",
+            "cls": "m-beam"
+          },
+          {
+            "name": "r10PrismSlow",
+            "cls": "m-core"
+          },
+          {
+            "name": "slowTurn",
+            "cls": "last-glyph"
+          }
+        ],
+        "hero": "none",
+        "portrait": {
+          "y": 210.28375244140625,
+          "h": 405.3074951171875,
+          "w": 338.9749755859375,
+          "loaded": true
+        }
+      },
+      "interaction": {
+        "nodePressed": "true",
+        "nodeName": "力量輪",
+        "axis": "你願意做哪一步？"
+      },
+      "errors": [],
+      "pass": {
+        "noOverflow": true,
+        "portrait": true,
+        "interaction": true,
+        "reduced": true,
+        "script": true
+      }
+    },
+    {
+      "spec": {
+        "n": "reduced",
+        "w": 390,
+        "h": 844,
+        "m": "reduce"
+      },
+      "before": {
+        "vw": 390,
+        "docW": 390,
+        "reduced": true,
+        "animations": [],
+        "hero": "none",
+        "portrait": {
+          "y": 210.28375244140625,
+          "h": 405.3074951171875,
+          "w": 338.9749755859375,
+          "loaded": true
+        }
+      },
+      "interaction": {
+        "nodePressed": "true",
+        "nodeName": "力量輪",
+        "axis": "你願意做哪一步？"
+      },
+      "errors": [],
+      "pass": {
+        "noOverflow": true,
+        "portrait": true,
+        "interaction": true,
+        "reduced": true,
+        "script": true
+      }
+    }
+  ]
+}
