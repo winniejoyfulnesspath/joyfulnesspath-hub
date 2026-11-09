@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tarot1to1.joyfulnesspath.com/sitemap.xml
