@@ -2,32 +2,92 @@
   "rewrites": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "wealth2027.joyfulnesspath.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "tarot1to1.joyfulnesspath.com"
+        }
+      ],
+      "destination": "/tarot1to1/index.html"
+    },
+    {
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "tarot1to1.joyfulnesspath.com"
+        }
+      ],
+      "destination": "/tarot1to1/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "tarot1to1.joyfulnesspath.com"
+        }
+      ],
+      "destination": "/tarot1to1/:path*"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "wealth2027.joyfulnesspath.com"
+        }
+      ],
       "destination": "/wealth2027/index.html"
     },
     {
       "source": "/index.html",
-      "has": [{ "type": "host", "value": "wealth2027.joyfulnesspath.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "wealth2027.joyfulnesspath.com"
+        }
+      ],
       "destination": "/wealth2027/index.html"
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "wealth2027.joyfulnesspath.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "wealth2027.joyfulnesspath.com"
+        }
+      ],
       "destination": "/wealth2027/:path*"
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "cardwhispers.joyfulnesspath.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "cardwhispers.joyfulnesspath.com"
+        }
+      ],
       "destination": "/cardwhispers/index.html"
     },
     {
       "source": "/index.html",
-      "has": [{ "type": "host", "value": "cardwhispers.joyfulnesspath.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "cardwhispers.joyfulnesspath.com"
+        }
+      ],
       "destination": "/cardwhispers/index.html"
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "cardwhispers.joyfulnesspath.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "cardwhispers.joyfulnesspath.com"
+        }
+      ],
       "destination": "/cardwhispers/:path*"
     },
     {
